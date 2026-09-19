@@ -17,9 +17,13 @@ DCT1204C1-MH-Nhom/
 │
 ├── README.md                           # Giới thiệu tổng quan và tài liệu hướng dẫn repo
 │
-└── Tuan02/                             # Nội dung bài tập & thực hành Tuần 02
-    ├── datav.ipynb                     # Jupyter Notebook: Nạp dữ liệu, tiền xử lý và trực quan hóa (EDA)
-    └── Bao_Cao_Phan_Tich_Du_Lieu_Iris.pdf # Báo cáo chi tiết định dạng PDF (gồm bìa chuẩn SGU, mục lục & insights)
+├── Tuan02/                             # Nội dung bài tập & thực hành Tuần 02
+│   ├── datav.ipynb                     # Jupyter Notebook: Nạp dữ liệu, tiền xử lý và trực quan hóa (EDA)
+│   └── Bao_Cao_Phan_Tich_Du_Lieu_Iris.pdf # Báo cáo chi tiết định dạng PDF (gồm bìa chuẩn SGU, mục lục & insights)
+│
+└── Tuan03/                             # Dự án: Dự đoán Giá nhà (House Prices) theo chuẩn CRISP-DM
+    ├── README.md                       # Kế hoạch chi tiết, hướng dẫn 6 phần CRISP-DM & phân công công việc
+    └── house_prices_model.py           # Toàn bộ mã nguồn: Tiền xử lý, XGBoost, Decision Tree & ANN Keras
 ```
 
 ---
@@ -52,6 +56,24 @@ Tuần 02 tập trung vào kỹ thuật **Phân tích Khám phá Dữ liệu (Ex
    - **Học không giám sát & Giảm chiều**: K-Means Clustering ($k = 3$), PCA (2 thành phần chính giữ $> 95\%$ phương sai dữ liệu).
 
 ---
+
+---
+
+## Nội dung Tuần 03: Dự án Dự đoán Giá nhà (House Prices Regression) theo quy trình CRISP-DM
+
+Dự án tham gia cuộc thi Kaggle [House Prices: Advanced Regression Techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques) và nghiên cứu Paper của GS. Dean De Cock (2011) về bộ dữ liệu Ames Housing.
+
+### Các tài nguyên chính:
+- **Tài liệu hướng dẫn & Phân công nhiệm vụ chi tiết:** Xem tại [Tuan03/README.md](Tuan03/README.md)
+- **Mã nguồn thực thi:** [Tuan03/house_prices_model.py](Tuan03/house_prices_model.py)
+
+### Tóm tắt các giai đoạn triển khai (CRISP-DM):
+1. **Business Understanding (Tổng quan dự án):** Xây dựng Mô hình Định giá Tự động (AVM) dự đoán giá bán bất động sản tại Ames, Iowa; giải quyết hạn chế của bộ dữ liệu Boston Housing cũ.
+2. **Data Understanding (Thấu hiểu dữ liệu):** Khảo sát 79 đặc trưng và phân tích tương quan giữa các yếu tố với giá bán SalePrice.
+3. **Data Preparation (Tiền xử lý):** Loại bỏ ngoại lai (> 4.000 sq ft) theo Paper De Cock, xử lý khuyết (Mode cho phân loại, Mean cho số), mã hóa One-Hot biến danh mục thành 176 đặc trưng.
+4. **Modeling (Xây dựng mô hình):** Huấn luyện XGBoost Regressor (tối ưu qua RandomizedSearchCV), Baseline Decision Tree, và Mạng Nơ-ron Nhân tạo ANN (Keras).
+5. **Evaluation (Đánh giá hiệu suất):** Đo lường chuẩn Kaggle RMSLE, MAE, ^2$, trực quan hóa Predicted vs Actual và biểu đồ phân phối phần dư (Residuals).
+6. **Deployment (Triển khai & Bảo trì):** Đóng gói Pipeline dự đoán, xuất file submission nộp Kaggle, thiết kế RESTful API (FastAPI) và kế hoạch giám sát trôi dạt dữ liệu (Data Drift).
 
 ## Hướng dẫn cài đặt và thực thi
 
