@@ -20,7 +20,7 @@ Nhóm gồm 4 thành viên với phân chia trách nhiệm tương ứng từng 
 
 ---
 
-## 📋 Chi Tiết Khung Sườn & Checklist Đề Mục (Khớp 100% Mục Lục Báo Cáo DOCX)
+## 📋 Chi Tiết Khung Sườn & Checklist Đề Mục
 
 ### CHƯƠNG 1: TỔNG QUAN DỰ ÁN VÀ BÀI TOÁN KINH DOANH (BUSINESS UNDERSTANDING)
 *Phụ trách: **Dương Gia Phát***
