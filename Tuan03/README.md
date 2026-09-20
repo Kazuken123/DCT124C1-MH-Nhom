@@ -7,7 +7,7 @@
 
 ---
 
-## 👥 Bảng Phân Công Công Việc Trong Nhóm (Khớp 100% Mục Lục Báo Cáo)
+## 👥 Bảng Phân Công Công Việc Trong Nhóm
 
 Nhóm gồm 4 thành viên với phân chia trách nhiệm tương ứng từng chương trong báo cáo:
 
