@@ -15,8 +15,8 @@ Nhóm gồm 4 thành viên với phân chia trách nhiệm tương ứng từng 
 | :-: | :--- | :-: | :--- | :--- |
 | **1** | **Dương Gia Phát** | **3124411212** | **CHƯƠNG 1: Business Understanding**<br>**CHƯƠNG 6: Deployment & Maintenance** | - Phân tích bối cảnh bài toán định giá AVM<br>- Nghiên cứu Paper GS. Dean De Cock (2011)<br>- Thiết kế kiến trúc API FastAPI & Web Demo<br>- Kế hoạch giám sát Data Drift & Viết Báo cáo |
 | **2** | **Văn Nguyễn Thành Đạt** | **3124411202** | **CHƯƠNG 2: Data Understanding**<br>**CHƯƠNG 3: Data Preparation** | - Thực hiện EDA, vẽ Heatmap Missing Values<br>- Phân tích phân phối giá SalePrice (Skewness)<br>- Lọc Outliers > 4000 sq ft theo Paper De Cock<br>- Xử lý Missing Value (Mean/Mode) & OHE |
-| **3** | **Lê Văn Hiếu** | **3124411091** | **CHƯƠNG 4: Modeling**<br>*(Phần Cây quyết định & XGBoost)* | - Xây dựng Baseline Decision Tree<br>- Cài đặt mô hình XGBoost Regressor<br>- Thiết lập RandomizedSearchCV 5-Fold<br>- Tuning tham số tối ưu & Xuất file nộp Kaggle |
-| **4** | **Cái Trần Minh Tiến** | **3124411234** | **CHƯƠNG 4: Modeling** *(Phần ANN)*<br>**CHƯƠNG 5: Evaluation & Error Analysis** | - Thiết kế mạng Deep Learning ANN đa tầng (Keras)<br>- Viết Custom Loss RMSE & chạy Adamax<br>- Tính toán thang đo RMSLE, MAE, RMSE, R²<br>- Vẽ Residual Plot & Phân tích sai số thực tế |
+| **3** | **Lê Văn Hiếu** | **3124411091** | **CHƯƠNG 4: Modeling**<br>*(Toàn bộ Chương 4)* | - Xây dựng Baseline Decision Tree<br>- Cài đặt mô hình XGBoost Regressor & RandomizedSearchCV<br>- Tuning siêu tham số tối ưu & xuất file nộp Kaggle<br>- Thiết kế & huấn luyện mạng Deep Learning ANN (Keras) |
+| **4** | **Cái Trần Minh Tiến** | **3124411234** | **CHƯƠNG 5: Evaluation & Error Analysis** | - Tính toán các thang đo RMSLE, MAE, RMSE, R²<br>- Lập bảng tổng hợp so sánh định lượng các mô hình<br>- Trực quan hóa Predicted vs Actual & Residual Plot<br>- Đánh giá Feature Importance & Phân tích sai số thực tế |
 
 ---
 
@@ -65,13 +65,12 @@ Nhóm gồm 4 thành viên với phân chia trách nhiệm tương ứng từng 
   - Khuyến nghị từ tác giả De Cock: Loại bỏ các bất động sản có diện tích sinh hoạt GrLivArea > 4000 sq ft (các giao dịch bán nội bộ/bán một phần làm lệch mô hình).
 - [ ] **3.2. Làm sạch và điền khuyết dữ liệu thiếu (Missing Value Imputation)**
   - Biến phân loại (cat_col): Điền giá trị xuất hiện nhiều nhất (mode) cho 18 cột (FireplaceQu, GarageType, BsmtQual...).
-  - Biến số (
-cat_col): Điền giá trị trung bình (mean) cho 11 cột (LotFrontage, GarageYrBlt, MasVnrArea...).
+  - Biến số (num_col): Điền giá trị trung bình (mean) cho 11 cột (LotFrontage, GarageYrBlt, MasVnrArea...).
 - [ ] **3.3. Loại bỏ các đặc trưng thừa, tỷ lệ rỗng cao (> 70%) và cột định danh Id**
   - Xóa 5 cột: Id, Alley (93.7% null), PoolQC (99.5% null), Fence (80.7% null), MiscFeature (96.3% null).
 - [ ] **3.4. Mã hóa biến phân loại bằng One-Hot Encoding và xử lý đồng bộ Train/Test**
-  - Nối tạm thời inal_df = pd.concat([train, test]) để đồng bộ các mức danh mục giữa Train và Test.
-  - Áp dụng pd.get_dummies(drop_first=True) cho 39 cột dạng danh mục để tránh bẫy biến giả.
+  - Nối tạm thời `final_df = pd.concat([train, test])` để đồng bộ các mức danh mục giữa Train và Test.
+  - Áp dụng `pd.get_dummies(drop_first=True)` cho 39 cột dạng danh mục để tránh bẫy biến giả.
 - [ ] **3.5. Đồng bộ hóa không gian đặc trưng và phân chia tập dữ liệu**
   - Loại bỏ các cột trùng tên -> Không gian dữ liệu chuẩn hóa thành **176 đặc trưng dạng số**.
   - Tách lại df_train (1.460 dòng) và df_test (1.459 dòng).
@@ -79,7 +78,7 @@ cat_col): Điền giá trị trung bình (mean) cho 11 cột (LotFrontage, Garag
 ---
 
 ### CHƯƠNG 4: THIẾT KẾ KIẾN TRÚC MÔ HÌNH VÀ THUẬT TOÁN (MODELING)
-*Phụ trách: **Lê Văn Hiếu** (Cây & XGBoost) & **Cái Trần Minh Tiến** (ANN)*
+*Phụ trách: **Lê Văn Hiếu***
 
 - [ ] **4.1. Mô hình cơ sở (Baseline Model): Cây quyết định (Decision Tree)** *(Hiếu phụ trách)*
   - Khởi tạo cây quyết định đơn lẻ để làm mốc tham chiếu so sánh.
@@ -87,12 +86,11 @@ cat_col): Điền giá trị trung bình (mean) cho 11 cột (LotFrontage, Garag
   - Nguyên lý học tăng cường kết hợp cơ chế điều hòa L1/L2 chống overfitting.
 - [ ] **4.3. Chiến lược tinh chỉnh siêu tham số tối ưu (Hyperparameter Tuning)** *(Hiếu phụ trách)*
   - Thiết lập RandomizedSearchCV với 5-Fold Cross Validation qua 50 lượt lặp.
-  - Cấu hình tối ưu tìm được: 
-_estimators=900, max_depth=2, learning_rate=0.1, base_score=0.25, booster='gbtree'.
-- [ ] **4.4. Mô hình Deep Learning: Mạng Nơ-ron Nhân tạo (ANN) với Keras** *(Tiến phụ trách)*
+  - Cấu hình tối ưu tìm được: n_estimators=900, max_depth=2, learning_rate=0.1, base_score=0.25, booster='gbtree'.
+- [ ] **4.4. Mô hình Deep Learning: Mạng Nơ-ron Nhân tạo (ANN) với Keras** *(Hiếu phụ trách)*
   - Kiến trúc mạng: Input (176 nodes) -> Dense(50, ReLU) -> Dense(25, ReLU) -> Dense(50, ReLU) -> Output(1).
   - Hàm mất mát tùy biến: Root Mean Squared Error (RMSE).
-  - Optimizer: Adamax, atch_size=10, epochs=1000, alidation_split=0.25.
+  - Optimizer: Adamax, batch_size=10, epochs=1000, validation_split=0.25.
 
 ---
 
@@ -120,8 +118,7 @@ _estimators=900, max_depth=2, learning_rate=0.1, base_score=0.25, booster='gbtre
 *Phụ trách: **Dương Gia Phát***
 
 - [ ] **6.1. Đóng gói sản phẩm dự án (Pipeline, File mô hình, File nộp Kaggle)**
-  - Đóng gói file trọng số: xgb_model.pkl, 
-n_model.h5.
+  - Đóng gói file trọng số: xgb_model.pkl, ann_model.h5.
   - Xuất file kết quả nộp Kaggle: sample_sub_xgb.csv, sample_sub_nn.csv.
 - [ ] **6.2. Kiến trúc tích hợp phần mềm thực tế (RESTful API & Web Demo)**
   - Thiết kế RESTful API bằng FastAPI: Endpoint /api/v1/predict_price.
@@ -144,17 +141,17 @@ n_model.h5.
 ## 💻 Hướng Dẫn Chạy Mã Nguồn house_prices_model.py
 
 ### 1. Cài đặt môi trường
-`ash
+```bash
 pip install numpy pandas matplotlib seaborn scikit-learn xgboost keras tensorflow
-`
+```
 
 ### 2. Tải dữ liệu từ Kaggle
 Tải các file sau từ cuộc thi [House Prices Kaggle](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data) và đặt vào cùng thư mục:
-* 	rain.csv
-* 	est.csv
+* train.csv
+* test.csv
 * sample_submission.csv
 
 ### 3. Thực thi mã nguồn
-`ash
+```bash
 python house_prices_model.py
-`
+```
