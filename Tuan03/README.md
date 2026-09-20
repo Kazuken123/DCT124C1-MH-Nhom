@@ -12,7 +12,7 @@
 Nhóm gồm 4 thành viên với phân chia trách nhiệm tương ứng từng chương trong báo cáo:
 
 | STT | Thành viên phụ trách | MSSV | Chương phụ trách (Theo CRISP-DM) | Nhiệm vụ cụ thể phụ trách |
-| :-: | :--- | :-: | :--- | :--- | :-: |
+| :-: | :--- | :-: | :--- | :--- |
 | **1** | **Dương Gia Phát** | **3124411212** | **CHƯƠNG 1: Business Understanding**<br>**CHƯƠNG 6: Deployment & Maintenance** | - Phân tích bối cảnh bài toán định giá AVM<br>- Nghiên cứu Paper GS. Dean De Cock (2011)<br>- Thiết kế kiến trúc API FastAPI & Web Demo<br>- Kế hoạch giám sát Data Drift & Viết Báo cáo |
 | **2** | **Văn Nguyễn Thành Đạt** | **3124411202** | **CHƯƠNG 2: Data Understanding**<br>**CHƯƠNG 3: Data Preparation** | - Thực hiện EDA, vẽ Heatmap Missing Values<br>- Phân tích phân phối giá SalePrice (Skewness)<br>- Lọc Outliers > 4000 sq ft theo Paper De Cock<br>- Xử lý Missing Value (Mean/Mode) & OHE |
 | **3** | **Lê Văn Hiếu** | **3124411091** | **CHƯƠNG 4: Modeling**<br>*(Phần Cây quyết định & XGBoost)* | - Xây dựng Baseline Decision Tree<br>- Cài đặt mô hình XGBoost Regressor<br>- Thiết lập RandomizedSearchCV 5-Fold<br>- Tuning tham số tối ưu & Xuất file nộp Kaggle |
