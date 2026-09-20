@@ -1,7 +1,7 @@
 # DCT124C1 - Máy Học (Nhóm Thực Hành)
 
 ## Thông tin chung
-- **Lớp**: DCT1204C1
+- **Lớp**: DCT124C1
 - **Thành viên nhóm**:
   - Văn Nguyễn Thành Đạt
   - Lê Văn Hiếu
@@ -67,13 +67,13 @@ Dự án tham gia cuộc thi Kaggle [House Prices: Advanced Regression Technique
 - **Tài liệu hướng dẫn & Phân công nhiệm vụ chi tiết:** Xem tại [Tuan03/README.md](Tuan03/README.md)
 - **Mã nguồn thực thi:** [Tuan03/house_prices_model.py](Tuan03/house_prices_model.py)
 
-### Tóm tắt các giai đoạn triển khai (CRISP-DM):
-1. **Business Understanding (Tổng quan dự án):** Xây dựng Mô hình Định giá Tự động (AVM) dự đoán giá bán bất động sản tại Ames, Iowa; giải quyết hạn chế của bộ dữ liệu Boston Housing cũ.
-2. **Data Understanding (Thấu hiểu dữ liệu):** Khảo sát 79 đặc trưng và phân tích tương quan giữa các yếu tố với giá bán SalePrice.
-3. **Data Preparation (Tiền xử lý):** Loại bỏ ngoại lai (> 4.000 sq ft) theo Paper De Cock, xử lý khuyết (Mode cho phân loại, Mean cho số), mã hóa One-Hot biến danh mục thành 176 đặc trưng.
-4. **Modeling (Xây dựng mô hình):** Huấn luyện XGBoost Regressor (tối ưu qua RandomizedSearchCV), Baseline Decision Tree, và Mạng Nơ-ron Nhân tạo ANN (Keras).
-5. **Evaluation (Đánh giá hiệu suất):** Đo lường chuẩn Kaggle RMSLE, MAE, ^2$, trực quan hóa Predicted vs Actual và biểu đồ phân phối phần dư (Residuals).
-6. **Deployment (Triển khai & Bảo trì):** Đóng gói Pipeline dự đoán, xuất file submission nộp Kaggle, thiết kế RESTful API (FastAPI) và kế hoạch giám sát trôi dạt dữ liệu (Data Drift).
+### Tóm tắt 6 Chương Báo cáo theo chuẩn CRISP-DM (Khớp 100% tệp Báo cáo Word):
+1. **CHƯƠNG 1: Business Understanding** *(Dương Gia Phát phụ trách)*: Bối cảnh định giá tự động (AVM), nghiên cứu Paper GS. Dean De Cock (2011), mục tiêu bài toán và thước đo Kaggle RMSLE.
+2. **CHƯƠNG 2: Data Understanding** *(Văn Nguyễn Thành Đạt phụ trách)*: Khảo sát quy mô tập Ames Housing, phân loại 79 đặc trưng, phân tích phân phối lệch phải của SalePrice và ma trận tương quan.
+3. **CHƯƠNG 3: Data Preparation** *(Văn Nguyễn Thành Đạt phụ trách)*: Loại bỏ ngoại lai > 4000 sq ft, xử lý Missing Values (Mean/Mode), loại bỏ 5 cột thừa/rỗng > 70% và mã hóa One-Hot đồng bộ thành 176 đặc trưng.
+4. **CHƯƠNG 4: Modeling** *(Lê Văn Hiếu & Cái Trần Minh Tiến phụ trách)*: Huấn luyện Baseline Decision Tree, XGBoost Regressor (tinh chỉnh qua RandomizedSearchCV 5-Fold) và mạng nơ-ron Deep Learning ANN (Keras).
+5. **CHƯƠNG 5: Evaluation & Error Analysis** *(Cái Trần Minh Tiến phụ trách)*: Đánh giá bằng RMSLE, MAE, RMSE, R²; vẽ đồ thị Predicted vs Actual & Residual Plot; phân tích các trường hợp sai số lớn và giới hạn thực tế.
+6. **CHƯƠNG 6: Deployment & Maintenance** *(Dương Gia Phát phụ trách)*: Đóng gói Pipeline & tệp mô hình, xuất kết quả nộp Kaggle, kiến trúc RESTful API (FastAPI) / Web Demo (Streamlit) và kế hoạch giám sát Data Drift.
 
 ## Hướng dẫn cài đặt và thực thi
 
