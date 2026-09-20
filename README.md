@@ -1,4 +1,4 @@
-# DCT1204C1 - Máy Học (Nhóm Thực Hành)
+# DCT124C1 - Máy Học (Nhóm Thực Hành)
 
 ## Thông tin chung
 - **Lớp**: DCT1204C1
