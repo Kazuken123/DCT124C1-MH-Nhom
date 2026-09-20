@@ -18,7 +18,7 @@ Nhóm gồm 4 thành viên:
 
 | Thành viên phụ trách | Nhiệm vụ chính (Theo CRISP-DM) | Sản phẩm đầu ra cần nộp |
 | :--- | :--- | :--- |
-| **Thành viên 1** | **Bước 1: Business Understanding** (Tổng quan & Bài toán định giá nhà)<br>**Bước 6: Deployment & Maintenance** (Kế hoạch API, Web Demo, Giám sát Drift) | - Soạn thảo Phần 1 & Phần 6 của Báo cáo.<br>- Thiết kế kịch bản sử dụng thực tế (Use-case AVM cho ngân hàng/người mua). |
+| **Dương Gia Phát** | **Bước 1: Business Understanding** (Tổng quan & Bài toán định giá nhà)<br>**Bước 6: Deployment & Maintenance** (Kế hoạch API, Web Demo, Giám sát Drift) | - Soạn thảo Phần 1 & Phần 6 của Báo cáo.<br>- Thiết kế kịch bản sử dụng thực tế (Use-case AVM cho ngân hàng/người mua). |
 | **Thành viên 2** | **Bước 2: Data Understanding** (Nguồn gốc, EDA, Heatmap, Tương quan)<br>**Bước 3: Data Preparation** (Lọc Outliers theo Paper De Cock, Xử lý Null, One-Hot Encoding) | - Soạn thảo Phần 2 của Báo cáo.<br>- Chạy code EDA, xuất các biểu đồ trực quan (Heatmap missing, phân phối `SalePrice`). |
 | **Thành viên 3** | **Bước 4: Modeling (Phần 1 - Tree-based Models)**<br>- Xây dựng Decision Tree (Baseline)<br>- Cấu hình & Tuning siêu tham số XGBoost Regressor bằng `RandomizedSearchCV` | - Soạn thảo Phần 3 (Mục XGBoost & Decision Tree).<br>- Lưu checkpoint `xgb_model.pkl` và xuất file nộp `sample_sub_xgb.csv`. |
 | **Thành viên 4** | **Bước 4: Modeling (Phần 2 - Deep Learning ANN)**<br>**Bước 5: Evaluation & Error Analysis**<br>- Huấn luyện mạng ANN Keras đa tầng<br>- Đo lường RMSLE, MAE, $R^2$, vẽ biểu đồ Predicted vs Actual & Residuals<br>- Phân tích sai số và giới hạn mô hình | - Soạn thảo Phần 4 & Phần 5 của Báo cáo.<br>- Lưu model `nn_model.h5`, xuất biểu đồ huấn luyện Loss/Val_Loss và Residual Plot. |
