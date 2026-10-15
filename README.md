@@ -21,9 +21,17 @@ DCT1204C1-MH-Nhom/
 │   ├── datav.ipynb                     # Jupyter Notebook: Nạp dữ liệu, tiền xử lý và trực quan hóa (EDA)
 │   └── Bao_Cao_Phan_Tich_Du_Lieu_Iris.pdf # Báo cáo chi tiết định dạng PDF (gồm bìa chuẩn SGU, mục lục & insights)
 │
-└── Tuan03/                             # Dự án: Dự đoán Giá nhà (House Prices) theo chuẩn CRISP-DM
-    ├── README.md                       # Kế hoạch chi tiết, hướng dẫn 6 phần CRISP-DM & phân công công việc
-    └── house_prices_model.py           # Toàn bộ mã nguồn: Tiền xử lý, XGBoost, Decision Tree & ANN Keras
+├── Tuan03/                             # Dự án: Dự đoán Giá nhà (House Prices) theo chuẩn CRISP-DM
+│   ├── README.md                       # Kế hoạch chi tiết, hướng dẫn 6 phần CRISP-DM & phân công công việc
+│   └── house_prices_model.py           # Toàn bộ mã nguồn: Tiền xử lý, XGBoost, Decision Tree & ANN Keras
+│
+├── Tuan04/                             # Khám phá và Trực quan hóa dữ liệu (EDA) - House Prices
+│   ├── EDA_House_Prices.ipynb          # Jupyter Notebook: EDA chi tiết 7 phần trên tập dữ liệu Ames Housing
+│   └── Bao_Cao_Thuyet_Trinh_EDA_House_Prices.pptx # Slide báo cáo thuyết trình EDA
+│
+└── Tuan05/                             # Lựa chọn đặc trưng & Đánh giá mô hình (Feature Selection & Evaluation)
+    ├── House_Prices_Feature_Selection_Evaluation.ipynb # Jupyter Notebook: Lựa chọn đặc trưng và đánh giá mô hình
+    └── Feature Selection_MH.docx       # Báo cáo chi tiết Lab 04 - Feature Selection
 ```
 
 ---
