@@ -29,9 +29,25 @@ DCT1204C1-MH-Nhom/
 │   ├── EDA_House_Prices.ipynb          # Jupyter Notebook: EDA chi tiết 7 phần trên tập dữ liệu Ames Housing
 │   └── Bao_Cao_Thuyet_Trinh_EDA_House_Prices.pptx # Slide báo cáo thuyết trình EDA
 │
-└── Tuan05/                             # Lựa chọn đặc trưng & Đánh giá mô hình (Feature Selection & Evaluation)
-    ├── House_Prices_Feature_Selection_Evaluation.ipynb # Jupyter Notebook: Lựa chọn đặc trưng và đánh giá mô hình
-    └── Feature Selection_MH.docx       # Báo cáo chi tiết Lab 04 - Feature Selection
+├── Tuan05/                             # Lựa chọn đặc trưng & Đánh giá mô hình (Feature Selection & Evaluation)
+│   ├── House_Prices_Feature_Selection_Evaluation.ipynb # Jupyter Notebook: Lựa chọn đặc trưng và đánh giá mô hình
+│   └── Feature Selection_MH.docx       # Báo cáo chi tiết Lab 04 - Feature Selection
+│
+└── Lab05_ThucHanhBaiToanPhanLop/       # Thực hành Bài toán Phân lớp (Classification)
+    ├── data/                           # Dữ liệu thực nghiệm (Credit Card, Titanic, Diabetes, Spam, ...)
+    ├── figures/                        # Toàn bộ biểu đồ phân tích xuất từ mô hình độ phân giải cao
+    ├── code/                           # Mã nguồn Jupyter Notebook thực thi hoàn chỉnh 100% outputs
+    │   ├── lab2_1_DecisionTree_RandomForest.ipynb # Master notebook Mục 2.1 (Lý thuyết, 2.1.2, 2.1.3, 2.1.4)
+    │   ├── 01_CreditCard_DT_RF.ipynb   # Notebook 2.1.2: Vỡ nợ thẻ tín dụng (Credit Card)
+    │   ├── 02_Titanic_DT_RF.ipynb      # Notebook 2.1.3: Dự đoán sống sót Titanic
+    │   ├── 03_Diabetes_DT_RF.ipynb     # Notebook 2.1.4: Dự đoán tiểu đường Pima Indians
+    │   ├── 01-iris-svm.ipynb           # Notebook 2.2: SVM trên Iris (Kernel & Hyperparameters)
+    │   ├── 02-digits-svm.ipynb         # Notebook 2.2: SVM trên tập Digits
+    │   ├── 03-diabetes-svm.ipynb       # Notebook 2.2: SVM trên tập Diabetes
+    │   ├── 04-animal-svm.ipynb         # Notebook 2.2: SVM trên tập Animal Condition
+    │   └── lab2_3_NaiveBayes (2).ipynb # Notebook 2.3: Naive Bayes (Spam, Customer, Mushrooms)
+    ├── Lab_2_1_1_On_tap_ly_thuyet_Decision_Tree_Random_Forest.docx # Trả lời 9 câu hỏi lý thuyết Mục 2.1.1
+    └── Bao_Cao_Tong_Hop_Lab05_Phan_Lop.docx # Báo cáo tổng hợp toàn diện Lab 05 (Bìa SGU, bảng kết quả & charts)
 ```
 
 ---
@@ -102,3 +118,24 @@ Hoặc mở trực tiếp trên [Google Colaboratory](https://colab.research.goo
 ### Xem tệp Báo cáo PDF
 Tệp báo cáo hoàn chỉnh được định dạng chuẩn học thuật Đại học Sài Gòn, sẵn sàng in ấn hoặc đọc trên các trình đọc PDF:
 `Tuan02/Bao_Cao_Phan_Tich_Du_Lieu_Iris.pdf`
+
+---
+
+## Nội dung Lab 05: Thực hành Bài toán Phân lớp (Classification)
+
+Thực hành chuyên sâu các giải thuật phân lớp kinh điển và học kết hợp (Ensemble Learning) trên đa dạng bộ dữ liệu thực tế (Credit Card Default, Titanic, Pima Diabetes, Handwritten Digits, Animal Condition, SMS Spam, Mushrooms).
+
+### 1. Phân công nhiệm vụ nhóm trong Lab 05:
+| STT | Thành viên phụ trách | MSSV | Vai trò | Nội dung phụ trách cụ thể |
+| :-: | :--- | :-: | :--- | :--- |
+| **1** | **Lê Văn Hiếu** | **3124411091** | **Nhóm trưởng** | - Phụ trách **Mục 2.1: Cây quyết định & Rừng ngẫu nhiên (Decision Tree & Random Forest)**<br>- Trả lời 9 câu hỏi lý thuyết 2.1.1 (CRISP-DM, Gini/Entropy/IG, RF, Tuning)<br>- Bài làm mẫu 2.1.2: Vỡ nợ thẻ tín dụng (Credit Card Default) 3 nhiệm vụ<br>- Bài tập thực hành 2.1.3: Sống sót Titanic & 2.1.4: Tiểu đường Pima Indians<br>- Phân tích chuyên sâu hiện tượng Quá khớp (Overfitting)<br>- Tổng hợp toàn diện Báo cáo Word chuẩn Đại học Sài Gòn |
+| **2** | **Văn Nguyễn Thành Đạt** | **3124411067** | **Thành viên** | - Phụ trách **Mục 2.2: Support Vector Machine (SVM)**<br>- Lý thuyết SVM (Hyperplane, Margin, Kernel, Tham số C)<br>- Thực nghiệm phân loại hoa Iris (Khảo sát các kernel Linear, Poly, RBF, Sigmoid)<br>- Thực nghiệm Digits (Chữ số 8x8), Diabetes và Animal Condition |
+| **3** | **Dương Gia Phát** | **3124411212** | **Thành viên** | - Phụ trách **Mục 2.3: Bayes ngây thơ (Naive Bayes)**<br>- Lý thuyết Naive Bayes (Định lý Bayes, giả định độc lập, Gaussian/Multinomial/Bernoulli)<br>- Bài làm mẫu: Phân loại Email Spam với CountVectorizer & MultinomialNB<br>- Bài tập thực hành 1: Customer Behaviour & Bài tập 2: Nấm Mushroom |
+| **4** | **Cái Trần Minh Tiến** | **3124411309** | **Thành viên** | - Phụ trách **Phần 1: Khám phá và Trực quan hóa dữ liệu (EDA)**<br>- Phân tích đơn biến và hai biến trên các tập dữ liệu Penguins, Amsterdam Housing, Marketing Campaign<br>- Hỗ trợ kiểm thử ma trận nhầm lẫn và đối soát số liệu thực nghiệm |
+
+### 2. Các tài nguyên chính trong Lab 05:
+- **Tài liệu Báo cáo Word hoàn chỉnh:** [Lab05_ThucHanhBaiToanPhanLop/Bao_Cao_Tong_Hop_Lab05_Phan_Lop.docx](Lab05_ThucHanhBaiToanPhanLop/Bao_Cao_Tong_Hop_Lab05_Phan_Lop.docx)
+- **Tài liệu Lý thuyết 2.1.1:** [Lab05_ThucHanhBaiToanPhanLop/Lab_2_1_1_On_tap_ly_thuyet_Decision_Tree_Random_Forest.docx](Lab05_ThucHanhBaiToanPhanLop/Lab_2_1_1_On_tap_ly_thuyet_Decision_Tree_Random_Forest.docx)
+- **Master Notebook Mục 2.1:** [Lab05_ThucHanhBaiToanPhanLop/code/lab2_1_DecisionTree_RandomForest.ipynb](Lab05_ThucHanhBaiToanPhanLop/code/lab2_1_DecisionTree_RandomForest.ipynb)
+- **Toàn bộ biểu đồ xuất từ mô hình:** Thư mục [Lab05_ThucHanhBaiToanPhanLop/figures/](Lab05_ThucHanhBaiToanPhanLop/figures/)
+
