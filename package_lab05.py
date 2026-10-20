@@ -6,7 +6,7 @@ def package():
     base_dir = os.path.abspath('Lab05_ThucHanhBaiToanPhanLop')
     workspace_dir = os.path.abspath('.')
     
-    zip_name_primary = 'Lab05_ModelTraining_LeVanHieu_3124411091.zip'
+    zip_name_primary = 'Lab05_ModelTraining_DuongGiaPhat_3124411212.zip'
     zip_path_primary = os.path.join(workspace_dir, zip_name_primary)
     
     zip_name_secondary = 'Lab05_ModelTraining_HoTen_MaSV.zip'
@@ -21,7 +21,8 @@ def package():
     }
 
     # Remove old zips if existing
-    for z in [zip_path_primary, zip_path_secondary]:
+    old_hieu_zip = os.path.join(workspace_dir, 'Lab05_ModelTraining_LeVanHieu_3124411091.zip')
+    for z in [zip_path_primary, zip_path_secondary, old_hieu_zip]:
         if os.path.exists(z):
             os.remove(z)
 

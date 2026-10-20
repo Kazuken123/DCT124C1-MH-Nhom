@@ -9,9 +9,9 @@
 
 | STT | Họ và tên | MSSV | Vai trò | Nhiệm vụ thực hiện cụ thể |
 | :-: | :--- | :-: | :--- | :--- |
-| **1** | **Lê Văn Hiếu** | **3124411091** | **Nhóm trưởng** | - Phụ trách **Mục 2.1: Cây quyết định & Rừng ngẫu nhiên (Decision Tree & Random Forest)**<br>- Trả lời 9 câu hỏi ôn tập lý thuyết 2.1.1 (CRISP-DM/SEMMA, Gini/Entropy/IG, Rừng ngẫu nhiên, Hyperparameter Tuning)<br>- Bài làm mẫu 2.1.2: Vỡ nợ thẻ tín dụng (Credit Card Default) 3 nhiệm vụ<br>- Bài tập thực hành 2.1.3: Sống sót Titanic & 2.1.4: Tiểu đường Pima Indians<br>- Phân tích chuyên sâu hiện tượng Quá khớp (Overfitting)<br>- **Tổng hợp toàn diện Cuốn Báo cáo Word chuẩn Đại học Sài Gòn** |
+| **1** | **Dương Gia Phát** | **3124411212** | **Nhóm trưởng** | - Phụ trách **Mục 2.1: Cây quyết định & Rừng ngẫu nhiên (Decision Tree & Random Forest)**<br>- Trả lời 9 câu hỏi ôn tập lý thuyết 2.1.1 (CRISP-DM/SEMMA, Gini/Entropy/IG, Rừng ngẫu nhiên, Hyperparameter Tuning)<br>- Bài làm mẫu 2.1.2: Vỡ nợ thẻ tín dụng (Credit Card Default) 3 nhiệm vụ<br>- Bài tập thực hành 2.1.3: Sống sót Titanic & 2.1.4: Tiểu đường Pima Indians<br>- Phân tích chuyên sâu hiện tượng Quá khớp (Overfitting)<br>- **Tổng hợp toàn diện Cuốn Báo cáo Word chuẩn Đại học Sài Gòn** |
 | **2** | **Văn Nguyễn Thành Đạt** | **3124411067** | **Thành viên** | - Phụ trách **Mục 2.2: Support Vector Machine (SVM)**<br>- Trả lời lý thuyết SVM (Siêu phẳng, Margin, Kernel Trick, Tham số C, Chuẩn hóa)<br>- Thực nghiệm phân loại hoa Iris (Khảo sát các kernel Linear, Poly, RBF, Sigmoid)<br>- Thực nghiệm Digits (Chữ số 8x8), Diabetes (100 nghìn mẫu) và Animal Condition |
-| **3** | **Dương Gia Phát** | **3124411212** | **Thành viên** | - Phụ trách **Mục 2.3: Bayes ngây thơ (Naive Bayes)**<br>- Trả lời lý thuyết Naive Bayes (Định lý Bayes, Giả định độc lập, Gaussian/Multinomial/Bernoulli, NLP Pipeline)<br>- Bài làm mẫu: Phân loại Email Spam với CountVectorizer & MultinomialNB<br>- Bài tập thực hành 1: Customer Behaviour & Bài tập 2: Nấm Mushroom |
+| **3** | **Lê Văn Hiếu** | **3124411091** | **Thành viên** | - Phụ trách **Mục 2.3: Bayes ngây thơ (Naive Bayes)**<br>- Trả lời lý thuyết Naive Bayes (Định lý Bayes, Giả định độc lập, Gaussian/Multinomial/Bernoulli, NLP Pipeline)<br>- Bài làm mẫu: Phân loại Email Spam với CountVectorizer & MultinomialNB<br>- Bài tập thực hành 1: Customer Behaviour & Bài tập 2: Nấm Mushroom |
 | **4** | **Cái Trần Minh Tiến** | **3124411309** | **Thành viên** | - Phụ trách **Phần 1: Khám phá và Trực quan hóa dữ liệu (EDA)**<br>- Phân tích đơn biến và hai biến trên các tập dữ liệu Penguins, Amsterdam Housing, Marketing Campaign<br>- Khảo sát các công cụ phân tích tự động: ydata-profiling, SweetViz, AutoViz<br>- Hỗ trợ kiểm thử ma trận nhầm lẫn và đối soát số liệu thực nghiệm |
 
 ---
@@ -48,7 +48,7 @@
 ## 3. CẤU TRÚC THƯ MỤC NỘP BÀI
 
 ```
-Lab05_ModelTraining_LeVanHieu_3124411091/
+Lab05_ModelTraining_DuongGiaPhat_3124411212/
 ├── Bao_Cao_Tong_Hop_Lab05_Phan_Lop.docx      # CUỐN BÁO CÁO TỔNG HỢP TOÀN BỘ LAB 05 (Bìa SGU, bảng số liệu & 19 charts)
 ├── Bao_cao_EDA_phan_1_3.docx                # Báo cáo chi tiết chuyên sâu Lab 1 EDA (219 đoạn, 7 bảng)
 ├── Lab_2_1_1_On_tap_ly_thuyet_Decision_Tree_Random_Forest.docx # Trả lời 9 câu hỏi lý thuyết Mục 2.1.1
