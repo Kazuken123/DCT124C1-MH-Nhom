@@ -186,10 +186,10 @@ def generate_report():
     info_table.alignment = WD_TABLE_ALIGNMENT.CENTER
     info_headers = ["Họ và tên", "MSSV", "Vai trò và Nhiệm vụ phụ trách"]
     info_data = [
-        ["Dương Gia Phát", "3124411212", "Nhóm trưởng - Phụ trách Mục 2.1 Cây quyết định và Rừng ngẫu nhiên, tổng hợp báo cáo"],
-        ["Văn Nguyễn Thành Đạt", "3124411067", "Thành viên - Phụ trách Mục 2.2 Support Vector Machine"],
-        ["Lê Văn Hiếu", "3124411091", "Thành viên - Phụ trách Mục 2.3 Naive Bayes"],
-        ["Cái Trần Minh Tiến", "3124411309", "Thành viên - Phụ trách Phần 1 Khám phá dữ liệu EDA"],
+        ["Dương Gia Phát", "3124411212", "Nhóm trưởng - Phụ trách Mục 2.1 Cây quyết định & Rừng ngẫu nhiên, hoàn thiện báo cáo"],
+        ["Lê Văn Hiếu", "3124411091", "Thành viên - Phụ trách Mục 1.1 Thống kê mô tả và Mục 1.2 Xử lý & Trực quan hóa dữ liệu"],
+        ["Văn Nguyễn Thành Đạt", "3124411067", "Thành viên - Phụ trách Mục 1.3 Đơn biến & Hai biến và Mục 2.3 Bayes ngây thơ"],
+        ["Cái Trần Minh Tiến", "3124411309", "Thành viên - Phụ trách Mục 2.2 Support Vector Machine và Quản lý Dataset"],
         ["Giảng viên hướng dẫn:", "TS. Đỗ Như Tài", "Bộ môn Khoa học Máy tính - Khoa Công nghệ Thông tin"]
     ]
     format_table_bw(info_table, info_headers, info_data, [1.6, 1.2, 3.8])
