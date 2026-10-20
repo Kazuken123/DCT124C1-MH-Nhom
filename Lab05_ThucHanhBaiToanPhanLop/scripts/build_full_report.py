@@ -390,9 +390,8 @@ def generate_report():
     add_body(doc, "Tập dữ liệu gồm 5,572 tin nhắn SMS được dán nhãn Ham hoặc Spam. Sau khi loại bỏ các bản ghi trùng lặp, tập dữ liệu còn lại 5,169 tin nhắn. Chuyển đổi nhãn thành 0 và 1, chia tập 80/20 có phân tầng. Sử dụng CountVectorizer để mã hóa văn bản thành ma trận túi từ gồm 7,370 từ vựng. Mô hình MultinomialNB đạt độ chính xác 98.26% trên tập kiểm tra gồm 1,034 tin nhắn với ma trận nhầm lẫn dự đoán chính xác 898 tin nhắn thông thường và 118 tin nhắn rác, đạt Precision 95.93%, Recall 90.08% và F1-score 0.9291 trên lớp Spam.")
 
     add_image_safe(doc, "Lab05_ThucHanhBaiToanPhanLop/figures/2_3_2_spam_cm.png", 5.2, "Hình 17: Ma trận nhầm lẫn phân loại tin nhắn rác Spam bằng MultinomialNB")
-
     add_heading_2(doc, "2.3.3 Bài tập thực hành 1: Dự đoán hành vi mua hàng Customer Behaviour")
-    add_body(doc, "Tập dữ liệu gồm 400 khách hàng với các đặc trưng Tuổi, Thu nhập ước tính, Giới tính và biến mục tiêu Đã mua hàng với giá trị 0 hoặc 1. Xử lý dữ liệu bằng cách mã hóa Giới tính và chia tập train/test 80/20. Mô hình GaussianNB đạt độ chính xác 91.25% trên tập kiểm tra gồm 80 khách hàng.")
+    add_body(doc, "Tập dữ liệu gồm 400 khách hàng với các đặc trưng Tuổi, Thu nhập ước tính, Giới tính và biến mục tiêu Đã mua hàng với giá trị 0 hoặc 1. Xử lý dữ liệu bằng cách mã hóa Giới tính và chia tập train/test 80/20. Mô hình GaussianNB đạt độ chính xác 87.50% trên tập kiểm tra gồm 80 khách hàng, phân loại chính xác 47 mẫu khách hàng không mua và 23 mẫu khách hàng mua, nhầm lẫn 10 mẫu.")
 
     add_image_safe(doc, "Lab05_ThucHanhBaiToanPhanLop/figures/2_3_3_customer_cm.png", 5.2, "Hình 18: Ma trận nhầm lẫn dự đoán hành vi mua hàng bằng GaussianNB")
 

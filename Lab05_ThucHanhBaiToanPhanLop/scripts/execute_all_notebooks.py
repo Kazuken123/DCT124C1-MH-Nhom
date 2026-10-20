@@ -17,7 +17,8 @@ notebooks_to_run = [
     '03_Diabetes_DT_RF.ipynb',
     'lab2_1_DecisionTree_RandomForest.ipynb',
     '01-iris-svm.ipynb',
-    'lab2_3_NaiveBayes (2).ipynb'
+    '02-digits-svm.ipynb',
+    'lab2_3_NaiveBayes.ipynb'
 ]
 
 for nb_name in notebooks_to_run:
