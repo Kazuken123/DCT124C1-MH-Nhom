@@ -2,109 +2,108 @@
 
 **Đề tài:** Dự đoán nguy cơ bỏ học và kết quả học tập của sinh viên.  
 **Nhóm:** 10 · **Lớp:** DCT124C1 · **Thành viên:** 4.  
-**Hạn Classroom:** 08/11/2026, 23:59 (giờ Việt Nam). Hạn nội bộ đề xuất: 20:00 cùng ngày.
+**Hạn Classroom:** 08/11/2026, 23:59 giờ Việt Nam. Hạn nội bộ đề xuất: 20:00.
 
 ## Tài liệu làm việc
 
-- [Bảng phân công, tiến độ và khối lượng](https://docs.google.com/spreadsheets/d/1ifjw4lbfHyAjlfEMAZqaTczeFblSxyRKLJEwAfjOrZ0/edit)
-- [Google Doc — khung báo cáo để cả nhóm viết](https://docs.google.com/document/d/1ta0YKkwCw14sy-P3lps2_znJ8xPgoIDGoJm4RRNdaKs/edit)
+- [Phân công, khối lượng và workflow](https://docs.google.com/spreadsheets/d/1ifjw4lbfHyAjlfEMAZqaTczeFblSxyRKLJEwAfjOrZ0/edit)
+- [Google Doc — khung chương và mục để cả nhóm viết](https://docs.google.com/document/d/1ta0YKkwCw14sy-P3lps2_znJ8xPgoIDGoJm4RRNdaKs/edit)
 - [Nguồn dữ liệu UCI](https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success)
 - [Notebook EDA và Decision Tree hiện có](ThanhDat_EDA_DecisionTree.ipynb)
 
-README này mô tả workflow và kế hoạch bàn giao. Những file, bước chạy và kết quả dự kiến bên dưới **không được xem là đã triển khai**. Notebook hiện có ghi rằng outputs được giữ từ bản gốc và bản tách chưa chạy lại vì thiếu dữ liệu; cần xác minh trước khi sử dụng số liệu.
+Đây là kế hoạch triển khai và bàn giao. Notebook hiện có ghi rằng outputs được giữ từ bản gốc, bản tách chưa chạy lại vì thiếu dữ liệu. Các thử nghiệm, kết quả và đường dẫn đề xuất bên dưới chỉ được xác nhận hoàn thành sau khi thực hiện và lưu bằng chứng.
 
-## Phân công cân bằng
+## Nguyên tắc chia công việc
 
-Dùng **40 điểm khối lượng tương đối**, chia 10 điểm cho mỗi gói để lập kế hoạch. Đây không phải điểm môn học, số giờ cam kết hoặc xác nhận 25% đóng góp thực tế. Đóng góp khi nộp phải dựa vào sản phẩm và công việc thực hiện.
+Cân khối lượng theo **kỹ thuật, thiết kế thực nghiệm và phân tích kết quả**. Mỗi người có một gói chuyên môn riêng, tự viết nội dung báo cáo và log của mình.
 
-| Thành viên | Triển khai và phân tích | Viết báo cáo | Kiểm tra / phối hợp | Tổng dự kiến |
-| --- | --- | --- | --- | --- |
-| **Dương Gia Phát** | Pipeline, split/CV, runner, Dummy baseline: **4**; tích hợp và kiểm tra tái lập: **3** | Chương 1 và 3: **2** | Ghép định dạng Word: **1**; kiểm tra RF trong gói kiểm chứng | **10 / 40** |
-| **Lê Văn Hiếu** | Dữ liệu và preprocessing: **4**; Logistic Regression và phân tích: **3** | 2.1, 2.3, 4.1 và đoạn LR ở Chương 5: **2** | Kiểm tra runner/baseline của Phát: **1** | **10 / 40** |
-| **Văn Nguyễn Thành Đạt** | EDA và insights: **4**; Decision Tree, tuning và phân tích: **3** | 2.2, 4.2 và đoạn DT ở Chương 5: **2** | Kiểm tra preprocessing/LR của Hiếu: **1** | **10 / 40** |
-| **Cái Trần Minh Tiến** | Random Forest, tuning nhỏ: **4**; ghép log và bảng so sánh: **3** | 4.3 và kết luận chung Chương 5: **2** | Kiểm tra EDA/DT của Đạt, tạo slide từ Word: **1** | **10 / 40** |
+**Phân chia, tổng hợp, ghép file, tích hợp, kiểm tra chạy lại, tạo slide và đóng ZIP là việc hỗ trợ; không tính thành nhiệm vụ chuyên môn để cân khối lượng.** Không đặt điểm hoặc phần trăm đóng góp giả định. Cả nhóm điều chỉnh phạm vi theo sản phẩm và công việc thực tế.
 
-**Ranh giới trách nhiệm:**
+## Bốn gói chuyên môn
 
-- Ai chạy mô hình thì tự ghi log, lưu outputs, giải thích lỗi và viết phần mô hình của mình.
-- Tiến ghép log, bảng kết quả và kết luận so sánh; từng tác giả cung cấp sẵn phân tích mô hình mình.
-- Phát làm baseline, khung chạy, tích hợp và ghép định dạng; từng người tự sửa nội dung/code của mình.
-- Từng người tự ghi đóng góp, khó khăn và kế hoạch ở Chương 6, tự bổ sung tài liệu tham khảo.
-- Slide tạo từ bản Word đã chốt là khâu nhẹ, không phải một gói chuyên môn riêng.
-- Nếu một gói phát sinh nhiều việc, cả nhóm chuyển một đầu việc cụ thể sang người còn khả năng trước khi nhận thêm mô hình hay tính năng.
+| Thành viên | Công việc chuyên môn | Thực nghiệm và phân tích phải có | Sản phẩm |
+| --- | --- | --- | --- |
+| **Dương Gia Phát** | **Feature engineering và ablation** | Xây dựng đặc trưng có ý nghĩa; so sánh A/B/C bằng cùng mô hình/cấu hình/fold; phân tích tác động đặc trưng và giới hạn thời điểm dữ liệu | Hàm tạo đặc trưng, notebook đối chứng, log, bảng/biểu đồ chênh lệch, Word 2.4 và 5.4; thiết kế Chương 3 và bối cảnh Chương 1 |
+| **Lê Văn Hiếu** | **Dữ liệu, preprocessing, baseline và Logistic Regression** | Kiểm tra schema/thiếu/trùng; encoding/scaling đúng trong CV; Dummy vs LR; lỗi theo lớp và train–validation gap | Dữ liệu/link, bảng thuộc tính, preprocessing, notebook baseline/LR, log/hình; Word 2.1, 2.3, 4.1; baseline cho 3.4 |
+| **Văn Nguyễn Thành Đạt** | **EDA, Decision Tree và tuning** | EDA trả lời câu hỏi dữ liệu; cây ban đầu vs tuning; phân tích overfitting, lỗi theo lớp, cấu trúc hoặc đặc trưng cây | Notebook EDA/DT, hình/insights, bảng tuning, log và phân tích; Word 2.2 và 4.2 |
+| **Cái Trần Minh Tiến** | **Random Forest, tuning và phân tích mô hình** | RF ban đầu vs tuning có giới hạn; độ ổn định theo fold; lỗi từng lớp; tầm quan trọng đặc trưng; ưu/nhược điểm so với LR/DT | Notebook RF, log, bảng tuning/metrics và hình; Word 4.3 và đoạn phân tích RF ở Chương 5 |
+
+Từng người tự viết đoạn phân tích mô hình/thực nghiệm mình ở Chương 5, tự ghi đóng góp và kế hoạch ở Chương 6, tự bổ sung nguồn. Không chỉ gọi `fit/predict` rồi báo Accuracy; mỗi gói phải có câu hỏi, thực nghiệm so sánh và nhận xét dựa trên bằng chứng.
+
+### Phần chuyên môn của Phát: đối chứng đặc trưng
+
+Câu hỏi nghiên cứu:
+
+1. Bỏ nhóm thông tin học kỳ 2 làm hiệu năng thay đổi thế nào?
+2. Đặc trưng được xây dựng thêm có cải thiện hiệu năng hoặc độ ổn định so với dữ liệu gốc không?
+
+| Cấu hình | Bộ đặc trưng | So sánh |
+| --- | --- | --- |
+| **A** | Bộ đặc trưng gốc đã thống nhất | Mốc đối chứng |
+| **B** | A bỏ toàn bộ cột học kỳ 2 | A–B: ảnh hưởng của nhóm thông tin HK2 |
+| **C** | A cộng các đặc trưng mới có giải thích | C–A: giá trị bổ sung của feature engineering |
+
+Ứng viên đặc trưng C: tỷ lệ học phần qua môn/đăng ký của HK1 và HK2; chênh lệch điểm HK2–HK1. Phải giải thích công thức, xử lý mẫu số bằng 0, kiểm tra tính hợp lệ và lưu danh sách cột của từng cấu hình.
+
+Hiếu bàn giao cấu hình Logistic Regression làm mô hình cố định. Phát giữ nguyên model, tham số, preprocessing cho các cột gốc, Train/Test và fold; chỉ thay feature set A/B/C. Ghi Macro-F1, Recall từng lớp, train–validation gap, mean/std và chênh lệch theo fold; lưu log và giải thích khi kết quả không cải thiện.
+
+B chỉ loại nhóm HK2, không chứng minh toàn bộ biến còn lại có sẵn lúc nhập học. C dùng HK2 nên cũng chỉ phù hợp thời điểm có HK2. Không diễn giải chênh lệch này thành quan hệ nhân quả hoặc hiệu quả triển khai cảnh báo sớm khi chưa xác minh thời điểm dữ liệu.
 
 ## Workflow trực quan
 
 ```mermaid
 flowchart TB
-    A["Cả nhóm chốt bài toán và quy ước"] --> B["Hiếu: dữ liệu và schema"]
-    B --> C["Phát: split, CV và khung chạy"]
-    C --> P["Phát: Dummy baseline và tích hợp"]
-    C --> H["Hiếu: preprocessing và Logistic Regression"]
-    C --> D["Đạt: EDA và Decision Tree"]
-    C --> T["Tiến: Random Forest"]
-    P --> R["Mỗi người: outputs, log và phần Word"]
-    H --> R
+    A["Cả nhóm chốt câu hỏi và dữ liệu"] --> B["Hiếu: dữ liệu và preprocessing"]
+    B --> C["Cả nhóm dùng chung split và CV"]
+    C --> H["Hiếu: baseline và Logistic Regression"]
+    C --> D["Đạt: EDA, Decision Tree và tuning"]
+    C --> T["Tiến: Random Forest và tuning"]
+    C --> P["Phát: xây dựng đặc trưng"]
+    H --> F["Phát: đối chứng A/B/C bằng LR cố định"]
+    P --> F
+    H --> R["Mỗi người: log, hình và phần Word"]
     D --> R
     T --> R
-    R --> V["Kiểm tra chéo; tác giả tự sửa"]
-    V --> S["Tiến: ghép so sánh CV và log"]
-    S --> Q{"Đủ điều kiện đánh giá Test?"}
-    Q -->|Có| X["Phát chạy Test; từng người diễn giải"]
+    F --> R
+    R --> S["Cả nhóm đối chiếu và diễn giải kết quả"]
+    S --> Q{"Sẵn sàng đánh giá Test?"}
+    Q -->|Có| X["Đánh giá cấu hình chốt trên Test"]
     Q -->|Chưa| N["Ghi tiến độ và kế hoạch còn lại"]
-    X --> W["Phát ghép Word; Tiến tạo slide"]
+    X --> W["Ghép báo cáo, tạo slide và nộp ZIP"]
     N --> W
-    W --> Z["Cả nhóm kiểm tra chạy lại và nộp ZIP"]
 ```
 
-### Đầu vào, đầu ra và thứ tự bàn giao
+### Thứ tự và điều kiện bàn giao
 
-| Bước | Chủ trì | Việc thực hiện | Đầu ra / điều kiện chuyển bước |
-| --- | --- | --- | --- |
-| 1. Chốt quy ước | Cả nhóm, Phát điều phối | Chốt thời điểm dự đoán, nhóm đặc trưng, nhãn, split/CV, metrics và môi trường | Một cấu hình thống nhất; 4 người xác nhận phạm vi |
-| 2. Dữ liệu gốc | Hiếu | Tải UCI; kiểm tra phiên bản, dòng/cột, thiếu/trùng; viết hàm đọc | Cùng dataset và thứ tự dòng; bảng thuộc tính |
-| 3. Khung thực nghiệm | Phát | Lưu chỉ số split; tạo CV/runner và DummyClassifier | Notebook các mô hình dùng cùng dòng Train/Test và fold |
-| 4. Làm song song | Hiếu, Đạt, Tiến | Preprocessing/LR; EDA/DT; RF; Phát hoàn thiện baseline và tích hợp | Code, metrics, hình, log và nội dung Word của từng gói |
-| 5. Bàn giao và kiểm tra chéo | Cả nhóm | Nhận đủ sản phẩm; người kiểm tra phản hồi, tác giả tự sửa | Không giao code/hình chưa có nhận xét cho người khác viết lại |
-| 6. So sánh | Tiến tổng hợp | Ghép bảng CV, log và các đoạn phân tích do tác giả gửi | Chốt cấu hình theo CV; phân biệt CV, OOF và Test |
-| 7. Test nếu sẵn sàng | Phát chạy, từng người kiểm tra | Fit pipeline trên Train rồi đánh giá Test cho cấu hình đã chốt | Bảng Test riêng; không chỉnh mô hình theo Test |
-| 8. Báo cáo và slide | Tất cả tự viết; Phát ghép; Tiến tạo slide | Chốt các mục trong Google Doc, đối chiếu số liệu | Word và slide khớp code, log và hình |
-| 9. Tái lập và nộp | Cả nhóm, nhóm trưởng nộp | Chạy lại qua README; mỗi tác giả sửa phần mình; ghép ZIP | Đủ sản phẩm, đọc được, ghi đúng tiến độ thực tế |
+| Bước | Người làm | Đầu ra / điều kiện |
+| --- | --- | --- |
+| 1. Chốt bài toán | Cả nhóm | Mục tiêu, nhãn, thời điểm dự đoán, feature set, split/CV và metrics thống nhất |
+| 2. Dữ liệu và khung dùng chung | Hiếu và cả nhóm | Cùng dữ liệu, thứ tự dòng, chỉ số split và fold; preprocessing fit trong Pipeline |
+| 3. Làm chuyên môn | Hiếu, Đạt, Tiến, Phát | Mỗi người làm gói ở bảng trên; Phát nhận LR cố định từ Hiếu để chạy đối chứng |
+| 4. Ghi log và viết | Mỗi người | Trước chạy ghi giả thuyết/cấu hình; sau chạy ghi outputs/kết luận; viết ngay phần Word |
+| 5. Phân tích | Mỗi người | Giải thích lỗi/kết quả mô hình mình; Phát giải thích A–B và C–A; số liệu có link truy vết |
+| 6. Đánh giá Test nếu sẵn sàng | Cả nhóm | Chốt cấu hình bằng CV trước; fit trên Train, đánh giá Test; không tuning theo Test |
+| 7. Hoàn thiện sản phẩm | Cả nhóm | Ghép các phần đã viết, đối chiếu code–log–hình–Word, xuất slide/ZIP và nộp |
 
-EDA phục vụ lựa chọn đặc trưng thực hiện trên Train. Hiếu cung cấp hàm tạo preprocessing; encoder/scaler phải được fit **bên trong Pipeline của từng fold**, không fit trên toàn bộ dữ liệu trước CV.
-
-### Kiểm tra chéo
-
-**Phát → Tiến → Đạt → Hiếu → Phát**: người bên trái kiểm tra phần của người bên phải.
-
-| Người kiểm tra | Phần cần kiểm tra |
-| --- | --- |
-| Phát | Random Forest của Tiến |
-| Tiến | EDA và Decision Tree của Đạt |
-| Đạt | Dữ liệu, preprocessing và Logistic Regression của Hiếu |
-| Hiếu | Split, runner và Dummy baseline của Phát |
-
-Người kiểm tra xác nhận đủ code, Word, log và hình, không nhận thay trách nhiệm sửa mọi lỗi của tác giả.
+Các bước thiết lập chung, kiểm tra chéo và hoàn thiện sản phẩm phục vụ chất lượng, không dùng để bù cho việc thiếu nhiệm vụ chuyên môn.
 
 ## Quy ước thực nghiệm
 
-Cấu hình theo notebook hiện có, cần cả nhóm xác nhận trước khi chạy:
+Cấu hình theo notebook hiện có, cần cả nhóm xác nhận:
 
-- Phân lớp **Dropout / Enrolled / Graduate**; chốt bộ đặc trưng theo **thời điểm dự đoán**. Dùng dữ liệu HK2 thì không gọi là dự đoán ngay lúc nhập học.
+- Target: **Dropout / Enrolled / Graduate**; chốt features theo thời điểm dự đoán.
 - Train/Test **80/20**, `stratify=y`, `random_state=42`; lưu chỉ số dòng và giữ thứ tự Train.
-- `StratifiedKFold(n_splits=5, shuffle=True, random_state=42)` trên Train.
-- Chọn cấu hình bằng **Macro-F1 CV**; báo cáo thêm Accuracy, Recall từng lớp và Confusion Matrix.
-- Ghi rõ **CV mean/std**, **OOF** hay **Test**; không đặt các giá trị khác cách tính cạnh nhau như cùng một thước đo.
-- Tuning trên Train/CV. Best CV sau tìm tham số là kết quả lựa chọn, chưa phải đánh giá độc lập.
-- Giữ Test riêng; dùng sau khi chốt cấu hình. Nếu giữa kỳ chưa làm tới, ghi rõ kế hoạch còn lại.
-- Có baseline và ít nhất hai mô hình phù hợp; hiện chia Logistic Regression, Decision Tree và Random Forest. Decision Tree là phần tuning chính; RF chỉ thử lưới nhỏ trong phạm vi gói việc.
+- `StratifiedKFold(n_splits=5, shuffle=True, random_state=42)` trên Train; cùng fold cho các thử nghiệm.
+- Chọn cấu hình bằng **Macro-F1 CV**; bổ sung Accuracy, Recall từng lớp và Confusion Matrix.
+- Ghi rõ **CV mean/std**, **OOF** hoặc **Test**; không trộn các cách tính khi so sánh.
+- Encoder/scaler và mọi bước học từ dữ liệu được fit bên trong từng fold. EDA phục vụ lựa chọn đặc trưng thực hiện trên Train.
+- Tuning trên Train/CV. Best CV từ tìm tham số là kết quả lựa chọn, chưa phải đánh giá độc lập.
+- Giữ Test riêng cho cấu hình đã chốt. Nếu giữa kỳ chưa đến bước này, ghi rõ phần còn lại.
+- Duy trì baseline, ba mô hình hiện tại và thí nghiệm đối chứng; không thêm thuật toán chỉ để chia đủ người.
 
-## Experiment log: ai chạy, người đó ghi
+## Experiment log
 
-**Trước chạy:** đặt câu hỏi/giả thuyết và ghi cấu hình.  
-**Sau chạy:** bổ sung outputs, quan sát, metrics, kết luận và link kết quả. Ghi cả lần lỗi hoặc không cải thiện.
-
-Schema dùng chung đề xuất:
+**Ai chạy, người đó ghi**; Tiến chỉ ghép các file, không ghi hộ.
 
 ```text
 run_id, owner, timestamp, objective_hypothesis,
@@ -113,76 +112,75 @@ params, split_id, seed, cv,
 metrics, observations, conclusion, output_link
 ```
 
-Mã ví dụ để đặt tên, không phải các lần chạy đã được thực hiện: `PHAT_DUMMY_001`, `HIEU_LR_001`, `DAT_DT_001`, `TIEN_RF_001`.
+- **Phát:** log A/B/C và kết luận về đặc trưng.
+- **Hiếu:** Dummy baseline và Logistic Regression.
+- **Đạt:** Decision Tree ban đầu, tuning và kết luận.
+- **Tiến:** Random Forest ban đầu, tuning và kết luận.
 
-Khi GridSearch, ghi một bản log mô tả lần tìm kiếm và xuất đầy đủ `cv_results.csv` cho các cấu hình; không cần chép tay từng fold. Tiến ghép các log do từng người cung cấp thành file chung.
+Mã mẫu để đặt tên, chưa phải các run đã thực hiện: `PHAT_FE_A_001`, `PHAT_FE_B_001`, `PHAT_FE_C_001`, `HIEU_LR_001`, `DAT_DT_001`, `TIEN_RF_001`.
 
-## Bố cục Google Doc
+Ghi cả lần lỗi hoặc không cải thiện. GridSearch có thể ghi một log của lần tìm kiếm và xuất `cv_results.csv` đầy đủ, không cần chép tay từng fold.
 
-Khung Doc chỉ gồm tiêu đề, chương/mục và khoảng trống để viết. **Không thêm tên người vào bất kỳ tiêu đề chương/mục nào.** Phân công chỉ đặt trong bảng công việc và bảng đóng góp thực tế.
+## Bố cục báo cáo
 
-| Chương / mục | Nội dung | Người viết trong bảng phân công |
-| --- | --- | --- |
-| Chương 1. Giới thiệu bài toán | Bối cảnh; mục tiêu; Input/Output; phạm vi và thời điểm dự đoán | Phát |
-| 2.1. Nguồn dữ liệu, thuộc tính và biến mục tiêu | Nguồn, schema, target, ví dụ | Hiếu |
-| 2.2. Khám phá và trực quan hóa dữ liệu | EDA và insights | Đạt |
-| 2.3. Tiền xử lý và xây dựng đặc trưng | Kiểm tra và biến đổi dữ liệu | Hiếu |
-| Chương 3. Thiết kế thực nghiệm | Pipeline; split/CV; metrics; baseline; leakage/tái lập | Phát |
-| 4.1. Logistic Regression | Cấu hình, cách chạy và kết quả LR | Hiếu |
-| 4.2. Decision Tree | Cây ban đầu, tuning và phân tích | Đạt |
-| 4.3. Random Forest | Cấu hình, tuning nhỏ và phân tích | Tiến |
-| Chương 5. Kết quả bước đầu và thảo luận | Bảng chung; lỗi; overfitting; diễn giải; hạn chế | Mỗi người viết mô hình mình; Tiến ghép kết luận |
-| Chương 6. Tiến độ và kế hoạch | Đã làm; khó khăn; còn lại; kế hoạch; đóng góp | Mỗi người tự điền; Phát ghép bảng |
-| Tài liệu tham khảo và phụ lục | Nguồn; log; hướng dẫn; hình bổ sung | Mỗi người bổ sung phần mình |
+Google Doc chỉ có **tiêu đề, chương/mục và khoảng trống**, không điền nội dung hay kết quả. **Không đặt tên thành viên trong tiêu đề chương/mục.** Tên chỉ nằm ở bảng phân công/đóng góp.
 
-Chương 2 có tên **Dữ liệu và tiền xử lý**; Chương 4 có tên **Xây dựng mô hình**. Mỗi phần cá nhân cần có cách làm, cấu hình, bảng/hình, nhận xét, hạn chế và nguồn. Không đưa điểm số chưa chạy xác minh vào báo cáo.
-
-## Tổ chức file và GitHub
-
-Cấu trúc **đề xuất để triển khai**, không phải xác nhận những đường dẫn này đã tồn tại:
-
-| Đường dẫn dự kiến trong FinalExam | Nội dung |
+| Chương / mục | Người viết trong bảng phân công |
 | --- | --- |
-| `data/` | Dữ liệu gốc hoặc hướng dẫn tải |
-| `configs/` | Split/CV, seed, feature set và cấu hình chung |
-| `src/` | Hàm đọc, preprocessing, runner và đánh giá |
-| `notebooks/` | EDA và các notebook mô hình |
-| `results/<run_id>/` | Params, metrics, dự đoán và kết quả từng lần chạy |
-| `logs/` | Log cá nhân và experiment_log.csv chung |
-| `figures/` | Hình gốc |
-| `report/` | Bản Word/slide xuất từ tài liệu chung |
-| `requirements.txt` | Phiên bản thư viện phục vụ tái lập |
+| Chương 1. Giới thiệu bài toán | Phát |
+| 2.1. Nguồn dữ liệu, thuộc tính và biến mục tiêu | Hiếu |
+| 2.2. Khám phá và trực quan hóa dữ liệu | Đạt |
+| 2.3. Tiền xử lý dữ liệu | Hiếu |
+| 2.4. Xây dựng đặc trưng | Phát |
+| Chương 3. Thiết kế thực nghiệm | Phát; Hiếu cung cấp kết quả baseline cho 3.4 |
+| 4.1. Logistic Regression | Hiếu |
+| 4.2. Decision Tree | Đạt |
+| 4.3. Random Forest | Tiến |
+| 5.1–5.3. So sánh, lỗi, overfitting và độ ổn định | Mỗi người viết mô hình mình; Tiến ghép bảng/kết luận |
+| 5.4. Thực nghiệm đối chứng và ảnh hưởng đặc trưng | Phát |
+| 5.5. Hạn chế và nhận xét ban đầu | Từng người cung cấp giới hạn phần mình |
+| Chương 6. Tiến độ và kế hoạch | Mỗi người tự điền |
+| Tài liệu tham khảo và phụ lục | Mỗi người bổ sung nguồn và tài nguyên |
 
-Notebook hiện có giữ nguyên đường dẫn cho đến khi nhóm chủ động thống nhất di chuyển.
+Tên Chương 2: **Dữ liệu và tiền xử lý**; Chương 4: **Xây dựng mô hình**; Chương 5: **Kết quả bước đầu và thảo luận**.
 
-- Nhánh đề xuất: `phat/integration`, `hieu/data-logreg`, `dat/eda-tree`, `tien/random-forest`.
-- Cập nhật phiên bản chung trước khi làm; commit theo đầu việc; tránh cùng sửa một notebook.
-- Bàn giao bằng link commit/PR và link outputs trên tab **Phân công**.
-- Khi đổi dữ liệu, split hay preprocessing chung: báo nhóm, cập nhật phiên bản và chạy lại các mô hình bị ảnh hưởng.
-- Tác giả hoàn thiện hướng dẫn chạy cho phần mình; Phát ghép thành hướng dẫn chung khi code đã tích hợp. README này không đưa lệnh chạy giả cho các file chưa được tạo.
+## Việc hỗ trợ chung — không tính khối lượng chuyên môn
 
-## Mốc bàn giao đề xuất
+- Phát ghép định dạng Word/README/ZIP và ghi cấu hình chung; từng tác giả tự sửa nội dung/code của mình.
+- Tiến ghép log/bảng kết quả và dùng công cụ tạo slide từ bản Word đã chốt.
+- Hiếu bàn giao dữ liệu/hướng dẫn preprocessing; Đạt bàn giao hình gốc.
+- Kiểm tra chéo: **Phát → Tiến → Đạt → Hiếu → Phát**; người bên trái kiểm tra phần người bên phải.
+- Mỗi người cập nhật tiến độ và link sản phẩm vào Sheet; nhóm trưởng đại diện nộp bài.
+
+## Tổ chức file và bàn giao
+
+Cấu trúc **đề xuất**, chưa xác nhận các đường dẫn đã được tạo:
+
+| Đường dẫn trong FinalExam | Nội dung |
+| --- | --- |
+| `data/`, `configs/`, `src/` | Dữ liệu/link tải, cấu hình chung, loader/preprocessing/features/evaluation |
+| `notebooks/` | EDA, mô hình và đối chứng A/B/C |
+| `results/<run_id>/`, `logs/` | Params, metrics, dự đoán, log và kết luận từng run |
+| `figures/`, `report/` | Hình gốc và bản xuất Word/slide |
+| `requirements.txt` | Phiên bản thư viện để tái lập |
+
+Giữ notebook hiện có tại đường dẫn cũ cho đến khi nhóm thống nhất di chuyển. Mỗi người bàn giao **code/notebook + log + metrics/hình + nội dung Word có nhận xét + hướng dẫn chạy + nguồn**.
+
+Nhánh đề xuất: `phat/features-ablation`, `hieu/data-logreg`, `dat/eda-tree`, `tien/random-forest`. Cập nhật phiên bản chung trước khi làm; tránh cùng sửa một notebook. Thay dữ liệu/split/preprocessing chung thì cập nhật phiên bản và chạy lại phần bị ảnh hưởng.
+
+Hướng dẫn chạy cụ thể sẽ được tác giả bổ sung khi code đã có; không đưa lệnh chạy giả cho file chưa tạo.
+
+## Mốc đề xuất và điều kiện hoàn thành
 
 | Hạn | Sản phẩm |
 | --- | --- |
-| 01/11 | Chốt bài toán và quy ước |
-| 03/11 | Dữ liệu, EDA, preprocessing, runner/baseline |
-| 04/11 | Các mô hình, hình, metrics và log cá nhân |
-| 05/11 | Kiểm tra chéo, bảng so sánh và nội dung Word |
-| 06/11 | Chốt Word; tạo slide từ Word |
-| 07/11 | Chạy lại từ đầu và tập trình bày |
+| 01/11 | Chốt câu hỏi và quy ước |
+| 03/11 | Dữ liệu, EDA, preprocessing và thiết kế features |
+| 04–05/11 | Baseline, các mô hình/tuning, đối chứng A/B/C, log và phân tích |
+| 06/11 | Chốt nội dung Word và xuất slide |
+| 07/11 | Kiểm tra chạy lại và tập trình bày |
 | 08/11 trước 20:00 | Nộp nội bộ; hạn Classroom 23:59 |
 
-## Hoàn thành và dừng
+Hoàn thành khi có thực nghiệm tái lập được, giải thích được kết quả, code–log–hình–Word khớp và đủ link bàn giao. Tiến độ giữa kỳ phải ghi cả phần chưa thực hiện. Dừng mở rộng khi đủ mục tiêu, thực nghiệm cần thiết và bằng chứng đã thống nhất.
 
-Chỉ đánh dấu **Hoàn thành** khi phần được giao chạy lại được, log–hình–Word khớp nhau, có nhận xét và đủ link bàn giao. Để rõ phần **chưa thực hiện** trong báo cáo giữa kỳ.
-
-Không thêm mô hình/tính năng chỉ để tăng số lượng. Khi đủ mục tiêu, thực nghiệm cần thiết và bằng chứng đã thống nhất, chốt báo cáo.
-
-Gói nộp **Nhom10_StudentDropout_GiuaKy.zip** gồm:
-
-- Báo cáo `.docx` và slide `.pptx`.
-- Source `.py`/`.ipynb`, cấu hình và README chạy lại.
-- Experiment log và hình gốc.
-- Dataset hoặc đường dẫn tải; mô hình đã huấn luyện nếu có.
-- Bảng tiến độ, đóng góp thực tế và kế hoạch giai đoạn tiếp theo.
+ZIP **Nhom10_StudentDropout_GiuaKy.zip** gồm Word, slide, source/config, README chạy lại, experiment log, hình gốc, dataset/link tải, model đã huấn luyện nếu có, đóng góp thực tế và kế hoạch tiếp theo.
