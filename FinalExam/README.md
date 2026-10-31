@@ -21,14 +21,14 @@ Cân khối lượng theo **kỹ thuật, thiết kế thực nghiệm và phân
 
 ## Bốn gói chuyên môn
 
-| Thành viên | Công việc chuyên môn | Thực nghiệm và phân tích phải có | Sản phẩm |
+| Thành viên | Công việc chuyên môn | Thực nghiệm chuyên môn được giao | Sản phẩm |
 | --- | --- | --- | --- |
-| **Dương Gia Phát** | **Feature engineering và ablation** | Xây dựng đặc trưng có ý nghĩa; so sánh A/B/C bằng cùng mô hình/cấu hình/fold; phân tích tác động đặc trưng và giới hạn thời điểm dữ liệu | Hàm tạo đặc trưng, notebook đối chứng, log, bảng/biểu đồ chênh lệch, Word 2.4 và 5.4; thiết kế Chương 3 và bối cảnh Chương 1 |
-| **Lê Văn Hiếu** | **Dữ liệu, preprocessing, baseline và Logistic Regression** | Kiểm tra schema/thiếu/trùng; encoding/scaling đúng trong CV; Dummy vs LR; lỗi theo lớp và train–validation gap | Dữ liệu/link, bảng thuộc tính, preprocessing, notebook baseline/LR, log/hình; Word 2.1, 2.3, 4.1; baseline cho 3.4 |
-| **Văn Nguyễn Thành Đạt** | **EDA, Decision Tree và tuning** | EDA trả lời câu hỏi dữ liệu; cây ban đầu vs tuning; phân tích overfitting, lỗi theo lớp, cấu trúc hoặc đặc trưng cây | Notebook EDA/DT, hình/insights, bảng tuning, log và phân tích; Word 2.2 và 4.2 |
-| **Cái Trần Minh Tiến** | **Random Forest, tuning và phân tích mô hình** | RF ban đầu vs tuning có giới hạn; độ ổn định theo fold; lỗi từng lớp; tầm quan trọng đặc trưng; ưu/nhược điểm so với LR/DT | Notebook RF, log, bảng tuning/metrics và hình; Word 4.3 và đoạn phân tích RF ở Chương 5 |
+| **Dương Gia Phát** | **Feature engineering và ablation** | Xây dựng đặc trưng có ý nghĩa; so sánh A/B/C bằng cùng mô hình/cấu hình/fold; phân tích tác động đặc trưng và giới hạn thời điểm dữ liệu | Hàm tạo đặc trưng, notebook đối chứng, log, bảng/biểu đồ chênh lệch, Word 2.5, 3.4 và 4.6; thiết kế Chương 3 và bối cảnh Chương 1 |
+| **Lê Văn Hiếu** | **Dữ liệu, preprocessing, baseline và Logistic Regression** | Kiểm tra schema/thiếu/trùng; encoding/scaling đúng trong CV; Dummy vs LR; lỗi theo lớp và train–validation gap | Dữ liệu/link, bảng thuộc tính, preprocessing, notebook baseline/LR, log/hình; Word 2.2, 3.1, 3.3, 4.1; baseline cho 3.7 |
+| **Văn Nguyễn Thành Đạt** | **EDA, Decision Tree và tuning** | EDA trả lời câu hỏi dữ liệu; cây ban đầu vs tuning; phân tích overfitting, lỗi theo lớp, cấu trúc hoặc đặc trưng cây | Notebook EDA/DT, hình/insights, bảng tuning, log và phân tích; Word 2.3, 3.2 và 4.2 |
+| **Cái Trần Minh Tiến** | **Random Forest, tuning và phân tích mô hình** | RF ban đầu vs tuning có giới hạn; độ ổn định theo fold; lỗi từng lớp; tầm quan trọng đặc trưng; ưu/nhược điểm so với LR/DT | Notebook RF, log, bảng tuning/metrics và hình; Word 2.4, 4.3 và đoạn phân tích RF ở Chương 4 |
 
-Từng người tự viết đoạn phân tích mô hình/thực nghiệm mình ở Chương 5, tự ghi đóng góp và kế hoạch ở Chương 6, tự bổ sung nguồn. Không chỉ gọi `fit/predict` rồi báo Accuracy; mỗi gói phải có câu hỏi, thực nghiệm so sánh và nhận xét dựa trên bằng chứng.
+Từng người tự viết đoạn phân tích mô hình/thực nghiệm mình ở Chương 4, tự ghi đóng góp và kế hoạch ở Chương 6, tự bổ sung nguồn. Không chỉ gọi `fit/predict` rồi báo Accuracy; mỗi gói phải có câu hỏi, thực nghiệm so sánh và nhận xét dựa trên bằng chứng.
 
 ### Phần chuyên môn của Phát: đối chứng đặc trưng
 
@@ -123,26 +123,51 @@ Ghi cả lần lỗi hoặc không cải thiện. GridSearch có thể ghi một
 
 ## Bố cục báo cáo
 
-Google Doc chỉ có **tiêu đề, chương/mục và khoảng trống**, không điền nội dung hay kết quả. **Không đặt tên thành viên trong tiêu đề chương/mục.** Tên chỉ nằm ở bảng phân công/đóng góp.
+Khung bám **5 chương trong tài liệu cuối kỳ**, bổ sung **Chương 6** để phản ánh tiến độ giữa kỳ. Google Doc chỉ có tiêu đề và khoảng trống, chưa có nội dung/kết quả. **Không đặt tên thành viên trong tiêu đề chương/mục**; tên chỉ nằm trong bảng phân công/đóng góp.
 
-| Chương / mục | Người viết trong bảng phân công |
-| --- | --- |
-| Chương 1. Giới thiệu bài toán | Phát |
-| 2.1. Nguồn dữ liệu, thuộc tính và biến mục tiêu | Hiếu |
-| 2.2. Khám phá và trực quan hóa dữ liệu | Đạt |
-| 2.3. Tiền xử lý dữ liệu | Hiếu |
-| 2.4. Xây dựng đặc trưng | Phát |
-| Chương 3. Thiết kế thực nghiệm | Phát; Hiếu cung cấp kết quả baseline cho 3.4 |
-| 4.1. Logistic Regression | Hiếu |
-| 4.2. Decision Tree | Đạt |
-| 4.3. Random Forest | Tiến |
-| 5.1–5.3. So sánh, lỗi, overfitting và độ ổn định | Mỗi người viết mô hình mình; Tiến ghép bảng/kết luận |
-| 5.4. Thực nghiệm đối chứng và ảnh hưởng đặc trưng | Phát |
-| 5.5. Hạn chế và nhận xét ban đầu | Từng người cung cấp giới hạn phần mình |
-| Chương 6. Tiến độ và kế hoạch | Mỗi người tự điền |
-| Tài liệu tham khảo và phụ lục | Mỗi người bổ sung nguồn và tài nguyên |
+| Chương / mục | Nội dung | Người viết trong bảng phân công |
+| --- | --- | --- |
+| Chương 1. Giới thiệu | Bối cảnh, ý nghĩa, mục tiêu/câu hỏi, Input/Output, loại ML, phạm vi | Phát |
+| Chương 2. Cơ sở lý thuyết và nghiên cứu liên quan | Hướng tiếp cận; nguyên lý, ưu/nhược điểm, lý do chọn các phương pháp | Phát: 2.1/2.5; Hiếu: 2.2 LR; Đạt: 2.3 DT; Tiến: 2.4 RF |
+| 3.1. Mô tả dữ liệu | Nguồn, số mẫu, số thuộc tính, target, schema, ví dụ | Hiếu |
+| 3.2. Khám phá và trực quan hóa dữ liệu | EDA, thống kê, hình và insights | Đạt |
+| 3.3. Tiền xử lý dữ liệu | Thiếu/trùng/ngoại lệ, encoding/scaling và lý do | Hiếu |
+| 3.4. Xây dựng đặc trưng | Công thức, tính hợp lệ, feature sets và thời điểm sử dụng | Phát |
+| 3.5–3.9. Thiết kế phương pháp | Pipeline, split/CV, baseline/metrics, tuning/đối chứng, leakage/tái lập | Phát viết thiết kế; Hiếu cấp baseline; mỗi người cấp cấu hình mô hình mình |
+| 4.1. Kết quả baseline và Logistic Regression | Huấn luyện, tham số, metrics và nhận xét | Hiếu |
+| 4.2. Kết quả Decision Tree | Cây ban đầu, tuning và phân tích | Đạt |
+| 4.3. Kết quả Random Forest | Cấu hình, tuning đã làm và phân tích | Tiến |
+| 4.4–4.5. So sánh và phân tích lỗi | Bảng/biểu đồ, Confusion Matrix, lỗi, overfitting và ổn định | Mỗi người phân tích mình; Tiến ghép bảng |
+| 4.6. Kết quả đối chứng và ảnh hưởng đặc trưng | A/B/C đã chạy, chênh lệch và nhận xét | Phát |
+| 4.7. Nhận xét ban đầu và câu hỏi nghiên cứu | Thảo luận dựa trên bằng chứng | Cả nhóm |
+| Chương 5. Kết luận và hướng phát triển | Kết quả đã đạt ở giữa kỳ, hạn chế, cải tiến | Mỗi người góp phần mình |
+| Chương 6. Tiến độ và đóng góp thực tế | Đã làm/minh chứng, khó khăn, còn lại, kế hoạch có người/thời hạn, đóng góp | Mỗi người tự điền |
+| Tài liệu tham khảo và phụ lục | Nguồn; log; hướng dẫn/tài nguyên; hình/bảng gốc | Mỗi người bổ sung |
 
-Tên Chương 2: **Dữ liệu và tiền xử lý**; Chương 4: **Xây dựng mô hình**; Chương 5: **Kết quả bước đầu và thảo luận**.
+Chương 3 có tên **Dữ liệu và phương pháp**; Chương 4 có tên **Thực nghiệm, kết quả và thảo luận**.
+
+## Phân biệt yêu cầu giữa kỳ và kế hoạch cuối kỳ
+
+- Giữa kỳ phải có **kết quả bước đầu đã thực hiện**, khó khăn và kế hoạch tiếp theo; nội dung không chỉ lặp lại proposal.
+- Tài liệu cuối kỳ yêu cầu baseline, ít nhất hai mô hình phù hợp và tuning ít nhất một mô hình. Kế hoạch nhóm có Dummy/LR/DT/RF và đối chứng; giữa kỳ ghi đúng phần đã làm, phần còn lại đưa Chương 6.
+- Feature engineering được thực hiện khi phù hợp. A/B/C là hướng nhóm chọn để chia gói chuyên môn, **không phải yêu cầu giảng viên bắt buộc hoàn thành đủ ba cấu hình trước giữa kỳ**.
+- Không cần tự áp dụng xử lý thiếu/ngoại lệ nếu dữ liệu không có vấn đề; cần ghi kết quả kiểm tra và giải thích quyết định.
+- Không ghi một mô hình, tuning, Test hay ablation là hoàn thành khi chưa có code/log/kết quả xác minh.
+
+## Đối chiếu sản phẩm phải nộp
+
+| Sản phẩm | Điều kiện hoàn thành | Hiện trạng kiểm tra trong FinalExam và tài liệu chung |
+| --- | --- | --- |
+| Báo cáo **.docx** | Điền báo cáo thật và xuất Microsoft Word từ Google Doc | Hiện mới có khung Doc trống; chưa thấy .docx giữa kỳ trong FinalExam |
+| Slide **.pptx** | Tệp slide có thể mở, khớp số liệu Word | Chưa thấy .pptx giữa kỳ trong FinalExam; link công cụ tạo slide không thay tệp nộp |
+| Source/config/tài nguyên | Có phần đã triển khai, chuẩn bị dữ liệu và chạy lại được | Có notebook của Đạt; chưa xác minh chạy lại và chưa thấy đầy đủ các phần khác trong FinalExam |
+| Experiment log | CSV/Excel hoặc tương đương chứa các lần chạy thật, params/split/metrics/results/notes | README có schema; chưa thấy file log riêng trong FinalExam |
+| Hình gốc | Xuất sơ đồ pipeline, hình EDA/kết quả thực dùng thành file riêng | Notebook có hình nhúng; chưa thấy file hình riêng trong FinalExam |
+| Dataset/link, model nếu có và README | Link tải đúng dữ liệu, cài thư viện, lệnh/thứ tự chạy, nơi lưu outputs; model kèm nếu đã lưu | Có link UCI; README này hiện là workflow, chưa phải hướng dẫn chạy hoàn chỉnh |
+
+Phạm vi kiểm tra là thư mục `FinalExam` trên nhánh `main` và Doc/Sheet được liên kết. **Chưa thấy ở đây không có nghĩa là file chưa tồn tại trên máy hoặc Drive khác**. Mỗi thành viên bổ sung link minh chứng để xác nhận.
+
+Trước khi nộp, xuất **.docx** và **.pptx**, ghép đủ source/config, log thật, hình gốc, dataset/link và README vào **Nhom10_StudentDropout_GiuaKy.zip**. Nhóm trưởng đại diện nộp Classroom; cập nhật trạng thái theo kết quả thực tế. Tab **Đối chiếu yêu cầu** trong Sheet ghi chi tiết từng mục.
 
 ## Việc hỗ trợ chung — không tính khối lượng chuyên môn
 
