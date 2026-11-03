@@ -1,0 +1,9 @@
+{
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.ipynb_checkpoints": true,
+    "FinalExam/.venv": true,
+    "FinalExam/data/raw/*.zip": true,
+    "FinalExam/results/HIEU_BASELINE_LR_*/lr_train_only.joblib": true
+  }
+}
