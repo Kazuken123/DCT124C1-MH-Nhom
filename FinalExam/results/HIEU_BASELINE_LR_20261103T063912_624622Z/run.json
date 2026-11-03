@@ -1,0 +1,87 @@
+{
+  "run_id": "HIEU_BASELINE_LR_20261103T063912_624622Z",
+  "status": "complete",
+  "owner": "Le Van Hieu - 3124411091",
+  "started_at_utc": "2026-11-03T06:39:12.889548+00:00",
+  "objective": "Does fixed LR improve on majority Dummy on the same folds, and which classes remain difficult?",
+  "config": {
+    "config_id": "hieu_baseline_lr_v1",
+    "owner": "Le Van Hieu - 3124411091",
+    "confirmation": "User reports leader Phat confirmed split/CV and shared indices on 2026-11-03",
+    "data_sha256": "3ef126de5cefff26eb11fbb4237f1a1401cb64b488e2f1d598c23cedeb4c45ae",
+    "preprocessing_config": "configs/hieu_preprocessing_v1.json",
+    "split_dir": "configs/splits/student_dropout_seed42_v1",
+    "split": {
+      "test_size": 0.2,
+      "random_state": 42,
+      "stratify": true
+    },
+    "cv": {
+      "n_splits": 5,
+      "shuffle": true,
+      "random_state": 42
+    },
+    "labels": [
+      "Dropout",
+      "Enrolled",
+      "Graduate"
+    ],
+    "dummy": {
+      "strategy": "most_frequent",
+      "random_state": 42
+    },
+    "lr": {
+      "C": 1.0,
+      "l1_ratio": 0.0,
+      "solver": "lbfgs",
+      "max_iter": 2000,
+      "tol": 0.0001,
+      "class_weight": null,
+      "fit_intercept": true,
+      "random_state": 42
+    },
+    "regularization": "L2, default for lbfgs with l1_ratio=0 in scikit-learn 1.9.1",
+    "selection": "Fixed initial LR, no hyperparameter search or feature selection",
+    "features": "All 36 original features; only strip column-name boundary whitespace",
+    "evaluation": "Training scores and validation scores per fold; pooled OOF separately; no Test evaluation",
+    "std_ddof": 0,
+    "thread_limit": 1
+  },
+  "split_manifest": {
+    "data_sha256": "3ef126de5cefff26eb11fbb4237f1a1401cb64b488e2f1d598c23cedeb4c45ae",
+    "row_id_definition": "Zero-based source CSV row, excluding header",
+    "n_rows": 4424,
+    "n_train": 3539,
+    "n_test": 885,
+    "split": {
+      "test_size": 0.2,
+      "random_state": 42,
+      "stratify": true
+    },
+    "cv": {
+      "n_splits": 5,
+      "shuffle": true,
+      "random_state": 42
+    },
+    "provenance": "Reconstructed locally from leader-confirmed recipe; no externally supplied indices in this checkout",
+    "reference": "ThanhDat_EDA_DecisionTree.ipynb: train_test_split and StratifiedKFold cells",
+    "files_sha256": {
+      "train_indices.csv": "16772061f86477d4c3357b52d55c7a258a47c76d929e83711aebdd6d988063ee",
+      "test_indices.csv": "71b65c57e9f4aa5b4c8a56549bd4d0b178c0b20c73f72462eb9b30122b56350f",
+      "train_folds.csv": "78d1cc1f9a055b51db617a6a923aead400f29f6513fd9da6118fdc4e7128ca47"
+    }
+  },
+  "code": {
+    "base_commit": "7b26940c8da3a4e4b4f114b10560f95b54c8d550",
+    "working_tree_status_at_start": "?? FinalExam/configs/hieu_baseline_lr_v1.json\n?? FinalExam/configs/splits/\n?? FinalExam/src/hieu_baseline_lr.py\n",
+    "source_sha256": {
+      "configs/hieu_baseline_lr_v1.json": "3a15a052fb162182a8d4c90d21b8890e684545c0e7df0179bf41bc2889ef7624",
+      "configs/hieu_preprocessing_v1.json": "760e58c0d560379fbed47173cc0c8242718797a9cbf437f7c651b8072f13e27c",
+      "src/hieu_baseline_lr.py": "686f6d0f971c03dc6c79f8429684001b981e3a73c6242860a8e0672b94075e49",
+      "src/hieu_data_preprocessing.py": "d6c6e79e92d1fe0747dc115630544a8f353426a98f92694a0648283fc6f6e99b"
+    }
+  },
+  "test_evaluated": false,
+  "completed_at_utc": "2026-11-03T06:39:15.075202+00:00",
+  "validation_checks": "OOF coverage, no Train/Test overlap, per-fold scaler mean and sample count verified"
+}
