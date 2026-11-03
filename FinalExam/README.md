@@ -193,7 +193,29 @@ Giữ notebook hiện có tại đường dẫn cũ cho đến khi nhóm thống
 
 Nhánh đề xuất: `phat/features-ablation`, `hieu/data-logreg`, `dat/eda-tree`, `tien/random-forest`. Cập nhật phiên bản chung trước khi làm; tránh cùng sửa một notebook. Thay dữ liệu/split/preprocessing chung thì cập nhật phiên bản và chạy lại phần bị ảnh hưởng.
 
-Hướng dẫn chạy cụ thể sẽ được tác giả bổ sung khi code đã có; không đưa lệnh chạy giả cho file chưa tạo.
+### Chạy kiểm tra dữ liệu và Dummy/Logistic Regression
+
+Các lệnh dưới đây chạy từ thư mục `FinalExam`, với Python 3.12 đã được cài trên máy:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-hieu.txt
+.\.venv\Scripts\python.exe -m src.hieu_baseline_lr
+```
+
+`requirements-hieu.txt` ghi thư viện cho phần dữ liệu/Dummy/LR, chưa phải môi trường chung đã được xác nhận cho mọi mô hình. Danh sách dựa trên môi trường của run có sẵn; chưa kiểm tra lại việc cài từ đầu trong môi trường sạch.
+
+Để xem phần kiểm tra dữ liệu, mở `Hieu_DataUnderstanding.ipynb` trong VS Code và chọn kernel của `.venv`. Notebook này không huấn luyện mô hình. Dummy/LR chạy bằng script `src/hieu_baseline_lr.py`, không có notebook mô hình riêng.
+
+CSV nguồn nằm tại `data/raw/data.csv`; hàm đọc kiểm tra SHA-256, chuẩn hóa tên cột trên bản làm việc và giữ thứ tự dòng. Preprocessing cho LR được cấu hình tại `configs/hieu_preprocessing_v1.json` (18 cột StandardScaler, 10 cột One-Hot, 8 cột giữ nguyên). Trạng thái chờ xác nhận trong bản preprocessing v1 ghi nhận thời điểm thiết kế ban đầu; người dùng đã báo Phát xác nhận cấu hình chia tập/CV sau đó.
+
+Script dùng cấu hình `configs/hieu_baseline_lr_v1.json`, tạo pipeline mới trong từng fold và sinh một run mới tại `results/HIEU_BASELINE_LR_<thời gian>/`, cùng log tại `logs/`. Các file tại `configs/splits/student_dropout_seed42_v1/` được tái tạo theo công thức đã xác nhận, chưa đối chiếu với một bộ indices bên ngoài checkout. Nhóm cần dùng cùng file chỉ số hoặc đối chiếu thứ tự dòng/fold trước khi so sánh chính thức.
+
+Run có sẵn `HIEU_BASELINE_LR_20261103T063912_624622Z` đã được kiểm tra tính nhất quán giữa dự đoán và bảng chỉ số, nhưng chưa tái chạy để xác minh trong chat chính. Đây chưa phải xác nhận hoàn tất hoặc bàn giao. `run.json` và hash lưu phiên bản tại thời điểm chạy, không được sửa để khớp các chỉnh sửa hướng dẫn sau đó.
+
+Các bảng chính: `fold_metrics.csv`, `cv_summary.csv`, `oof_predictions.csv`, `class_metrics_oof.csv`, `oof_summary.csv`; hình và ma trận nhầm lẫn nằm cùng run. `run.json`, `environment.json`, `warnings.json` và `leakage_checks.csv` phục vụ truy vết. Giữ riêng CV mean, OOF và Test khi trình bày. Script chưa đánh giá Test.
+
+Model `lr_train_only.joblib` là file sinh ra cục bộ, không đưa vào Git. Khi chạy đối chứng A/B/C, tạo pipeline mới trong mỗi fold; không dùng lại scaler/encoder đã fit toàn bộ Train.
 
 ## Mốc đề xuất và điều kiện hoàn thành
 

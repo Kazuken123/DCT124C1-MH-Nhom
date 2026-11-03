@@ -1,7 +1,7 @@
 """Reproducible Dummy/LR evaluation. Test rows are never scored here.
 
 Run from FinalExam: python -m src.hieu_baseline_lr
-Setup, outputs and verification status are documented in HIEU_README.md.
+Setup, outputs and verification status are documented in README.md.
 """
 
 import argparse
