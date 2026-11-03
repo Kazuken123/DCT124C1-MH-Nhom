@@ -1,0 +1,19 @@
+{
+  "config_id": "hieu_baseline_lr_v1",
+  "owner": "Le Van Hieu - 3124411091",
+  "confirmation": "User reports leader Phat confirmed split/CV and shared indices on 2026-11-03",
+  "data_sha256": "3ef126de5cefff26eb11fbb4237f1a1401cb64b488e2f1d598c23cedeb4c45ae",
+  "preprocessing_config": "configs/hieu_preprocessing_v1.json",
+  "split_dir": "configs/splits/student_dropout_seed42_v1",
+  "split": {"test_size": 0.2, "random_state": 42, "stratify": true},
+  "cv": {"n_splits": 5, "shuffle": true, "random_state": 42},
+  "labels": ["Dropout", "Enrolled", "Graduate"],
+  "dummy": {"strategy": "most_frequent", "random_state": 42},
+  "lr": {"C": 1.0, "l1_ratio": 0.0, "solver": "lbfgs", "max_iter": 2000, "tol": 0.0001, "class_weight": null, "fit_intercept": true, "random_state": 42},
+  "regularization": "L2, default for lbfgs with l1_ratio=0 in scikit-learn 1.9.1",
+  "selection": "Fixed initial LR, no hyperparameter search or feature selection",
+  "features": "All 36 original features; only strip column-name boundary whitespace",
+  "evaluation": "Training scores and validation scores per fold; pooled OOF separately; no Test evaluation",
+  "std_ddof": 0,
+  "thread_limit": 1
+}

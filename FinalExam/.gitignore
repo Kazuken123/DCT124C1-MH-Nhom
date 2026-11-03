@@ -1,1 +1,4 @@
 
+## Rebuildable local artifacts; experiment tables, plots and logs remain tracked.
+*.joblib
+*.py[cod]
