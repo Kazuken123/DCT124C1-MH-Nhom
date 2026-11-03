@@ -1,0 +1,2 @@
+# Preserve the exact source bytes used by the SHA-256 dataset check.
+data/raw/data.csv -text whitespace=cr-at-eol
