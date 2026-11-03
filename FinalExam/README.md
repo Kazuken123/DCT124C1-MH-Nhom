@@ -203,7 +203,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m src.hieu_baseline_lr
 ```
 
-`requirements-hieu.txt` ghi thư viện cho phần dữ liệu/Dummy/LR, chưa phải môi trường chung đã được xác nhận cho mọi mô hình. Danh sách dựa trên môi trường của run có sẵn; chưa kiểm tra lại việc cài từ đầu trong môi trường sạch.
+`requirements-hieu.txt` ghi thư viện cho phần dữ liệu/Dummy/LR, chưa phải môi trường chung đã được xác nhận cho mọi mô hình. Ngày 03/11/2026 đã cài danh sách này vào môi trường `.venv` mới với Python 3.12.14; `pip check` đạt, tám ô code notebook dữ liệu và script Dummy/LR đã chạy thành công.
 
 Để xem phần kiểm tra dữ liệu, mở `Hieu_DataUnderstanding.ipynb` trong VS Code và chọn kernel của `.venv`. Notebook này không huấn luyện mô hình. Dummy/LR chạy bằng script `src/hieu_baseline_lr.py`, không có notebook mô hình riêng.
 
@@ -211,7 +211,9 @@ CSV nguồn nằm tại `data/raw/data.csv`; hàm đọc kiểm tra SHA-256, chu
 
 Script dùng cấu hình `configs/hieu_baseline_lr_v1.json`, tạo pipeline mới trong từng fold và sinh một run mới tại `results/HIEU_BASELINE_LR_<thời gian>/`, cùng log tại `logs/`. Các file tại `configs/splits/student_dropout_seed42_v1/` được tái tạo theo công thức đã xác nhận, chưa đối chiếu với một bộ indices bên ngoài checkout. Nhóm cần dùng cùng file chỉ số hoặc đối chiếu thứ tự dòng/fold trước khi so sánh chính thức.
 
-Run có sẵn `HIEU_BASELINE_LR_20261103T063912_624622Z` đã được kiểm tra tính nhất quán giữa dự đoán và bảng chỉ số, nhưng chưa tái chạy để xác minh trong chat chính. Đây chưa phải xác nhận hoàn tất hoặc bàn giao. `run.json` và hash lưu phiên bản tại thời điểm chạy, không được sửa để khớp các chỉnh sửa hướng dẫn sau đó.
+Run đã kiểm chứng dùng cho báo cáo: `HIEU_BASELINE_LR_20261103T071117_365642Z`. Lần chạy lại khớp sáu bảng của bản trước trong sai số 1e-12, không có cảnh báo hội tụ; dự đoán OOF, fold và nhãn nguồn đã được đối chiếu. `verification.json` ghi phạm vi kiểm tra. Bản trước `HIEU_BASELINE_LR_20261103T063912_624622Z` được giữ trong lịch sử Git ở commit `8521328`, thay vì để hai bộ kết quả trùng trong cây thư mục. `run.json` và hash lưu phiên bản tại thời điểm chạy, không được sửa để khớp các chỉnh sửa hướng dẫn sau đó.
+
+LR cố định đạt Macro-F1 CV 0,6997 ± 0,0099, Accuracy CV 0,7754 và Recall Dropout CV 0,7748; Dummy đạt Macro-F1 CV 0,2220. Đây là kết quả Train/CV, chưa phải Test và không đủ để khẳng định LR tốt nhất nhóm. Gói bàn giao gồm code, hai cấu hình preprocessing/LR, bộ chỉ số chia tập, thư mục run và log cùng mã run; người nhận cần tự xác nhận kiểm tra chéo. Phần ôn và kiểm tra hiểu bài được người dùng để sau phần hoàn thiện sản phẩm.
 
 Các bảng chính: `fold_metrics.csv`, `cv_summary.csv`, `oof_predictions.csv`, `class_metrics_oof.csv`, `oof_summary.csv`; hình và ma trận nhầm lẫn nằm cùng run. `run.json`, `environment.json`, `warnings.json` và `leakage_checks.csv` phục vụ truy vết. Giữ riêng CV mean, OOF và Test khi trình bày. Script chưa đánh giá Test.
 

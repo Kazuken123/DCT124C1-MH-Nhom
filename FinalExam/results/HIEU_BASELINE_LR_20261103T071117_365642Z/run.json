@@ -1,8 +1,8 @@
 {
-  "run_id": "HIEU_BASELINE_LR_20261103T063912_624622Z",
+  "run_id": "HIEU_BASELINE_LR_20261103T071117_365642Z",
   "status": "complete",
   "owner": "Le Van Hieu - 3124411091",
-  "started_at_utc": "2026-11-03T06:39:12.889548+00:00",
+  "started_at_utc": "2026-11-03T07:11:17.576989+00:00",
   "objective": "Does fixed LR improve on majority Dummy on the same folds, and which classes remain difficult?",
   "config": {
     "config_id": "hieu_baseline_lr_v1",
@@ -72,16 +72,16 @@
     }
   },
   "code": {
-    "base_commit": "7b26940c8da3a4e4b4f114b10560f95b54c8d550",
-    "working_tree_status_at_start": "?? FinalExam/configs/hieu_baseline_lr_v1.json\n?? FinalExam/configs/splits/\n?? FinalExam/src/hieu_baseline_lr.py\n",
+    "base_commit": "25bb3c071371bea3e8b780e1cca0d42e8cc0787f",
+    "working_tree_status_at_start": "",
     "source_sha256": {
       "configs/hieu_baseline_lr_v1.json": "3a15a052fb162182a8d4c90d21b8890e684545c0e7df0179bf41bc2889ef7624",
       "configs/hieu_preprocessing_v1.json": "760e58c0d560379fbed47173cc0c8242718797a9cbf437f7c651b8072f13e27c",
-      "src/hieu_baseline_lr.py": "686f6d0f971c03dc6c79f8429684001b981e3a73c6242860a8e0672b94075e49",
+      "src/hieu_baseline_lr.py": "10d81fa8995b34d5cd7cae8f82c3fe2af707f2b5aef456018417d2e96f689380",
       "src/hieu_data_preprocessing.py": "d6c6e79e92d1fe0747dc115630544a8f353426a98f92694a0648283fc6f6e99b"
     }
   },
   "test_evaluated": false,
-  "completed_at_utc": "2026-11-03T06:39:15.075202+00:00",
+  "completed_at_utc": "2026-11-03T07:11:22.333817+00:00",
   "validation_checks": "OOF coverage, no Train/Test overlap, per-fold scaler mean and sample count verified"
 }

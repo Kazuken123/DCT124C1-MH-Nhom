@@ -1,6 +1,6 @@
 # Phân tích Dummy và Logistic Regression — Lê Văn Hiếu
 
-Run: HIEU_BASELINE_LR_20261103T063912_624622Z. Dữ liệu Train có 3539 sinh viên; Test 885 sinh viên được giữ riêng, chưa đánh giá.
+Run: HIEU_BASELINE_LR_20261103T071117_365642Z. Dữ liệu Train có 3539 sinh viên; Test 885 sinh viên được giữ riêng, chưa đánh giá.
 
 ## 1. Câu hỏi và thiết kế
 
