@@ -1,7 +1,0 @@
-model,evaluation,label,precision,recall,f1-score,support
-Dummy,pooled_OOF_train_only,Dropout,0.0,0.0,0.0,1137.0
-Dummy,pooled_OOF_train_only,Enrolled,0.0,0.0,0.0,635.0
-Dummy,pooled_OOF_train_only,Graduate,0.4992935857586889,1.0,0.6660384470410856,1767.0
-LR,pooled_OOF_train_only,Dropout,0.7980072463768116,0.7748460861917327,0.786256135653726,1137.0
-LR,pooled_OOF_train_only,Enrolled,0.5741626794258373,0.3779527559055118,0.45584045584045585,635.0
-LR,pooled_OOF_train_only,Graduate,0.80466038671294,0.9185059422750425,0.8578224101479915,1767.0
