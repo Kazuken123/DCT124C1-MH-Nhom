@@ -1,0 +1,9 @@
+[
+  {
+    "fold": null,
+    "stage": "index_write",
+    "category": "FutureWarning",
+    "source": "observed console output",
+    "message": "The behavior of DataFrame concatenation with empty or all-NA entries is deprecated."
+  }
+]

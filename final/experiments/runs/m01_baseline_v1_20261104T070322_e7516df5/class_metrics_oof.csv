@@ -1,0 +1,4 @@
+label,precision,recall,f1-score,support
+Dropout,0.0,0.0,0.0,1137.0
+Enrolled,0.0,0.0,0.0,635.0
+Graduate,0.4992935857586889,1.0,0.6660384470410856,1767.0

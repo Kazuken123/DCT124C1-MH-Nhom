@@ -1,0 +1,39 @@
+{
+  "base_commit": "d3ce745398f5b8604d6b2a176bbe2a19b82e0f36",
+  "working_tree_status_at_start": " M final/.gitattributes\n M final/experiments/results.csv\n M final/models/m01_baseline/v1/config.yaml\n M final/models/m01_baseline/v1/metrics.json\n M final/models/m01_baseline/v1/notes.md\n M final/models/m01_baseline/v1/train.py\n M final/models/m05_logistic_regression/v1/config.yaml\n M final/models/m05_logistic_regression/v1/notes.md\n M final/models/m05_logistic_regression/v1/train.py\n M final/requirements.txt\n M final/src/evaluate.py\n M final/src/tracking.py\n?? final/experiments/runs/m01_baseline_v1_20261104T070322_e7516df5/\n",
+  "source_sha256": {
+    "src/data.py": "b07ff2d171aa89a106c058e1515b1b0286f68c276a5809309a9d4380b10c3246",
+    "src/features.py": "26b4fae39df10751601d763d31b6a69d866c84ac0af1ff7458af01bdb16c0b4f",
+    "src/evaluate.py": "bbc9d44ebca652e91fd257bbc178cf2c1f8a460b178f1467fbf39d66f26ba321",
+    "src/tracking.py": "98ae0ee9126abbe365ec94300a66dd8c65ebf01f4f879ff011afe448596809ea",
+    "configs/lr_preprocessing_v1.json": "99e6ae8de4b591efbaf130dc1b443076cf84fcac5fb92710ee83589174703398",
+    "requirements.txt": "0bd7e8916e7386bd1322a5e8ce7fada5ab07c4b368124326095e913090266fbe",
+    "models/m01_baseline/v1/config.yaml": "9dc01d529cb03c7bc8e05e531ca2c12eabd9da1646f223725c0b0ebd3d927be3",
+    "models/m01_baseline/v1/train.py": "717984b99a4bb72bef1d56dde8e4d3ced7b24dda1205f2eef050bafede558ecd"
+  },
+  "note": "Source may be uncommitted during review; hashes identify the executed files.",
+  "split_manifest": {
+    "data_sha256": "3ef126de5cefff26eb11fbb4237f1a1401cb64b488e2f1d598c23cedeb4c45ae",
+    "row_id_definition": "Zero-based source CSV row, excluding header",
+    "n_rows": 4424,
+    "n_train": 3539,
+    "n_test": 885,
+    "split": {
+      "test_size": 0.2,
+      "random_state": 42,
+      "stratify": true
+    },
+    "cv": {
+      "n_splits": 5,
+      "shuffle": true,
+      "random_state": 42
+    },
+    "provenance": "Reconstructed locally from leader-confirmed recipe; no externally supplied indices in this checkout",
+    "reference": "ThanhDat_EDA_DecisionTree.ipynb: train_test_split and StratifiedKFold cells",
+    "files_sha256": {
+      "train_indices.csv": "16772061f86477d4c3357b52d55c7a258a47c76d929e83711aebdd6d988063ee",
+      "test_indices.csv": "71b65c57e9f4aa5b4c8a56549bd4d0b178c0b20c73f72462eb9b30122b56350f",
+      "train_folds.csv": "78d1cc1f9a055b51db617a6a923aead400f29f6513fd9da6118fdc4e7128ca47"
+    }
+  }
+}

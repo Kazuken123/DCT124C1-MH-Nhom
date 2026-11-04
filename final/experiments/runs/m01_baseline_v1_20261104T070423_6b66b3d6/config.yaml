@@ -1,0 +1,9 @@
+model_id: m01_baseline
+version: v1
+owner: Le Van Hieu - 3124411091
+objective: Establish the majority-class reference on the shared five folds.
+feature_set: original_36
+preprocessing_config: null
+params:
+  strategy: most_frequent
+  random_state: 42

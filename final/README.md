@@ -264,7 +264,33 @@ preprocessor = make_preprocessor()  # mới, chưa fit
 
 Các file split được nạp nguyên thứ tự và kiểm tra checksum theo manifest. Thuộc tính Git giữ CSV nguồn nguyên byte và CSV chỉ số ở LF, tránh sai checksum do CRLF trên Windows. Nguồn gốc tái tạo bộ chia được giữ trong manifest; notebook cũ được tham chiếu ở đó hiện nằm trong lịch sử Git trước khi chuyển khung.
 
-Các lệnh huấn luyện, đánh giá và đồng bộ W&B/Sheets sẽ được bổ sung sau khi mã nguồn tương ứng được triển khai và kiểm thử. Hiện README không cam kết các lệnh đó đã chạy được.
+### Chạy Dummy và Logistic Regression v1
+
+Từ gốc repo, sau khi cài `final/requirements.txt`:
+
+```powershell
+.\.venv\Scripts\python.exe final/models/m01_baseline/v1/train.py
+.\.venv\Scripts\python.exe final/models/m05_logistic_regression/v1/train.py
+```
+
+Trên Codespaces/Linux, thay đường dẫn interpreter bằng `python3` trong môi trường đã kích hoạt. Trên Windows có thể đặt `$env:MPLCONFIGDIR = "$PWD/.venv/matplotlib-cache"` trước khi chạy nếu thư mục cache người dùng không ghi được.
+
+Mỗi lệnh tạo một run mới, dùng nguyên bộ chỉ số nhóm, đánh giá CV 5-fold trên Train và fit lại model trên toàn Train để bàn giao. Script không dự đoán hoặc đánh giá Test. Mỗi fold tạo mới model/Pipeline; không tuning hoặc thêm đặc trưng ở v1. LR giữ C=1, L2 (l1_ratio=0 với sklearn 1.9.1), lbfgs, max_iter=2000, tol=1e-4, class_weight=None.
+
+Hai run v1 được kiểm tra ngày 04/11/2026:
+
+- Dummy: `m01_baseline_v1_20261104T070423_6b66b3d6`, Macro-F1 CV 0,2220; Accuracy CV 0,4993; Recall Dropout CV 0.
+- LR: `m05_logistic_regression_v1_20261104T070444_33387318`, Macro-F1 CV 0,6997 ± 0,0099 (ddof=0); Accuracy CV 0,7754; Recall Dropout CV 0,7748.
+
+Kết quả số và dự đoán OOF được đối chiếu với run giữa kỳ `HIEU_BASELINE_LR_20261103T071117_365642Z` trong lịch sử Git; xem `verification.json` của từng run để biết phạm vi kiểm tra. Đây là chạy lại có huấn luyện thực tế trong khung mới, không phải nhập lại kết quả cũ. Chưa có căn cứ kết luận LR tốt nhất nhóm.
+
+Run Dummy đầu `m01_baseline_v1_20261104T070322_e7516df5` được giữ với trạng thái `superseded`: huấn luyện hoàn thành nhưng phần ghi chỉ mục phát cảnh báo pandas; đã thay phần ghi CSV và chạy lại Dummy. Không tính lần kiểm tra lại thành v2.
+
+Tracking hiện lưu cục bộ: `experiments/results.csv` là chỉ mục; mỗi run giữ config, git/source hashes, environment, metrics, fold metrics, OOF, cảnh báo, nhận xét và hình. File `models/m01_baseline/v1/metrics.json` chỉ chỉ dẫn nơi lấy kết quả, không phải metrics của một lần chạy. Model `model_train_only.joblib` bị Git bỏ qua; chạy lại để tạo khi cần bàn giao.
+
+Chưa đồng bộ W&B hoặc Google Sheets vì cấu hình trong checkout chưa có. `tracking.json` ghi rõ `wandb_status=not_configured` và `sheets_synced=false`; không cần tài khoản cloud để tái lập kết quả cục bộ. Không chạy đồng thời hai script cùng ghi `experiments/results.csv` trong một checkout; các thành viên dùng checkout riêng và xử lý ghép chỉ mục khi tích hợp.
+
+Lịch sử Test: notebook RF cũ đã đánh giá trên Test trước khi đổi khung. Hai run Dummy/LR này không dùng Test, nhưng việc tạo lại cấu trúc không biến Test toàn nhóm thành tập chưa từng được xem. Các bước tiếp theo chọn cấu hình bằng Train-CV và ghi đúng giới hạn của đánh giá.
 
 ## 11. Báo cáo cuối kỳ
 
@@ -288,10 +314,10 @@ Sản phẩm hoàn thiện gồm báo cáo, slide, mã nguồn, README và demo 
 - [x] Hoàn thiện `src/data.py`: loader và nạp split có kiểm chứng.
 - [x] Khôi phục preprocessing LR v1 trong `src/features.py`; chưa bổ sung feature engineering.
 - [ ] Hoàn thiện `src/features.py`.
-- [ ] Hoàn thiện `src/evaluate.py`.
-- [ ] Hoàn thiện `src/tracking.py`.
+- [x] Có `src/evaluate.py` cho Dummy/LR v1: CV, OOF, lỗi theo lớp và kiểm tra leakage.
+- [x] Có `src/tracking.py` lưu run/chỉ mục cục bộ; chưa tích hợp cloud.
 - [ ] Cấu hình W&B và nhật ký Google Sheets.
-- [ ] Huấn luyện và đánh giá Dummy baseline.
+- [x] Huấn luyện và đánh giá Dummy baseline, LR v1 trên CV; lưu bằng chứng.
 - [ ] Thực nghiệm các thuật toán được phân công.
 - [ ] Thực hiện Ablation Study khi phù hợp.
 - [ ] Chốt champion và đánh giá Test cuối cùng.
