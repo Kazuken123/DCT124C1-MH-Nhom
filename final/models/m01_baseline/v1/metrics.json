@@ -1,0 +1,7 @@
+{
+  "model_id": "m01_baseline",
+  "version": "v1",
+  "results_index_from_project_root": "experiments/results.csv",
+  "run_metrics_from_project_root": "experiments/runs/<run_id>/metrics.json",
+  "note": "Each execution has its own metrics; this file only describes where to find them."
+}
