@@ -116,7 +116,7 @@ Gồm bốn file:
 | `m03_random_forest` | Random Forest | Mô hình tập hợp nhiều cây |
 | `m04_xgboost` | XGBoost | Dự kiến, chờ phân công |
 | `m05_logistic_regression` | Logistic Regression | Mô hình tuyến tính |
-| `m10_ensemble` | Ensemble | Dự kiến, chỉ triển khai khi có cơ sở |
+
 
 Danh sách này thể hiện các thư mục đã thiết kế, **không đồng nghĩa tất cả mô hình đã được huấn luyện**.
 
