@@ -41,8 +41,15 @@ def run_cv_experiment(config_path, model_factory):
     """
     config_path = Path(config_path).resolve()
     config = yaml.safe_load(config_path.read_text(encoding="utf-8"))
-    if config["version"] != "v1" or config["feature_set"] != "original_36":
-        raise ValueError("This v1 runner expects original_36 features")
+    model_id = config["model_id"]
+    version = config["version"]
+
+    supported_version = version == "v1" or (
+        model_id == "m05_logistic_regression" and version == "v2"
+    )
+
+    if not supported_version or config["feature_set"] != "original_36":
+        raise ValueError("Unsupported model version or feature set")
     X, y = load_student_data()
     train_ids, test_ids, folds, split_manifest = load_splits()
     X_train, y_train = X.iloc[train_ids], y.iloc[train_ids]
@@ -132,13 +139,13 @@ def run_cv_experiment(config_path, model_factory):
         figures.mkdir()
         fig, ax = plt.subplots(figsize=(6.4, 5))
         ConfusionMatrixDisplay(cm, display_labels=LABELS).plot(ax=ax, colorbar=False, cmap="Blues")
-        ax.set_title(f"{config['model_id']} v1: Train OOF (n={len(train_ids)})")
+        ax.set_title(f"{config['model_id']} {version}: Train OOF (n={len(train_ids)})")
         fig.tight_layout(); fig.savefig(figures / "confusion_matrix.png", dpi=150); plt.close(fig)
         fig, ax = plt.subplots(figsize=(6.4, 4))
         ax.plot(frame.fold, frame.train_f1_macro, "o-", label="Train Macro-F1")
         ax.plot(frame.fold, frame.valid_f1_macro, "s-", label="Validation Macro-F1")
         ax.set(xlabel="CV fold", ylabel="Macro-F1 (0–1)", ylim=(0, 1), xticks=range(1, 6),
-               title=f"{config['model_id']} v1: same five saved folds")
+                title=f"{config['model_id']} {version}: same five saved folds")
         ax.legend(); fig.tight_layout(); fig.savefig(figures / "cv_macro_f1.png", dpi=150); plt.close(fig)
         note = f"""# {config['model_id']} {config['version']}
 
