@@ -9,3 +9,10 @@ requirements.txt text eol=lf
 .gitignore text eol=lf
 reports/tables/*.json text eol=lf
 README.md whitespace=cr-at-eol
+models/**/train.py text eol=lf
+models/**/config.yaml text eol=lf
+models/**/notes.md text eol=lf
+models/**/metrics.json text eol=lf
+experiments/results.csv text eol=lf
+experiments/runs/** text eol=lf
+experiments/runs/**/figures/*.png -text
