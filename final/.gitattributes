@@ -1,2 +1,11 @@
 # Preserve source CSV bytes for reproducible SHA-256 checks.
 data/raw/data.csv -text whitespace=cr-at-eol
+
+# Match the LF bytes recorded in the shared split manifest.
+configs/splits/student_dropout_seed42_v1/*.csv text eol=lf
+configs/*.json text eol=lf
+src/*.py text eol=lf
+requirements.txt text eol=lf
+.gitignore text eol=lf
+reports/tables/*.json text eol=lf
+README.md whitespace=cr-at-eol

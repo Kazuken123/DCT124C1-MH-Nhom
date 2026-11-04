@@ -1,0 +1,68 @@
+{
+  "config_id": "lr_preprocessing_v1",
+  "intended_model": "LogisticRegression",
+  "data_csv_sha256": "3ef126de5cefff26eb11fbb4237f1a1401cb64b488e2f1d598c23cedeb4c45ae",
+  "column_name_cleanup": "strip_leading_trailing_whitespace",
+  "numeric": {
+    "columns": [
+      "Previous qualification (grade)",
+      "Admission grade",
+      "Age at enrollment",
+      "Unemployment rate",
+      "Inflation rate",
+      "GDP",
+      "Curricular units 1st sem (credited)",
+      "Curricular units 1st sem (enrolled)",
+      "Curricular units 1st sem (evaluations)",
+      "Curricular units 1st sem (approved)",
+      "Curricular units 1st sem (grade)",
+      "Curricular units 1st sem (without evaluations)",
+      "Curricular units 2nd sem (credited)",
+      "Curricular units 2nd sem (enrolled)",
+      "Curricular units 2nd sem (evaluations)",
+      "Curricular units 2nd sem (approved)",
+      "Curricular units 2nd sem (grade)",
+      "Curricular units 2nd sem (without evaluations)"
+    ],
+    "transformer": "StandardScaler",
+    "with_mean": true,
+    "with_std": true
+  },
+  "categorical": {
+    "columns": [
+      "Marital status",
+      "Application mode",
+      "Course",
+      "Previous qualification",
+      "Nacionality",
+      "Mother's qualification",
+      "Father's qualification",
+      "Mother's occupation",
+      "Father's occupation",
+      "Application order"
+    ],
+    "transformer": "OneHotEncoder",
+    "handle_unknown": "ignore",
+    "drop": null
+  },
+  "binary": {
+    "columns": [
+      "Daytime/evening attendance",
+      "Displaced",
+      "Educational special needs",
+      "Debtor",
+      "Tuition fees up to date",
+      "Gender",
+      "Scholarship holder",
+      "International"
+    ],
+    "transformer": "passthrough"
+  },
+  "application_order_representation": "one_hot",
+  "qualification_unknown_code_policy": "keep_34_as_category",
+  "imputation": null,
+  "outlier_removal": null,
+  "resampling": null,
+  "fit_scope": "training_partition_inside_each_cv_pipeline",
+  "provenance": "Migrated without changing column groups or transformations from commit 436ef03, FinalExam/configs/hieu_preprocessing_v1.json."
+}

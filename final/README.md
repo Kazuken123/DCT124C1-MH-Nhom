@@ -231,9 +231,38 @@ Sau khi `requirements.txt` được hoàn thiện, cài đặt thư viện bằn
 
 `pip install -r final/requirements.txt`
 
-Lệnh đọc và kiểm chứng dữ liệu dự kiến:
+Lệnh đọc và kiểm chứng dữ liệu từ thư mục gốc repo:
 
 `python3 final/src/data.py`
+
+Trên Windows, nếu đã tạo `.venv` ở gốc repo:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r final/requirements.txt
+.\.venv\Scripts\python.exe final/src/data.py
+```
+
+Phần dữ liệu/preprocessing đã kiểm tra với Python 3.12.14. `requirements.txt` hiện chỉ bao gồm thư viện cho phần này, chưa phải môi trường đã kiểm chứng cho XGBoost, demo hoặc tracking.
+
+Lệnh kiểm chứng chỉ đọc CSV và bộ chỉ số có sẵn, in số mẫu/phân phối lớp từng fold; không tạo lại split, fit preprocessing hoặc huấn luyện mô hình. Minh chứng kiểm tra ngày 04/11/2026 nằm tại `reports/tables/data_validation_v1.json`. Trong kiểm thử riêng, preprocessing được fit tạm trên phần Train của từng fold để kiểm tra scaler; không lưu transformer đã fit và không huấn luyện classifier.
+
+Khi viết mô hình, chạy từ `final/` và dùng API chung:
+
+```python
+from src.data import load_student_data, load_splits
+from src.features import make_preprocessor
+
+X, y = load_student_data()  # Target nằm riêng ở y; row index giữ thứ tự nguồn
+train_ids, test_ids, folds, manifest = load_splits()
+X_train, y_train = X.iloc[train_ids], y.iloc[train_ids]
+preprocessor = make_preprocessor()  # mới, chưa fit
+# folds chứa vị trí tương đối trong X_train, không phải row_id toàn dataset.
+# Đặt preprocessor vào Pipeline mới trong từng fold của LR.
+```
+
+`configs/lr_preprocessing_v1.json` bảo toàn cấu hình LR đã kiểm chứng: 18 cột StandardScaler, 10 cột One-Hot và 8 cột nhị phân giữ nguyên. Đây là preprocessing của LR v1; mô hình cây có thể dùng cấu hình phù hợp riêng. Chưa thêm đặc trưng, imputation, loại ngoại lệ hoặc resampling.
+
+Các file split được nạp nguyên thứ tự và kiểm tra checksum theo manifest. Thuộc tính Git giữ CSV nguồn nguyên byte và CSV chỉ số ở LF, tránh sai checksum do CRLF trên Windows. Nguồn gốc tái tạo bộ chia được giữ trong manifest; notebook cũ được tham chiếu ở đó hiện nằm trong lịch sử Git trước khi chuyển khung.
 
 Các lệnh huấn luyện, đánh giá và đồng bộ W&B/Sheets sẽ được bổ sung sau khi mã nguồn tương ứng được triển khai và kiểm thử. Hiện README không cam kết các lệnh đó đã chạy được.
 
@@ -255,8 +284,9 @@ Sản phẩm hoàn thiện gồm báo cáo, slide, mã nguồn, README và demo 
 - [x] Đưa cấu trúc lên nhánh `main`.
 - [x] Có dữ liệu gốc và source manifest.
 - [x] Khôi phục bộ chỉ số Train/Test và CV vào thư mục làm việc.
-- [ ] Xác nhận bộ split đã được commit và kiểm tra phân phối lớp theo từng fold.
-- [ ] Hoàn thiện `src/data.py`.
+- [x] Xác nhận bộ split đã được commit và kiểm tra phân phối lớp theo từng fold.
+- [x] Hoàn thiện `src/data.py`: loader và nạp split có kiểm chứng.
+- [x] Khôi phục preprocessing LR v1 trong `src/features.py`; chưa bổ sung feature engineering.
 - [ ] Hoàn thiện `src/features.py`.
 - [ ] Hoàn thiện `src/evaluate.py`.
 - [ ] Hoàn thiện `src/tracking.py`.

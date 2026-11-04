@@ -1,0 +1,99 @@
+{
+  "data_sha256": "3ef126de5cefff26eb11fbb4237f1a1401cb64b488e2f1d598c23cedeb4c45ae",
+  "n_rows": 4424,
+  "n_features": 36,
+  "n_train": 3539,
+  "n_test": 885,
+  "train_class_counts": {
+    "Dropout": 1137,
+    "Enrolled": 635,
+    "Graduate": 1767
+  },
+  "test_class_counts": {
+    "Dropout": 284,
+    "Enrolled": 159,
+    "Graduate": 442
+  },
+  "validation_folds": [
+    {
+      "fold": 1,
+      "n_fit": 2831,
+      "n_valid": 708,
+      "class_counts": {
+        "Dropout": 227,
+        "Enrolled": 127,
+        "Graduate": 354
+      }
+    },
+    {
+      "fold": 2,
+      "n_fit": 2831,
+      "n_valid": 708,
+      "class_counts": {
+        "Dropout": 227,
+        "Enrolled": 127,
+        "Graduate": 354
+      }
+    },
+    {
+      "fold": 3,
+      "n_fit": 2831,
+      "n_valid": 708,
+      "class_counts": {
+        "Dropout": 228,
+        "Enrolled": 127,
+        "Graduate": 353
+      }
+    },
+    {
+      "fold": 4,
+      "n_fit": 2831,
+      "n_valid": 708,
+      "class_counts": {
+        "Dropout": 228,
+        "Enrolled": 127,
+        "Graduate": 353
+      }
+    },
+    {
+      "fold": 5,
+      "n_fit": 2832,
+      "n_valid": 707,
+      "class_counts": {
+        "Dropout": 227,
+        "Enrolled": 127,
+        "Graduate": 353
+      }
+    }
+  ],
+  "model_trained": false,
+  "test_scored": false,
+  "verified_at_utc": "2026-11-04T06:53:40.000373+00:00",
+  "checks_passed": [
+    "source_hash_schema_missing_duplicates_labels",
+    "shared_split_order_matches_seed42_recipe",
+    "five_saved_folds_match_stratified_recipe",
+    "fresh_unfitted_preprocessor_18_10_8",
+    "five_temporary_preprocessors_fit_only_training_fold",
+    "reject_modified_source_bytes",
+    "reject_modified_split_bytes",
+    "reject_overlap_even_with_updated_checksum"
+  ],
+  "preprocessor_validation": "Temporary per-fold fit/transform checks only; no fitted object saved and no classifier trained.",
+  "fitted_preprocessor_saved": false,
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0"
+  },
+  "input_sha256": {
+    "src/data.py": "b07ff2d171aa89a106c058e1515b1b0286f68c276a5809309a9d4380b10c3246",
+    "src/features.py": "26b4fae39df10751601d763d31b6a69d866c84ac0af1ff7458af01bdb16c0b4f",
+    "configs/lr_preprocessing_v1.json": "99e6ae8de4b591efbaf130dc1b443076cf84fcac5fb92710ee83589174703398",
+    "data/raw/data.csv": "3ef126de5cefff26eb11fbb4237f1a1401cb64b488e2f1d598c23cedeb4c45ae"
+  }
+}
