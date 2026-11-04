@@ -1,0 +1,67 @@
+{
+  "experiment": "Ablation Study on Feature Sets A, B, C",
+  "intended_model": "LogisticRegression (fixed v1)",
+  "split_id": "student_dropout_seed42_v1",
+  "cv_folds": 5,
+  "std_ddof": 0,
+  "configurations": {
+    "A": {
+      "name": "Original 36",
+      "n_features": 36,
+      "run_id": "m05_logistic_regression_v1_20261104T070444_33387318",
+      "owner": "Le Van Hieu - 3124411091",
+      "macro_f1_mean": 0.699743,
+      "macro_f1_std": 0.009946,
+      "accuracy_mean": 0.775358,
+      "recall_dropout_mean": 0.774805,
+      "recall_enrolled_mean": 0.377953,
+      "recall_graduate_mean": 0.918460,
+      "train_valid_gap_macro_f1": 0.055914,
+      "fold_macro_f1": [0.718988, 0.694622, 0.691936, 0.699515, 0.693656]
+    },
+    "B": {
+      "name": "No Sem2 30",
+      "n_features": 30,
+      "run_id": "m05_logistic_regression_ablation_b_20261104T104503_4007289c",
+      "owner": "Duong Gia Phat - 3124411212",
+      "macro_f1_mean": 0.657754,
+      "macro_f1_std": 0.014864,
+      "accuracy_mean": 0.746249,
+      "recall_dropout_mean": 0.752802,
+      "recall_enrolled_mean": 0.299213,
+      "recall_graduate_mean": 0.902605,
+      "train_valid_gap_macro_f1": 0.049216,
+      "fold_macro_f1": [0.678354, 0.657579, 0.645735, 0.669372, 0.637731],
+      "diff_vs_A": {
+        "macro_f1": -0.041989,
+        "accuracy": -0.029109,
+        "recall_dropout": -0.022003,
+        "recall_enrolled": -0.078740,
+        "recall_graduate": -0.015855,
+        "fold_macro_f1_diff": [-0.040634, -0.037042, -0.046201, -0.030143, -0.055925]
+      }
+    },
+    "C": {
+      "name": "With Engineered 39",
+      "n_features": 39,
+      "run_id": "m05_logistic_regression_ablation_c_20261104T104521_4cf44704",
+      "owner": "Duong Gia Phat - 3124411212",
+      "macro_f1_mean": 0.703062,
+      "macro_f1_std": 0.011018,
+      "accuracy_mean": 0.777053,
+      "recall_dropout_mean": 0.777444,
+      "recall_enrolled_mean": 0.384252,
+      "recall_graduate_mean": 0.917894,
+      "train_valid_gap_macro_f1": 0.056341,
+      "fold_macro_f1": [0.724930, 0.698351, 0.699645, 0.695654, 0.696732],
+      "diff_vs_A": {
+        "macro_f1": 0.003319,
+        "accuracy": 0.001695,
+        "recall_dropout": 0.002639,
+        "recall_enrolled": 0.006299,
+        "recall_graduate": -0.000566,
+        "fold_macro_f1_diff": [0.005942, 0.003729, 0.007709, -0.003861, 0.003076]
+      }
+    }
+  }
+}

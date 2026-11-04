@@ -44,11 +44,12 @@ def run_cv_experiment(config_path, model_factory):
     model_id = config["model_id"]
     version = config["version"]
 
-    supported_version = version == "v1" or (
-        model_id == "m05_logistic_regression" and version == "v2"
+    supported_version = version in {"v1", "v2"} or (
+        model_id == "m05_logistic_regression" and (version.startswith("ablation_") or version.startswith("fe_"))
     )
+    supported_feature_sets = {"original_36", "no_sem2_30", "with_engineered_39"}
 
-    if not supported_version or config["feature_set"] != "original_36":
+    if not supported_version or config.get("feature_set") not in supported_feature_sets:
         raise ValueError("Unsupported model version or feature set")
     X, y = load_student_data()
     train_ids, test_ids, folds, split_manifest = load_splits()
@@ -86,8 +87,14 @@ def run_cv_experiment(config_path, model_factory):
                 row["gap_f1_macro"] = row["train_f1_macro"] - row["valid_f1_macro"]
                 if config["model_id"] == "m05_logistic_regression":
                     scaler = model.named_steps["preprocessor"].named_transformers_["numeric"]
-                    columns = read_preprocessing_config()["numeric"]["columns"]
-                    expected = X_train.iloc[fit_pos][columns].mean().to_numpy()
+                    prep_cfg_path = PROJECT_DIR / config.get("preprocessing_config", "configs/lr_preprocessing_v1.json")
+                    prep_config = read_preprocessing_config(prep_cfg_path)
+                    columns = prep_config["numeric"]["columns"]
+                    if "feature_engineering" in model.named_steps:
+                        X_fit_transformed = model.named_steps["feature_engineering"].transform(X_train.iloc[fit_pos])
+                    else:
+                        X_fit_transformed = X_train.iloc[fit_pos]
+                    expected = X_fit_transformed[columns].mean().to_numpy()
                     np.testing.assert_allclose(scaler.mean_, expected, rtol=1e-12, atol=1e-12)
                     if int(scaler.n_samples_seen_) != len(fit_pos):
                         raise ValueError("Scaler saw unexpected rows")

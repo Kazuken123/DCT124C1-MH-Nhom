@@ -1,0 +1,15 @@
+model_id: m05_logistic_regression
+version: ablation_c
+owner: Duong Gia Phat - 3124411212
+objective: "Ablation C: Evaluate fixed Logistic Regression with 3 engineered features adding to original 36 features (total 39 features) on shared 5 folds."
+feature_set: with_engineered_39
+preprocessing_config: configs/lr_preprocessing_ablation_c.json
+params:
+  C: 1.0
+  l1_ratio: 0.0
+  solver: lbfgs
+  max_iter: 2000
+  tol: 0.0001
+  class_weight: null
+  fit_intercept: true
+  random_state: 42
