@@ -1,0 +1,15 @@
+model_id: m05_logistic_regression
+version: v2
+owner: Van Nguyen Thanh Dat - 3124411067
+objective: "Evaluate whether balanced class weights improve Enrolled recall and CV macro F1."
+feature_set: original_36
+preprocessing_config: configs/lr_preprocessing_v1.json
+params:
+  C: 1.0
+  l1_ratio: 0.0
+  solver: lbfgs
+  max_iter: 2000
+  tol: 0.0001
+  class_weight: balanced
+  fit_intercept: true
+  random_state: 42
