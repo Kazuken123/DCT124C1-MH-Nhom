@@ -1,0 +1,11 @@
+model_id: m02_decision_tree
+version: v1
+owner: Van Nguyen Thanh Dat - 3124411067
+objective: "Evaluate a fixed Decision Tree on the shared five folds."
+feature_set: original_36
+preprocessing_config: null
+params:
+  criterion: gini
+  max_depth: 5
+  min_samples_leaf: 10
+  random_state: 42

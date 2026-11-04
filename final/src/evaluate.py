@@ -96,9 +96,10 @@ def run_cv_experiment(config_path, model_factory):
                                          "fit_validation_disjoint": not bool(set(fit_pos) & set(valid_pos))})
                     row["n_iter"] = int(model.named_steps["model"].n_iter_.max())
                 else:
-                    majority = y_train.iloc[fit_pos].value_counts().idxmax()
-                    if set(pred_valid) != {majority}:
-                        raise ValueError("Majority baseline predictions do not match training majority")
+                    if config["model_id"] == "m01_baseline":
+                        majority = y_train.iloc[fit_pos].value_counts().idxmax()
+                        if set(pred_valid) != {majority}:
+                            raise ValueError("Majority baseline predictions do not match training majority")
                     row["n_iter"] = 0
                 fold_rows.append(row)
                 pd.DataFrame(fold_rows).to_csv(run.path / "fold_metrics.csv", index=False, lineterminator="\n")
