@@ -16,3 +16,4 @@ models/**/metrics.json text eol=lf
 experiments/results.csv text eol=lf
 experiments/runs/** text eol=lf
 experiments/runs/**/figures/*.png -text
+notebooks/**/*.ipynb text eol=lf

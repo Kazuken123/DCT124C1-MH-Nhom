@@ -67,6 +67,7 @@ Thư mục gốc của đồ án là `final/`.
 | `src/evaluate.py` | Đánh giá mô hình |
 | `src/tracking.py` | Theo dõi và lưu kết quả thí nghiệm |
 | `models/` | Mã nguồn và cấu hình từng mô hình |
+| `notebooks/<model_id>/vN.ipynb` | Notebook riêng cho từng mô hình và phiên bản, có bảng/hình và cách chạy lại |
 | `experiments/runs/` | Kết quả chi tiết từng lần chạy |
 | `experiments/results.csv` | Bảng tổng hợp các thí nghiệm |
 | `experiments/ablation.csv` | Kết quả nghiên cứu loại bỏ thành phần |
@@ -265,6 +266,21 @@ preprocessor = make_preprocessor()  # mới, chưa fit
 Các file split được nạp nguyên thứ tự và kiểm tra checksum theo manifest. Thuộc tính Git giữ CSV nguồn nguyên byte và CSV chỉ số ở LF, tránh sai checksum do CRLF trên Windows. Nguồn gốc tái tạo bộ chia được giữ trong manifest; notebook cũ được tham chiếu ở đó hiện nằm trong lịch sử Git trước khi chuyển khung.
 
 ### Chạy Dummy và Logistic Regression v1
+
+Mỗi mô hình có thư mục notebook riêng, đồng nhất model ID với thư mục code. Mở trong VS Code và chọn kernel `.venv`:
+
+- Dummy v1: `notebooks/m01_baseline/v1.ipynb`.
+- LR v1: `notebooks/m05_logistic_regression/v1.ipynb`.
+
+Khi có thay đổi phương pháp/cấu hình, thêm `v2.ipynb`, `v3.ipynb`… trong thư mục đúng mô hình; v1 giữ làm mốc. Hiện chỉ tạo v1 đã có kết quả, không tạo sẵn các notebook v2–v10 rỗng. Thay người thực hiện không tự làm tăng version; ghi tác giả và thay đổi trong notebook/config/run tương ứng.
+
+Cài thêm thư viện notebook từ gốc repo:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r final/requirements-notebook.txt
+```
+
+Hai notebook đã chạy toàn bộ các ô đọc dữ liệu/kết quả và lưu outputs để xem ngay bảng/hình. Mỗi notebook chỉ tạo/hiển thị mô hình của nó. Mặc định `RUN_NEW_EXPERIMENT=False`: đọc run v1 đã kiểm chứng, không huấn luyện lại. Đổi thành `True` ở mục 5 để huấn luyện riêng mô hình đó bằng factory và CV runner dùng chung, tạo run mới; không sao chép thuật toán vào notebook và không ghi đè run cũ. Outputs hiện có trình bày kết quả đã huấn luyện trước đó, không phải một lần huấn luyện mới bên trong notebook.
 
 Từ gốc repo, sau khi cài `final/requirements.txt`:
 
