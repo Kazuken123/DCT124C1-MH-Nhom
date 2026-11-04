@@ -1,0 +1,27 @@
+{
+  "dataset_id": 697,
+  "source_url": "https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success",
+  "dataset_doi": "10.24432/C5MC89",
+  "verified_at_utc": "2026-11-03T05:33:04.494564+00:00",
+  "csv_path": "data/raw/data.csv",
+  "csv_bytes": 533230,
+  "csv_sha256": "3ef126de5cefff26eb11fbb4237f1a1401cb64b488e2f1d598c23cedeb4c45ae",
+  "zip_sha256": "e90e55fd65ec462ae283ebeb2cca409319e3460ed898d8754f62fb35cc83a65d",
+  "csv_member_in_zip": "data.csv",
+  "csv_matches_zip": true,
+  "row_order": "unchanged from source CSV",
+  "source_archive_in_repository": false,
+  "archive_verification_note": "ZIP checksum and CSV comparison record the source verification on 2026-11-03; only the verified CSV is restored in this project structure.",
+  "n_rows": 4424,
+  "n_features": 36,
+  "target_column": "Target",
+  "target_counts": {
+    "Dropout": 1421,
+    "Enrolled": 794,
+    "Graduate": 2209
+  },
+  "delimiter": ";",
+  "license": "CC BY 4.0",
+  "restored_from_git_commit": "436ef03",
+  "restored_from_git_path": "FinalExam/data/raw/data.csv"
+}

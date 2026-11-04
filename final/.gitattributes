@@ -1,0 +1,2 @@
+# Preserve source CSV bytes for reproducible SHA-256 checks.
+data/raw/data.csv -text whitespace=cr-at-eol
