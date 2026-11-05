@@ -1,0 +1,9 @@
+{
+  "python": "3.13.18",
+  "sklearn": "1.6.1",
+  "pandas": "2.3.3",
+  "numpy": "2.1.3",
+  "data_source": "/kaggle/input/datasets/citrnminhtin/predictstudentsdropoutandacademicsuccess/data.csv",
+  "data_sha256": "3ef126de5cefff26eb11fbb4237f1a1401cb64b488e2f1d598c23cedeb4c45ae",
+  "test_not_evaluated": true
+}

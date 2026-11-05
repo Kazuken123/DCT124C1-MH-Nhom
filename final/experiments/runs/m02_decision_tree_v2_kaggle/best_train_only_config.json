@@ -1,0 +1,22 @@
+{
+  "model_id": "m02_decision_tree",
+  "version": "v2",
+  "purpose": "train_only",
+  "best_params": {
+    "clf__min_samples_split": 10,
+    "clf__min_samples_leaf": 10,
+    "clf__max_depth": null,
+    "clf__class_weight": null,
+    "clf__ccp_alpha": 0.002
+  },
+  "best_cv_macro_f1": 0.6734184050068908,
+  "max_depth_actual": 7,
+  "n_leaves": 19,
+  "data_sha256": "3ef126de5cefff26eb11fbb4237f1a1401cb64b488e2f1d598c23cedeb4c45ae",
+  "random_state": 42,
+  "n_train": 3539,
+  "n_test_not_used": 885,
+  "n_candidates": 24,
+  "outer_folds": 5,
+  "inner_folds_nested": 3
+}
