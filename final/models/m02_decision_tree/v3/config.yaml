@@ -1,0 +1,11 @@
+model_id: m02_decision_tree
+version: v3
+owner: Le Van Hieu - 3124411091
+objective: "Compare depth 3 with DT v1 depth 5 on the same folds; examine validation performance and overfitting gap."
+feature_set: original_36
+preprocessing_config: null
+params:
+  criterion: gini
+  max_depth: 3
+  min_samples_leaf: 10
+  random_state: 42

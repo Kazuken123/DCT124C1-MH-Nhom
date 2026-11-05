@@ -51,9 +51,13 @@ class LocalRun:
             "src/data.py", "src/features.py", "src/evaluate.py", "src/tracking.py",
             "configs/lr_preprocessing_v1.json", "requirements.txt",
         ]] + [Path(config_path), Path(config_path).with_name("train.py")]
-        prep_cfg = PROJECT_DIR / config.get("preprocessing_config", "configs/lr_preprocessing_v1.json")
-        if prep_cfg.exists() and prep_cfg not in source_files:
-            source_files.append(prep_cfg)
+        prep_name = config.get(
+            "preprocessing_config", "configs/lr_preprocessing_v1.json"
+        )
+        if prep_name is not None:
+            prep_cfg = PROJECT_DIR / prep_name
+            if prep_cfg.exists() and prep_cfg not in source_files:
+                source_files.append(prep_cfg)
         try:
             commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=PROJECT_DIR, text=True).strip()
             status = subprocess.check_output(["git", "status", "--porcelain", "--", "."], cwd=PROJECT_DIR, text=True)
