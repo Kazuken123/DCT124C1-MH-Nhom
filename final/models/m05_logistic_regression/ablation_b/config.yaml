@@ -1,0 +1,15 @@
+model_id: m05_logistic_regression
+version: ablation_b
+owner: Duong Gia Phat - 3124411212
+objective: "Ablation B: Evaluate fixed Logistic Regression without 2nd semester features (30 features) on shared 5 folds to measure performance impact of 2nd semester information."
+feature_set: no_sem2_30
+preprocessing_config: configs/lr_preprocessing_ablation_b.json
+params:
+  C: 1.0
+  l1_ratio: 0.0
+  solver: lbfgs
+  max_iter: 2000
+  tol: 0.0001
+  class_weight: null
+  fit_intercept: true
+  random_state: 42

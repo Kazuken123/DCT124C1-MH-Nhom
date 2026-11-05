@@ -30,8 +30,9 @@ def read_preprocessing_config(config_path=PREPROCESSING_CONFIG):
         if config[group]["transformer"] != transformer:
             raise ValueError(f"Unsupported transformer for {group}")
         columns.extend(config[group]["columns"])
-    if len(columns) != 36 or len(set(columns)) != 36 or "Target" in columns:
-        raise ValueError("Expected 36 distinct features, excluding Target")
+    expected_count = config.get("n_features", 36)
+    if len(columns) != expected_count or len(set(columns)) != expected_count or "Target" in columns:
+        raise ValueError(f"Expected {expected_count} distinct features, excluding Target")
     return config
 
 
