@@ -1,0 +1,541 @@
+fold,feature,repeat,macro_f1_drop
+1,Marital status,1,0.0
+1,Marital status,2,0.0
+1,Marital status,3,0.0
+1,Application mode,1,0.0
+1,Application mode,2,0.0
+1,Application mode,3,0.0
+1,Application order,1,0.0
+1,Application order,2,0.0
+1,Application order,3,0.0
+1,Course,1,0.00042760183423096176
+1,Course,2,0.0042253732666143184
+1,Course,3,0.00497970224632871
+1,Daytime/evening attendance,1,0.0
+1,Daytime/evening attendance,2,0.0
+1,Daytime/evening attendance,3,0.0
+1,Previous qualification,1,0.0
+1,Previous qualification,2,0.0
+1,Previous qualification,3,0.0
+1,Previous qualification (grade),1,0.0
+1,Previous qualification (grade),2,0.0
+1,Previous qualification (grade),3,0.0
+1,Nacionality,1,0.0
+1,Nacionality,2,0.0
+1,Nacionality,3,0.0
+1,Mother's qualification,1,0.0
+1,Mother's qualification,2,0.0
+1,Mother's qualification,3,0.0
+1,Father's qualification,1,0.0
+1,Father's qualification,2,0.0
+1,Father's qualification,3,0.0
+1,Mother's occupation,1,0.0
+1,Mother's occupation,2,0.0
+1,Mother's occupation,3,0.0
+1,Father's occupation,1,0.0
+1,Father's occupation,2,0.0
+1,Father's occupation,3,0.0
+1,Admission grade,1,0.004454850607102823
+1,Admission grade,2,0.0012888316469710226
+1,Admission grade,3,-0.0018783794993106895
+1,Displaced,1,0.0
+1,Displaced,2,0.0
+1,Displaced,3,0.0
+1,Educational special needs,1,0.0
+1,Educational special needs,2,0.0
+1,Educational special needs,3,0.0
+1,Debtor,1,0.0
+1,Debtor,2,0.0
+1,Debtor,3,0.0
+1,Tuition fees up to date,1,0.06334390168927873
+1,Tuition fees up to date,2,0.06491834523339235
+1,Tuition fees up to date,3,0.06992231824135586
+1,Gender,1,0.0
+1,Gender,2,0.0
+1,Gender,3,0.0
+1,Scholarship holder,1,0.0
+1,Scholarship holder,2,0.0
+1,Scholarship holder,3,0.0
+1,Age at enrollment,1,0.021138675893877412
+1,Age at enrollment,2,0.016467465676763382
+1,Age at enrollment,3,0.015335600094769974
+1,International,1,0.0
+1,International,2,0.0
+1,International,3,0.0
+1,Curricular units 1st sem (credited),1,0.0
+1,Curricular units 1st sem (credited),2,0.0
+1,Curricular units 1st sem (credited),3,0.0
+1,Curricular units 1st sem (enrolled),1,-0.005867085873450639
+1,Curricular units 1st sem (enrolled),2,-0.002431800614010826
+1,Curricular units 1st sem (enrolled),3,-0.005225714644769508
+1,Curricular units 1st sem (evaluations),1,0.004890341082160354
+1,Curricular units 1st sem (evaluations),2,-0.0058586437634119415
+1,Curricular units 1st sem (evaluations),3,0.0031076319280738396
+1,Curricular units 1st sem (approved),1,0.000248686905222395
+1,Curricular units 1st sem (approved),2,-0.0008889031503764855
+1,Curricular units 1st sem (approved),3,0.011406079683010217
+1,Curricular units 1st sem (grade),1,0.0
+1,Curricular units 1st sem (grade),2,0.0
+1,Curricular units 1st sem (grade),3,0.0
+1,Curricular units 1st sem (without evaluations),1,0.0
+1,Curricular units 1st sem (without evaluations),2,0.0
+1,Curricular units 1st sem (without evaluations),3,0.0
+1,Curricular units 2nd sem (credited),1,0.0
+1,Curricular units 2nd sem (credited),2,0.0
+1,Curricular units 2nd sem (credited),3,0.0
+1,Curricular units 2nd sem (enrolled),1,0.014568237944197149
+1,Curricular units 2nd sem (enrolled),2,-0.003571517291244719
+1,Curricular units 2nd sem (enrolled),3,0.010458142469966791
+1,Curricular units 2nd sem (evaluations),1,0.0
+1,Curricular units 2nd sem (evaluations),2,0.0
+1,Curricular units 2nd sem (evaluations),3,0.0
+1,Curricular units 2nd sem (approved),1,0.2737408122384017
+1,Curricular units 2nd sem (approved),2,0.2579634109784509
+1,Curricular units 2nd sem (approved),3,0.2723439709968593
+1,Curricular units 2nd sem (grade),1,0.01167659822936229
+1,Curricular units 2nd sem (grade),2,0.027101381734202512
+1,Curricular units 2nd sem (grade),3,0.015030222790528125
+1,Curricular units 2nd sem (without evaluations),1,0.0
+1,Curricular units 2nd sem (without evaluations),2,0.0
+1,Curricular units 2nd sem (without evaluations),3,0.0
+1,Unemployment rate,1,0.0038200162025323614
+1,Unemployment rate,2,0.001072567781046696
+1,Unemployment rate,3,-0.00031112466257665616
+1,Inflation rate,1,0.0
+1,Inflation rate,2,0.0
+1,Inflation rate,3,0.0
+1,GDP,1,0.008781637351856997
+1,GDP,2,0.004041226353075578
+1,GDP,3,0.00995061788536633
+2,Marital status,1,0.0
+2,Marital status,2,0.0
+2,Marital status,3,0.0
+2,Application mode,1,0.0
+2,Application mode,2,0.0
+2,Application mode,3,0.0
+2,Application order,1,0.0
+2,Application order,2,0.0
+2,Application order,3,0.0
+2,Course,1,0.0
+2,Course,2,0.0
+2,Course,3,0.0
+2,Daytime/evening attendance,1,0.0
+2,Daytime/evening attendance,2,0.0
+2,Daytime/evening attendance,3,0.0
+2,Previous qualification,1,0.0
+2,Previous qualification,2,0.0
+2,Previous qualification,3,0.0
+2,Previous qualification (grade),1,0.0
+2,Previous qualification (grade),2,0.0
+2,Previous qualification (grade),3,0.0
+2,Nacionality,1,0.0
+2,Nacionality,2,0.0
+2,Nacionality,3,0.0
+2,Mother's qualification,1,0.0
+2,Mother's qualification,2,0.0
+2,Mother's qualification,3,0.0
+2,Father's qualification,1,0.0
+2,Father's qualification,2,0.0
+2,Father's qualification,3,0.0
+2,Mother's occupation,1,0.0
+2,Mother's occupation,2,0.0
+2,Mother's occupation,3,0.0
+2,Father's occupation,1,0.0
+2,Father's occupation,2,0.0
+2,Father's occupation,3,0.0
+2,Admission grade,1,-0.0016001961583091973
+2,Admission grade,2,-0.0002238146121579243
+2,Admission grade,3,0.009261985607635026
+2,Displaced,1,0.0
+2,Displaced,2,0.0
+2,Displaced,3,0.0
+2,Educational special needs,1,0.0
+2,Educational special needs,2,0.0
+2,Educational special needs,3,0.0
+2,Debtor,1,0.0
+2,Debtor,2,0.0
+2,Debtor,3,0.0
+2,Tuition fees up to date,1,0.04076293045769541
+2,Tuition fees up to date,2,0.04235507585845566
+2,Tuition fees up to date,3,0.034185372231524846
+2,Gender,1,0.0
+2,Gender,2,0.0
+2,Gender,3,0.0
+2,Scholarship holder,1,0.010549189100401701
+2,Scholarship holder,2,0.010613138590034765
+2,Scholarship holder,3,0.006678230416735209
+2,Age at enrollment,1,0.006456093485070702
+2,Age at enrollment,2,0.012403649329343014
+2,Age at enrollment,3,0.008742061319928829
+2,International,1,0.0
+2,International,2,0.0
+2,International,3,0.0
+2,Curricular units 1st sem (credited),1,0.0
+2,Curricular units 1st sem (credited),2,0.0
+2,Curricular units 1st sem (credited),3,0.0
+2,Curricular units 1st sem (enrolled),1,0.0014403614173891244
+2,Curricular units 1st sem (enrolled),2,0.002827311038748448
+2,Curricular units 1st sem (enrolled),3,0.0030352577491276067
+2,Curricular units 1st sem (evaluations),1,0.017669586594006192
+2,Curricular units 1st sem (evaluations),2,0.021347702889217945
+2,Curricular units 1st sem (evaluations),3,0.02850897843171174
+2,Curricular units 1st sem (approved),1,0.0
+2,Curricular units 1st sem (approved),2,0.0
+2,Curricular units 1st sem (approved),3,0.0
+2,Curricular units 1st sem (grade),1,0.0
+2,Curricular units 1st sem (grade),2,0.0
+2,Curricular units 1st sem (grade),3,0.0
+2,Curricular units 1st sem (without evaluations),1,0.0
+2,Curricular units 1st sem (without evaluations),2,0.0
+2,Curricular units 1st sem (without evaluations),3,0.0
+2,Curricular units 2nd sem (credited),1,0.0
+2,Curricular units 2nd sem (credited),2,0.0
+2,Curricular units 2nd sem (credited),3,0.0
+2,Curricular units 2nd sem (enrolled),1,-0.0037233411028605445
+2,Curricular units 2nd sem (enrolled),2,0.0032480219515884645
+2,Curricular units 2nd sem (enrolled),3,0.00015841511858072366
+2,Curricular units 2nd sem (evaluations),1,0.0
+2,Curricular units 2nd sem (evaluations),2,0.0
+2,Curricular units 2nd sem (evaluations),3,0.0
+2,Curricular units 2nd sem (approved),1,0.22781673327626545
+2,Curricular units 2nd sem (approved),2,0.2478788690415693
+2,Curricular units 2nd sem (approved),3,0.24597384825814872
+2,Curricular units 2nd sem (grade),1,-0.0060090300718617096
+2,Curricular units 2nd sem (grade),2,9.759133663966857e-05
+2,Curricular units 2nd sem (grade),3,-0.0001752201701448186
+2,Curricular units 2nd sem (without evaluations),1,0.0
+2,Curricular units 2nd sem (without evaluations),2,0.0
+2,Curricular units 2nd sem (without evaluations),3,0.0
+2,Unemployment rate,1,0.0
+2,Unemployment rate,2,0.0
+2,Unemployment rate,3,0.0
+2,Inflation rate,1,0.0
+2,Inflation rate,2,0.0
+2,Inflation rate,3,0.0
+2,GDP,1,0.0
+2,GDP,2,0.0
+2,GDP,3,0.0
+3,Marital status,1,0.0
+3,Marital status,2,0.0
+3,Marital status,3,0.0
+3,Application mode,1,0.0
+3,Application mode,2,0.0
+3,Application mode,3,0.0
+3,Application order,1,0.0
+3,Application order,2,0.0
+3,Application order,3,0.0
+3,Course,1,0.0
+3,Course,2,0.0
+3,Course,3,0.0
+3,Daytime/evening attendance,1,0.0
+3,Daytime/evening attendance,2,0.0
+3,Daytime/evening attendance,3,0.0
+3,Previous qualification,1,0.0
+3,Previous qualification,2,0.0
+3,Previous qualification,3,0.0
+3,Previous qualification (grade),1,0.0
+3,Previous qualification (grade),2,0.0
+3,Previous qualification (grade),3,0.0
+3,Nacionality,1,0.0
+3,Nacionality,2,0.0
+3,Nacionality,3,0.0
+3,Mother's qualification,1,0.0
+3,Mother's qualification,2,0.0
+3,Mother's qualification,3,0.0
+3,Father's qualification,1,0.0
+3,Father's qualification,2,0.0
+3,Father's qualification,3,0.0
+3,Mother's occupation,1,0.0
+3,Mother's occupation,2,0.0
+3,Mother's occupation,3,0.0
+3,Father's occupation,1,0.0
+3,Father's occupation,2,0.0
+3,Father's occupation,3,0.0
+3,Admission grade,1,0.004313454061620092
+3,Admission grade,2,0.005220483540078091
+3,Admission grade,3,0.008253732438939898
+3,Displaced,1,0.0
+3,Displaced,2,0.0
+3,Displaced,3,0.0
+3,Educational special needs,1,0.0
+3,Educational special needs,2,0.0
+3,Educational special needs,3,0.0
+3,Debtor,1,0.0
+3,Debtor,2,0.0
+3,Debtor,3,0.0
+3,Tuition fees up to date,1,0.07557100788248816
+3,Tuition fees up to date,2,0.07868988798854748
+3,Tuition fees up to date,3,0.0742361838555996
+3,Gender,1,0.0
+3,Gender,2,0.0
+3,Gender,3,0.0
+3,Scholarship holder,1,0.0
+3,Scholarship holder,2,0.0
+3,Scholarship holder,3,0.0
+3,Age at enrollment,1,0.007342131449572187
+3,Age at enrollment,2,0.011256723653830125
+3,Age at enrollment,3,0.007892957481977825
+3,International,1,0.0
+3,International,2,0.0
+3,International,3,0.0
+3,Curricular units 1st sem (credited),1,0.0
+3,Curricular units 1st sem (credited),2,0.0
+3,Curricular units 1st sem (credited),3,0.0
+3,Curricular units 1st sem (enrolled),1,0.005447429912540547
+3,Curricular units 1st sem (enrolled),2,0.004141525989282857
+3,Curricular units 1st sem (enrolled),3,0.004141525989282857
+3,Curricular units 1st sem (evaluations),1,0.004949456952169418
+3,Curricular units 1st sem (evaluations),2,0.004976652826654937
+3,Curricular units 1st sem (evaluations),3,0.0015726367075977743
+3,Curricular units 1st sem (approved),1,0.0
+3,Curricular units 1st sem (approved),2,0.0
+3,Curricular units 1st sem (approved),3,0.0
+3,Curricular units 1st sem (grade),1,0.0
+3,Curricular units 1st sem (grade),2,0.0
+3,Curricular units 1st sem (grade),3,0.0
+3,Curricular units 1st sem (without evaluations),1,0.0
+3,Curricular units 1st sem (without evaluations),2,0.0
+3,Curricular units 1st sem (without evaluations),3,0.0
+3,Curricular units 2nd sem (credited),1,0.0
+3,Curricular units 2nd sem (credited),2,0.0
+3,Curricular units 2nd sem (credited),3,0.0
+3,Curricular units 2nd sem (enrolled),1,0.013870175761116266
+3,Curricular units 2nd sem (enrolled),2,0.009370266765982294
+3,Curricular units 2nd sem (enrolled),3,0.00113106196693058
+3,Curricular units 2nd sem (evaluations),1,0.0
+3,Curricular units 2nd sem (evaluations),2,0.0
+3,Curricular units 2nd sem (evaluations),3,0.0
+3,Curricular units 2nd sem (approved),1,0.2667073485401981
+3,Curricular units 2nd sem (approved),2,0.2639523304227935
+3,Curricular units 2nd sem (approved),3,0.30842138156519416
+3,Curricular units 2nd sem (grade),1,0.0
+3,Curricular units 2nd sem (grade),2,0.0
+3,Curricular units 2nd sem (grade),3,0.0
+3,Curricular units 2nd sem (without evaluations),1,0.0
+3,Curricular units 2nd sem (without evaluations),2,0.0
+3,Curricular units 2nd sem (without evaluations),3,0.0
+3,Unemployment rate,1,0.0
+3,Unemployment rate,2,0.0
+3,Unemployment rate,3,0.0
+3,Inflation rate,1,0.0
+3,Inflation rate,2,0.0
+3,Inflation rate,3,0.0
+3,GDP,1,-0.0003787972129839501
+3,GDP,2,0.0027465865625492247
+3,GDP,3,-0.0015592986368524464
+4,Marital status,1,0.0
+4,Marital status,2,0.0
+4,Marital status,3,0.0
+4,Application mode,1,0.00044233717171515696
+4,Application mode,2,0.010038122693347029
+4,Application mode,3,-0.003823386760766656
+4,Application order,1,0.0
+4,Application order,2,0.0
+4,Application order,3,0.0
+4,Course,1,0.0
+4,Course,2,0.0
+4,Course,3,0.0
+4,Daytime/evening attendance,1,0.0
+4,Daytime/evening attendance,2,0.0
+4,Daytime/evening attendance,3,0.0
+4,Previous qualification,1,0.0
+4,Previous qualification,2,0.0
+4,Previous qualification,3,0.0
+4,Previous qualification (grade),1,0.0
+4,Previous qualification (grade),2,0.0
+4,Previous qualification (grade),3,0.0
+4,Nacionality,1,0.0
+4,Nacionality,2,0.0
+4,Nacionality,3,0.0
+4,Mother's qualification,1,0.0
+4,Mother's qualification,2,0.0
+4,Mother's qualification,3,0.0
+4,Father's qualification,1,0.0
+4,Father's qualification,2,0.0
+4,Father's qualification,3,0.0
+4,Mother's occupation,1,0.0
+4,Mother's occupation,2,0.0
+4,Mother's occupation,3,0.0
+4,Father's occupation,1,0.0
+4,Father's occupation,2,0.0
+4,Father's occupation,3,0.0
+4,Admission grade,1,0.005599363639125721
+4,Admission grade,2,0.005059160314421551
+4,Admission grade,3,0.007531135019796631
+4,Displaced,1,0.0
+4,Displaced,2,0.0
+4,Displaced,3,0.0
+4,Educational special needs,1,0.0
+4,Educational special needs,2,0.0
+4,Educational special needs,3,0.0
+4,Debtor,1,0.0
+4,Debtor,2,0.0
+4,Debtor,3,0.0
+4,Tuition fees up to date,1,0.08015840079931436
+4,Tuition fees up to date,2,0.09855336640471701
+4,Tuition fees up to date,3,0.0695439673635454
+4,Gender,1,0.0
+4,Gender,2,0.0
+4,Gender,3,0.0
+4,Scholarship holder,1,0.010734118547017113
+4,Scholarship holder,2,0.009416752914690907
+4,Scholarship holder,3,0.006974046315774918
+4,Age at enrollment,1,0.0
+4,Age at enrollment,2,0.0
+4,Age at enrollment,3,0.0
+4,International,1,0.0
+4,International,2,0.0
+4,International,3,0.0
+4,Curricular units 1st sem (credited),1,0.0
+4,Curricular units 1st sem (credited),2,0.0
+4,Curricular units 1st sem (credited),3,0.0
+4,Curricular units 1st sem (enrolled),1,0.0
+4,Curricular units 1st sem (enrolled),2,0.0
+4,Curricular units 1st sem (enrolled),3,0.0
+4,Curricular units 1st sem (evaluations),1,0.007612424076741675
+4,Curricular units 1st sem (evaluations),2,0.010128223717217666
+4,Curricular units 1st sem (evaluations),3,0.0087933122116568
+4,Curricular units 1st sem (approved),1,0.054898076121720596
+4,Curricular units 1st sem (approved),2,0.04398984417770191
+4,Curricular units 1st sem (approved),3,0.05154477597184837
+4,Curricular units 1st sem (grade),1,0.0
+4,Curricular units 1st sem (grade),2,0.0
+4,Curricular units 1st sem (grade),3,0.0
+4,Curricular units 1st sem (without evaluations),1,0.0
+4,Curricular units 1st sem (without evaluations),2,0.0
+4,Curricular units 1st sem (without evaluations),3,0.0
+4,Curricular units 2nd sem (credited),1,0.0
+4,Curricular units 2nd sem (credited),2,0.0
+4,Curricular units 2nd sem (credited),3,0.0
+4,Curricular units 2nd sem (enrolled),1,0.002002923765763609
+4,Curricular units 2nd sem (enrolled),2,0.019938757393927364
+4,Curricular units 2nd sem (enrolled),3,0.019772595234734958
+4,Curricular units 2nd sem (evaluations),1,0.015664774482100463
+4,Curricular units 2nd sem (evaluations),2,0.010712282907941573
+4,Curricular units 2nd sem (evaluations),3,0.0158812458499209
+4,Curricular units 2nd sem (approved),1,0.19724083592220515
+4,Curricular units 2nd sem (approved),2,0.22731039894938448
+4,Curricular units 2nd sem (approved),3,0.22457367122158678
+4,Curricular units 2nd sem (grade),1,0.0002340644667017111
+4,Curricular units 2nd sem (grade),2,0.0003695248731996337
+4,Curricular units 2nd sem (grade),3,0.008742383530608522
+4,Curricular units 2nd sem (without evaluations),1,0.0
+4,Curricular units 2nd sem (without evaluations),2,0.0
+4,Curricular units 2nd sem (without evaluations),3,0.0
+4,Unemployment rate,1,0.0
+4,Unemployment rate,2,0.0
+4,Unemployment rate,3,0.0
+4,Inflation rate,1,0.0
+4,Inflation rate,2,0.0
+4,Inflation rate,3,0.0
+4,GDP,1,0.007341942750189734
+4,GDP,2,0.01274005341145834
+4,GDP,3,0.01638494632044718
+5,Marital status,1,0.0
+5,Marital status,2,0.0
+5,Marital status,3,0.0
+5,Application mode,1,0.0
+5,Application mode,2,0.0
+5,Application mode,3,0.0
+5,Application order,1,0.0
+5,Application order,2,0.0
+5,Application order,3,0.0
+5,Course,1,0.001078817838799928
+5,Course,2,0.0021547943469557573
+5,Course,3,0.001078817838799928
+5,Daytime/evening attendance,1,0.0
+5,Daytime/evening attendance,2,0.0
+5,Daytime/evening attendance,3,0.0
+5,Previous qualification,1,0.0
+5,Previous qualification,2,0.0
+5,Previous qualification,3,0.0
+5,Previous qualification (grade),1,0.0
+5,Previous qualification (grade),2,0.0
+5,Previous qualification (grade),3,0.0
+5,Nacionality,1,0.0
+5,Nacionality,2,0.0
+5,Nacionality,3,0.0
+5,Mother's qualification,1,0.0
+5,Mother's qualification,2,0.0
+5,Mother's qualification,3,0.0
+5,Father's qualification,1,0.0
+5,Father's qualification,2,0.0
+5,Father's qualification,3,0.0
+5,Mother's occupation,1,0.0
+5,Mother's occupation,2,0.0
+5,Mother's occupation,3,0.0
+5,Father's occupation,1,0.0
+5,Father's occupation,2,0.0
+5,Father's occupation,3,0.0
+5,Admission grade,1,0.008331224840225637
+5,Admission grade,2,0.006650574107844531
+5,Admission grade,3,0.004223736870547334
+5,Displaced,1,0.0
+5,Displaced,2,0.0
+5,Displaced,3,0.0
+5,Educational special needs,1,0.0
+5,Educational special needs,2,0.0
+5,Educational special needs,3,0.0
+5,Debtor,1,0.0
+5,Debtor,2,0.0
+5,Debtor,3,0.0
+5,Tuition fees up to date,1,0.02726228937639441
+5,Tuition fees up to date,2,0.04259437578668268
+5,Tuition fees up to date,3,0.04024629767371757
+5,Gender,1,0.0
+5,Gender,2,0.0
+5,Gender,3,0.0
+5,Scholarship holder,1,0.0
+5,Scholarship holder,2,0.0
+5,Scholarship holder,3,0.0
+5,Age at enrollment,1,0.019068868913476145
+5,Age at enrollment,2,0.016740494476070178
+5,Age at enrollment,3,0.014857778670933519
+5,International,1,0.0
+5,International,2,0.0
+5,International,3,0.0
+5,Curricular units 1st sem (credited),1,0.0
+5,Curricular units 1st sem (credited),2,0.0
+5,Curricular units 1st sem (credited),3,0.0
+5,Curricular units 1st sem (enrolled),1,0.0055392968545529
+5,Curricular units 1st sem (enrolled),2,0.005290881447817197
+5,Curricular units 1st sem (enrolled),3,0.006650574107844531
+5,Curricular units 1st sem (evaluations),1,0.008438866723660676
+5,Curricular units 1st sem (evaluations),2,0.019552425687030972
+5,Curricular units 1st sem (evaluations),3,0.01088031132870948
+5,Curricular units 1st sem (approved),1,0.006087543323839761
+5,Curricular units 1st sem (approved),2,0.00279550113276239
+5,Curricular units 1st sem (approved),3,0.0009336026778290485
+5,Curricular units 1st sem (grade),1,0.0
+5,Curricular units 1st sem (grade),2,0.0
+5,Curricular units 1st sem (grade),3,0.0
+5,Curricular units 1st sem (without evaluations),1,0.0
+5,Curricular units 1st sem (without evaluations),2,0.0
+5,Curricular units 1st sem (without evaluations),3,0.0
+5,Curricular units 2nd sem (credited),1,0.0
+5,Curricular units 2nd sem (credited),2,0.0
+5,Curricular units 2nd sem (credited),3,0.0
+5,Curricular units 2nd sem (enrolled),1,0.019512641394945907
+5,Curricular units 2nd sem (enrolled),2,0.028314569641503917
+5,Curricular units 2nd sem (enrolled),3,0.0260274316606115
+5,Curricular units 2nd sem (evaluations),1,0.0
+5,Curricular units 2nd sem (evaluations),2,0.0
+5,Curricular units 2nd sem (evaluations),3,0.0
+5,Curricular units 2nd sem (approved),1,0.25121024968084466
+5,Curricular units 2nd sem (approved),2,0.22292676572853803
+5,Curricular units 2nd sem (approved),3,0.25094719328527876
+5,Curricular units 2nd sem (grade),1,0.01691667103459127
+5,Curricular units 2nd sem (grade),2,0.009803431453059397
+5,Curricular units 2nd sem (grade),3,0.004400718455952246
+5,Curricular units 2nd sem (without evaluations),1,0.0
+5,Curricular units 2nd sem (without evaluations),2,0.0
+5,Curricular units 2nd sem (without evaluations),3,0.0
+5,Unemployment rate,1,0.0
+5,Unemployment rate,2,0.0
+5,Unemployment rate,3,0.0
+5,Inflation rate,1,0.0
+5,Inflation rate,2,0.0
+5,Inflation rate,3,0.0
+5,GDP,1,0.0006890012413737212
+5,GDP,2,-0.000444149090750634
+5,GDP,3,-0.0030993538602490656

@@ -1,0 +1,7 @@
+actual,predicted,count
+Enrolled,Graduate,234
+Graduate,Enrolled,212
+Dropout,Enrolled,179
+Dropout,Graduate,166
+Enrolled,Dropout,102
+Graduate,Dropout,42

@@ -1,0 +1,46 @@
+{
+  "model": "Random Forest V1 baseline (100 trees, raw numeric coded features)",
+  "model_config": {
+    "n_estimators": 100,
+    "max_depth": null,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "data_rows": 4424,
+  "train_rows": 3539,
+  "test_rows_reserved_not_scored": 885,
+  "n_folds": 5,
+  "dataset_sha256": "3ef126de5cefff26eb11fbb4237f1a1401cb64b488e2f1d598c23cedeb4c45ae",
+  "ddof": 0,
+  "test_scored": false,
+  "tuned": false,
+  "metrics": {
+    "train_accuracy": {
+      "cv_mean": 1.0,
+      "cv_std": 0.0
+    },
+    "validation_accuracy": {
+      "cv_mean": 0.7691455101926657,
+      "cv_std": 0.012236259668723808
+    },
+    "accuracy_gap": {
+      "cv_mean": 0.23085448980733422,
+      "cv_std": 0.01223625966872381
+    },
+    "train_macro_f1": {
+      "cv_mean": 1.0,
+      "cv_std": 0.0
+    },
+    "validation_macro_f1": {
+      "cv_mean": 0.6851723808500556,
+      "cv_std": 0.023927348459414913
+    },
+    "macro_f1_gap": {
+      "cv_mean": 0.3148276191499444,
+      "cv_std": 0.023927348459414913
+    }
+  },
+  "note": "Train scores are measured on each fold's fitting subset; validation scores are measured on its held-out subset. Gap = Train score - Validation score. CV-based gap is not a Test score."
+}
