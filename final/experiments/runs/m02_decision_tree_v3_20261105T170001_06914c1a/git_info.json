@@ -1,0 +1,39 @@
+{
+  "base_commit": "5907a81442c8a182ebb366447d2ea8cd7233c9c5",
+  "working_tree_status_at_start": " M final/.gitattributes\n M final/.gitignore\n M final/README.md\n M final/configs/wandb.yaml\n M final/src/evaluate.py\n M final/src/tracking.py\n?? final/experiments/sync/\n?? final/models/m02_decision_tree/v3/\n?? final/requirements-tracking.txt\n?? final/src/sync_wandb.py\n",
+  "source_sha256": {
+    "src/data.py": "03c9340dfa4bdd0e7e4bd349063524dc4d9008f1a88277cbbe2ba7f5ecdd78a8",
+    "src/features.py": "a41932fa7314f6ee475e7e66b9370d176ab5fb33a185817752e1f3d2a5cd6023",
+    "src/evaluate.py": "2167be5d3d44f0c84c1ae321f69b6c965fc9880bf5108a8b43282cd78bf6ef34",
+    "src/tracking.py": "0c95a7b08a10e4f08afc3165d905b28342fa5a52a236e1d487caff8867b04643",
+    "configs/lr_preprocessing_v1.json": "99e6ae8de4b591efbaf130dc1b443076cf84fcac5fb92710ee83589174703398",
+    "requirements.txt": "0bd7e8916e7386bd1322a5e8ce7fada5ab07c4b368124326095e913090266fbe",
+    "models/m02_decision_tree/v3/config.yaml": "7b1f4463f117bc4c552fecae7f7a50b80ce7d91f906d9ad69dc15e9ea02e6406",
+    "models/m02_decision_tree/v3/train.py": "0bc2a91c299557800f9b3dafd680f671af7dc9f8da9be71f5906d2df118c573c"
+  },
+  "note": "Source may be uncommitted during review; hashes identify the executed files.",
+  "split_manifest": {
+    "data_sha256": "3ef126de5cefff26eb11fbb4237f1a1401cb64b488e2f1d598c23cedeb4c45ae",
+    "row_id_definition": "Zero-based source CSV row, excluding header",
+    "n_rows": 4424,
+    "n_train": 3539,
+    "n_test": 885,
+    "split": {
+      "test_size": 0.2,
+      "random_state": 42,
+      "stratify": true
+    },
+    "cv": {
+      "n_splits": 5,
+      "shuffle": true,
+      "random_state": 42
+    },
+    "provenance": "Reconstructed locally from leader-confirmed recipe; no externally supplied indices in this checkout",
+    "reference": "ThanhDat_EDA_DecisionTree.ipynb: train_test_split and StratifiedKFold cells",
+    "files_sha256": {
+      "train_indices.csv": "16772061f86477d4c3357b52d55c7a258a47c76d929e83711aebdd6d988063ee",
+      "test_indices.csv": "71b65c57e9f4aa5b4c8a56549bd4d0b178c0b20c73f72462eb9b30122b56350f",
+      "train_folds.csv": "78d1cc1f9a055b51db617a6a923aead400f29f6513fd9da6118fdc4e7128ca47"
+    }
+  }
+}
