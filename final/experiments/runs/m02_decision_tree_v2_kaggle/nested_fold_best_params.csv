@@ -1,0 +1,6 @@
+fold,best_inner_cv_macro_f1,best_params
+1,0.6570227559599627,"{""clf__min_samples_split"": 10, ""clf__min_samples_leaf"": 10, ""clf__max_depth"": 6, ""clf__class_weight"": null, ""clf__ccp_alpha"": 0.0}"
+2,0.6609747628357623,"{""clf__min_samples_split"": 2, ""clf__min_samples_leaf"": 20, ""clf__max_depth"": 5, ""clf__class_weight"": ""balanced"", ""clf__ccp_alpha"": 0.002}"
+3,0.6747420940692495,"{""clf__min_samples_split"": 2, ""clf__min_samples_leaf"": 20, ""clf__max_depth"": 9, ""clf__class_weight"": null, ""clf__ccp_alpha"": 0.002}"
+4,0.6768962182806625,"{""clf__min_samples_split"": 2, ""clf__min_samples_leaf"": 20, ""clf__max_depth"": 9, ""clf__class_weight"": null, ""clf__ccp_alpha"": 0.002}"
+5,0.6622614732653319,"{""clf__min_samples_split"": 2, ""clf__min_samples_leaf"": 20, ""clf__max_depth"": 9, ""clf__class_weight"": null, ""clf__ccp_alpha"": 0.002}"
