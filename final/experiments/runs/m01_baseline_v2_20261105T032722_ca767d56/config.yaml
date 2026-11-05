@@ -1,0 +1,9 @@
+model_id: m01_baseline
+version: v2
+owner: Van Nguyen Thanh Dat - 3124411067
+objective: "Compare stratified random predictions with the majority baseline."
+feature_set: original_36
+preprocessing_config: null
+params:
+  strategy: stratified
+  random_state: 42
