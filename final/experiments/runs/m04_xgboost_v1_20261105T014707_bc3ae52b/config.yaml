@@ -1,0 +1,14 @@
+model_id: m04_xgboost
+version : v1
+owner : Van Nguyen Thanh Dat - 3124411067
+objective: "Evaluate a fixed XGBoost baseline on the shared five folds."
+feature_set: original_36
+preprocessing_config: null
+params:
+    objective: multi:softprob
+    n_estimators: 100
+    max_depth: 3
+    learning_rate: 0.1
+    tree_method: hist
+    random_state: 42
+    
