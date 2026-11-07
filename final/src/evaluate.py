@@ -45,10 +45,15 @@ def run_cv_experiment(config_path, model_factory):
     version = config["version"]
 
     supported_version = version in {"v1", "v2"} or (
-        model_id == "m05_logistic_regression" and (version.startswith("ablation_") or version.startswith("fe_"))
+    model_id == "m02_decision_tree" and version == "v3"
+    ) or (
+    model_id == "m05_logistic_regression"
+    and (
+        version.startswith("ablation_")
+        or version.startswith("fe_")
+        )
     )
     supported_feature_sets = {"original_36", "no_sem2_30", "with_engineered_39"}
-
     if not supported_version or config.get("feature_set") not in supported_feature_sets:
         raise ValueError("Unsupported model version or feature set")
     X, y = load_student_data()

@@ -1,0 +1,14 @@
+{
+  "checks_passed": true,
+  "reference_run_id": "m02_decision_tree_v1_20261104T095332_6d8b7c85",
+  "only_model_parameter_changed": "max_depth: 5 -> 3",
+  "n_train": 3539,
+  "n_test_reserved": 885,
+  "saved_row_ids_labels_folds_match": true,
+  "independent_refit_oof_exact_match": true,
+  "fold_train_validation_macro_f1_match": true,
+  "cv_mean_std_ddof0_match": true,
+  "png_signatures_valid": true,
+  "test_scored_during_verification": false,
+  "note": "Independent verification of the existing v3 run; no additional experiment run created."
+}
