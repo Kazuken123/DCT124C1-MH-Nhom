@@ -308,17 +308,20 @@ Chưa đồng bộ W&B hoặc Google Sheets vì cấu hình trong checkout chưa
 
 Lịch sử Test: notebook RF cũ đã đánh giá trên Test trước khi đổi khung. Hai run Dummy/LR này không dùng Test, nhưng việc tạo lại cấu trúc không biến Test toàn nhóm thành tập chưa từng được xem. Các bước tiếp theo chọn cấu hình bằng Train-CV và ghi đúng giới hạn của đánh giá.
 
-## 11. Báo cáo cuối kỳ
+## 11. Báo cáo và tài liệu thực nghiệm
 
-Báo cáo thực hiện theo cấu trúc 5 chương trong đề bài:
+- **Báo cáo tiến độ giữa kỳ (.docx):** [reports/BaoCao_TienDo_GiuaKy_Nhom10.docx](reports/BaoCao_TienDo_GiuaKy_Nhom10.docx)
+- **Slide thuyết trình giữa kỳ (.pptx):** [reports/BaoCao_TienDo_GiuaKy_Nhom10.pptx](reports/BaoCao_TienDo_GiuaKy_Nhom10.pptx)
+- **Nhật ký thực nghiệm cục bộ (.csv):** [experiments/Experiment_Log.csv](experiments/Experiment_Log.csv)
+- **Nhật ký thực nghiệm trực tuyến (Google Sheets):** [Experiment Log - Student Dropout - Nhóm 10](https://docs.google.com/spreadsheets/d/1TN7sYaRpnH5Ge9akvWWv2rm1OC8tYlIXVco6vyS2sDg/edit?usp=sharing)
+- **Thư mục hình ảnh và biểu đồ báo cáo:** [reports/figures/](reports/figures/)
 
-1. **Giới thiệu:** Bối cảnh, mục tiêu, bài toán.
-2. **Cơ sở lý thuyết:** Các thuật toán và phương pháp được chọn.
-3. **Dữ liệu và phương pháp:** EDA, preprocessing, pipeline và thiết kế thực nghiệm.
-4. **Thực nghiệm, kết quả và thảo luận:** So sánh mô hình, phân tích lỗi và kết quả.
-5. **Kết luận và hướng phát triển:** Champion, hạn chế và cải tiến.
-
-Sản phẩm hoàn thiện gồm báo cáo, slide, mã nguồn, README và demo theo yêu cầu giảng viên.
+Báo cáo thực hiện theo cấu trúc các chương trong đề tài:
+1. **Giới thiệu:** Bối cảnh, mục tiêu, bài toán phân loại đa lớp.
+2. **Cơ sở lý thuyết:** Các thuật toán và phương pháp được chọn (Baseline, DT, RF, LR, XGBoost).
+3. **Dữ liệu và phương pháp:** EDA, preprocessing, pipeline chống rò rỉ và thiết kế 5-fold CV.
+4. **Thực nghiệm, kết quả và thảo luận:** So sánh 12 mô hình, phân tích lỗi và thực nghiệm ablation.
+5. **Kết luận và hướng phát triển:** Tiến độ đạt được, hạn chế kỹ thuật và kế hoạch cuối kỳ.
 
 ## 12. Trạng thái dự án
 

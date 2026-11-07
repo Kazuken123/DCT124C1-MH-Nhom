@@ -1,6 +1,35 @@
-
+# Python virtual environment and caches
 .venv/
 __pycache__/
+*.pyc
 .ipynb_checkpoints/
 
+# Submission archives
 *.zip
+
+# Local workflow and builder scripts (kept locally for authoring/testing, not tracked in git)
+build_*.py
+generate_report_charts.py
+package_submission.py
+verify_*.py
+stress_test_*.py
+challenger_*.py
+check_*.py
+scan_*.py
+empirical_table_audit.py
+
+# Local working notes, transcript dumps and downloaded temporary sheets
+AUDIT_REPORT.md
+REPORT_BLUEPRINT.md
+PROJECT.md
+CONVERSATION.md
+doc_content.txt
+nb_outputs_summary.txt
+conversation_clean*
+sheet_*.csv
+
+# Root-level copies of deliverables (official copies are located inside final/)
+/BaoCao_TienDo_GiuaKy_Nhom10.docx
+/BaoCao_TienDo_GiuaKy_Nhom10.pptx
+/Experiment_Log.csv
+/figures_report/

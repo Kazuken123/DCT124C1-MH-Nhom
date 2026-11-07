@@ -15,7 +15,10 @@
 
 - **Thư mục mã nguồn và thực nghiệm đồ án**: [final/](final/)
 - **Tài liệu kỹ thuật và hướng dẫn chuyên sâu**: [final/README.md](final/README.md)
-- **Tệp Báo cáo tiến độ giữa kỳ chính thức (.docx)**: [BaoCao_TienDo_GiuaKy_Nhom10.docx](BaoCao_TienDo_GiuaKy_Nhom10.docx)
+- **Báo cáo tiến độ giữa kỳ (.docx)**: [final/reports/BaoCao_TienDo_GiuaKy_Nhom10.docx](final/reports/BaoCao_TienDo_GiuaKy_Nhom10.docx)
+- **Slide thuyết trình giữa kỳ (.pptx)**: [final/reports/BaoCao_TienDo_GiuaKy_Nhom10.pptx](final/reports/BaoCao_TienDo_GiuaKy_Nhom10.pptx)
+- **Nhật ký thực nghiệm cục bộ (.csv)**: [final/experiments/Experiment_Log.csv](final/experiments/Experiment_Log.csv)
+- **Nhật ký thực nghiệm trực tuyến (Google Sheets)**: [Experiment Log - Student Dropout - Nhóm 10](https://docs.google.com/spreadsheets/d/1TN7sYaRpnH5Ge9akvWWv2rm1OC8tYlIXVco6vyS2sDg/edit?usp=sharing)
 - **Kịch bản chạy tự động kiểm chứng toàn bộ một bước (Reproducibility Runner)**:
   ```bash
   # Cài đặt môi trường và các gói phụ thuộc (bao gồm xgboost)
