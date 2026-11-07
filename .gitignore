@@ -18,6 +18,7 @@ challenger_*.py
 check_*.py
 scan_*.py
 empirical_table_audit.py
+assets/
 
 # Local working notes, transcript dumps and downloaded temporary sheets
 AUDIT_REPORT.md
