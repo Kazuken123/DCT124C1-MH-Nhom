@@ -71,7 +71,8 @@ Thư mục gốc của đồ án là `final/`.
 | `experiments/runs/` | Kết quả chi tiết từng lần chạy |
 | `experiments/results.csv` | Bảng tổng hợp các thí nghiệm |
 | `experiments/ablation.csv` | Kết quả nghiên cứu loại bỏ thành phần |
-| `reports/` | Biểu đồ, bảng kết quả, báo cáo |
+| `figures/` | Toàn bộ hình ảnh, sơ đồ và biểu đồ thực nghiệm gốc |
+| `reports/` | Báo cáo, bảng kết quả, tài liệu |
 | `demo/` | Ứng dụng minh họa |
 | `references/` | Tài liệu tham khảo |
 | `requirements.txt` | Danh sách thư viện cần cài đặt |
@@ -314,7 +315,7 @@ Lịch sử Test: notebook RF cũ đã đánh giá trên Test trước khi đổ
 - **Slide thuyết trình giữa kỳ (.pptx):** [BaoCao_TienDo_GiuaKy_Nhom10.pptx](BaoCao_TienDo_GiuaKy_Nhom10.pptx)
 - **Nhật ký thực nghiệm cục bộ (.csv):** [Experiment_Log.csv](Experiment_Log.csv)
 - **Nhật ký thực nghiệm trực tuyến (Google Sheets):** [Experiment Log - Student Dropout - Nhóm 10](https://docs.google.com/spreadsheets/d/1TN7sYaRpnH5Ge9akvWWv2rm1OC8tYlIXVco6vyS2sDg/edit?usp=sharing)
-- **Thư mục hình ảnh và biểu đồ báo cáo:** [reports/figures/](reports/figures/)
+- **Thư mục hình ảnh và biểu đồ báo cáo:** [figures/](figures/) (hoặc [reports/figures/](reports/figures/))
 
 Báo cáo thực hiện theo cấu trúc các chương trong đề tài:
 1. **Giới thiệu:** Bối cảnh, mục tiêu, bài toán phân loại đa lớp.

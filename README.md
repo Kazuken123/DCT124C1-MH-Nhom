@@ -17,6 +17,7 @@
 - **Tài liệu kỹ thuật và hướng dẫn chuyên sâu**: [final/README.md](final/README.md)
 - **Báo cáo tiến độ giữa kỳ (.docx)**: [final/BaoCao_TienDo_GiuaKy_Nhom10.docx](final/BaoCao_TienDo_GiuaKy_Nhom10.docx)
 - **Slide thuyết trình giữa kỳ (.pptx)**: [final/BaoCao_TienDo_GiuaKy_Nhom10.pptx](final/BaoCao_TienDo_GiuaKy_Nhom10.pptx)
+- **Thư mục hình ảnh và biểu đồ thực nghiệm**: [final/figures/](final/figures/)
 - **Nhật ký thực nghiệm cục bộ (.csv)**: [final/Experiment_Log.csv](final/Experiment_Log.csv)
 - **Nhật ký thực nghiệm trực tuyến (Google Sheets)**: [Experiment Log - Student Dropout - Nhóm 10](https://docs.google.com/spreadsheets/d/1TN7sYaRpnH5Ge9akvWWv2rm1OC8tYlIXVco6vyS2sDg/edit?usp=sharing)
 - **Kịch bản chạy tự động kiểm chứng toàn bộ một bước (Reproducibility Runner)**:
