@@ -543,18 +543,19 @@ def build_document():
     add_bullet(doc, "Giữ nguyên cấu hình tham số của phiên bản 1 nhưng áp dụng thêm tùy chọn class_weight='balanced'. Tùy chọn này tự động gán trọng số phạt lớn hơn cho các lớp có ít mẫu như lớp Enrolled và Dropout, nhằm đánh giá khả năng cải thiện tỷ lệ nhận diện cho các lớp thiểu số.", bold_prefix="4. Logistic Regression phiên bản 2: ")
     add_bullet(doc, "Cây quyết định cố định ban đầu sử dụng tiêu chí phân tách Gini, giới hạn độ sâu tối đa max_depth bằng 5, số lượng mẫu tối thiểu tại mỗi nút lá min_samples_leaf bằng 10, seed bằng 42 trên 36 đặc trưng gốc.", bold_prefix="5. Decision Tree phiên bản 1: ")
     add_bullet(doc, "Triển khai cải tiến kết hợp mã hóa One-Hot cho 17 biến danh mục và áp dụng phương pháp thẩm định chéo lồng nhau Nested Cross-Validation gồm 5 fold ngoài và 3 fold trong. Quá trình khảo sát ngẫu nhiên 24 tổ hợp tham số gồm max_depth trong khoảng từ 3 đến 10, min_samples_split trong khoảng từ 2 đến 20, min_samples_leaf trong khoảng từ 2 đến 20, và tham số cắt tỉa ccp_alpha trong khoảng từ 0.0 đến 0.005.", bold_prefix="6. Decision Tree phiên bản 2: ")
-    add_bullet(doc, "Mô hình rừng ngẫu nhiên kết hợp 100 cây quyết định, tham số mặc định không giới hạn độ sâu cây với max_depth bằng None, min_samples_leaf bằng 1, seed bằng 42. Mô hình được dùng để kiểm tra năng lực của phương pháp học kết hợp và đo đạc mức độ học quá khớp.", bold_prefix="7. Random Forest phiên bản 1: ")
-    add_bullet(doc, "Mô hình tăng cường độ dốc gồm 100 cây quyết định, giới hạn độ sâu cây max_depth bằng 3, tốc độ học learning_rate bằng 0,1, phương pháp phân chia nút tree_method='hist', seed bằng 42.", bold_prefix="8. XGBoost phiên bản 1: ")
+    add_bullet(doc, "Kế thừa Decision Tree v1 nhưng giảm độ sâu cây max_depth từ 5 xuống 3, giữ nguyên min_samples_leaf bằng 10 trên 36 đặc trưng gốc nhằm kiểm tra sự đánh đổi giữa hiệu năng nhận diện và khả năng triệt tiêu khoảng cách học quá khớp Train-Validation Gap.", bold_prefix="7. Decision Tree phiên bản 3: ")
+    add_bullet(doc, "Mô hình rừng ngẫu nhiên kết hợp 100 cây quyết định, tham số mặc định không giới hạn độ sâu cây với max_depth bằng None, min_samples_leaf bằng 1, seed bằng 42. Mô hình được dùng để kiểm tra năng lực của phương pháp học kết hợp và đo đạc mức độ học quá khớp.", bold_prefix="8. Random Forest phiên bản 1: ")
+    add_bullet(doc, "Mô hình tăng cường độ dốc gồm 100 cây quyết định, giới hạn độ sâu cây max_depth bằng 3, tốc độ học learning_rate bằng 0,1, phương pháp phân chia nút tree_method='hist', seed bằng 42.", bold_prefix="9. XGBoost phiên bản 1: ")
 
     # =========================================================
     # MỤC 6. KẾT QUẢ THỰC NGHIỆM BƯỚC ĐẦU
     # =========================================================
     add_heading_1(doc, "6. Kết quả thực nghiệm bước đầu")
 
-    add_heading_2(doc, "6.1. Bảng so sánh tổng thể 11 lượt chạy thực nghiệm trên tập huấn luyện")
-    add_body(doc, "Dưới đây là bảng tổng hợp đầy đủ số liệu từ 11 lượt chạy thực nghiệm chính thức được trích xuất trực tiếp từ các tệp nhật ký final/experiments/results.csv, final/experiments/ablation.csv và các tệp cấu hình metrics.json:")
+    add_heading_2(doc, "6.1. Bảng so sánh tổng thể 12 lượt chạy thực nghiệm trên tập huấn luyện")
+    add_body(doc, "Dưới đây là bảng tổng hợp đầy đủ số liệu từ 12 lượt chạy thực nghiệm chính thức được trích xuất trực tiếp từ các tệp nhật ký final/experiments/results.csv, final/experiments/ablation.csv và Google Sheets:")
 
-    t4 = doc.add_table(rows=12, cols=10)
+    t4 = doc.add_table(rows=13, cols=10)
     t4_headers = ["STT", "Tên mô hình và phiên bản", "Mã lần chạy", "Số biến", "Macro-F1", "Độ lệch chuẩn", "Accuracy", "Recall Drop", "Recall Enr", "Train-Val Gap"]
     t4_data = [
         ["1", "DummyClassifier v1", "m01_baseline_v1_6b66b3d6", "36", "0,2220", "0,0002", "49,93%", "0,00%", "0,00%", "0,0000"],
@@ -562,12 +563,13 @@ def build_document():
         ["3", "Decision Tree v1", "m02_decision_tree_v1_6d8b7c85", "36", "0,6472", "0,0230", "73,69%", "70,10%", "29,76%", "0,0405"],
         ["4", "Decision Tree v2 One-Hot", "DT_V2_onehot_fixed", "36", "0,6586", "0,0186", "74,09%", "69,83%", "33,07%", "0,0346"],
         ["5", "Decision Tree v2 Tuned", "DT_V2_nested_tuned", "36", "0,6783", "0,0097", "73,58%", "69,65%", "47,09%", "0,0305"],
-        ["6", "Random Forest v1", "m03_random_forest_v1_kaggle", "36", "0,6852", "0,0239", "76,91%", "76,52%", "Chưa có", "0,3148"],
-        ["7", "Logistic Regression v1", "m05_logistic_regression_v1", "36", "0,6997", "0,0099", "77,54%", "77,48%", "37,80%", "0,0559"],
-        ["8", "Logistic Regression v2 Balanced", "m05_logistic_regression_v2", "36", "0,7067", "0,0143", "74,85%", "73,61%", "59,37%", "0,0625"],
-        ["9", "XGBoost v1", "m04_xgboost_v1_bc3ae52b", "36", "0,6994", "0,0046", "77,71%", "76,07%", "37,01%", "0,0714"],
-        ["10", "LR Ablation B Bỏ HK2", "m05_lr_ablation_b", "30", "0,6578", "0,0149", "74,62%", "75,28%", "29,92%", "0,0612"],
-        ["11", "LR Ablation C Thêm FE", "m05_lr_ablation_c", "39", "0,7031", "0,0110", "77,71%", "77,74%", "38,43%", "0,0527"]
+        ["6", "Decision Tree v3 Nông", "m02_dt_v3_06914c1a", "36", "0,6603", "0,0272", "73,64%", "65,61%", "37,80%", "-0,0000"],
+        ["7", "Random Forest v1", "m03_random_forest_v1_kaggle", "36", "0,6852", "0,0239", "76,91%", "76,52%", "Chưa có", "0,3148"],
+        ["8", "Logistic Regression v1", "m05_logistic_regression_v1", "36", "0,6997", "0,0099", "77,54%", "77,48%", "37,80%", "0,0559"],
+        ["9", "Logistic Regression v2 Balanced", "m05_logistic_regression_v2", "36", "0,7067", "0,0143", "74,85%", "73,61%", "59,37%", "0,0625"],
+        ["10", "XGBoost v1", "m04_xgboost_v1_bc3ae52b", "36", "0,6994", "0,0046", "77,71%", "76,07%", "37,01%", "0,0714"],
+        ["11", "LR Ablation B Bỏ HK2", "m05_lr_ablation_b", "30", "0,6578", "0,0149", "74,62%", "75,28%", "29,92%", "0,0612"],
+        ["12", "LR Ablation C Thêm FE", "m05_lr_ablation_c", "39", "0,7031", "0,0110", "77,71%", "77,74%", "38,43%", "0,0527"]
     ]
     format_table(t4, t4_headers, t4_data, [0.8, 3.8, 2.5, 1.0, 1.4, 1.3, 1.4, 1.4, 1.4, 1.5], 
                  [True, False, False, True, True, True, True, True, True, True])
