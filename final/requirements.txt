@@ -8,3 +8,4 @@ joblib==1.6.0
 threadpoolctl==3.7.0
 matplotlib==3.11.2
 PyYAML==6.0.3
+xgboost>=2.0.0

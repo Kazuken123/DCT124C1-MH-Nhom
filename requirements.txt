@@ -1,0 +1,2 @@
+# Root requirements pointing to final project dependencies
+-r final/requirements.txt

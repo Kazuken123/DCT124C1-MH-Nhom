@@ -1,12 +1,30 @@
 # DCT124C1 - Máy Học (Nhóm Thực Hành)
 
 ## Thông tin chung
-- **Lớp**: DCT124C1
+- **Lớp**: DCT124C1 - Máy Học (Nhóm 10)
+- **Tên đề tài**: Dự đoán nguy cơ bỏ học và kết quả học tập của sinh viên (Predict Students' Dropout and Academic Success - UCI 697)
 - **Thành viên nhóm**:
-  - Văn Nguyễn Thành Đạt
-  - Lê Văn Hiếu
-  - Dương Gia Phát
-  - Cái Trần Minh Tiến
+  - Dương Gia Phát (3124411212) - Trưởng nhóm
+  - Lê Văn Hiếu (3124411091) - Thành viên
+  - Văn Nguyễn Thành Đạt (3124411067) - Thành viên
+  - Cái Trần Minh Tiến (3124411309) - Thành viên
+
+---
+
+## Đề tài môn Máy học (Thư mục chính: final/)
+
+- **Thư mục mã nguồn và thực nghiệm đồ án**: [final/](final/)
+- **Tài liệu kỹ thuật và hướng dẫn chuyên sâu**: [final/README.md](final/README.md)
+- **Tệp Báo cáo tiến độ giữa kỳ chính thức (.docx)**: [BaoCao_TienDo_GiuaKy_Nhom10.docx](BaoCao_TienDo_GiuaKy_Nhom10.docx)
+- **Kịch bản chạy tự động kiểm chứng toàn bộ một bước (Reproducibility Runner)**:
+  ```bash
+  # Cài đặt môi trường và các gói phụ thuộc (bao gồm xgboost)
+  pip install -r requirements.txt
+
+  # Chạy tự động kiểm toán dữ liệu, unit tests và 5-fold CV các mô hình
+  python run_all.py
+  ```
+  *(Có thể chạy `python test_all.py --skip-models` để kiểm toán dữ liệu và unit tests nhanh trong 5 giây)*
 
 ---
 
