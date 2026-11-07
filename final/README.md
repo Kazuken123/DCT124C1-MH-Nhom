@@ -310,9 +310,9 @@ Lịch sử Test: notebook RF cũ đã đánh giá trên Test trước khi đổ
 
 ## 11. Báo cáo và tài liệu thực nghiệm
 
-- **Báo cáo tiến độ giữa kỳ (.docx):** [reports/BaoCao_TienDo_GiuaKy_Nhom10.docx](reports/BaoCao_TienDo_GiuaKy_Nhom10.docx)
-- **Slide thuyết trình giữa kỳ (.pptx):** [reports/BaoCao_TienDo_GiuaKy_Nhom10.pptx](reports/BaoCao_TienDo_GiuaKy_Nhom10.pptx)
-- **Nhật ký thực nghiệm cục bộ (.csv):** [experiments/Experiment_Log.csv](experiments/Experiment_Log.csv)
+- **Báo cáo tiến độ giữa kỳ (.docx):** [BaoCao_TienDo_GiuaKy_Nhom10.docx](BaoCao_TienDo_GiuaKy_Nhom10.docx)
+- **Slide thuyết trình giữa kỳ (.pptx):** [BaoCao_TienDo_GiuaKy_Nhom10.pptx](BaoCao_TienDo_GiuaKy_Nhom10.pptx)
+- **Nhật ký thực nghiệm cục bộ (.csv):** [Experiment_Log.csv](Experiment_Log.csv)
 - **Nhật ký thực nghiệm trực tuyến (Google Sheets):** [Experiment Log - Student Dropout - Nhóm 10](https://docs.google.com/spreadsheets/d/1TN7sYaRpnH5Ge9akvWWv2rm1OC8tYlIXVco6vyS2sDg/edit?usp=sharing)
 - **Thư mục hình ảnh và biểu đồ báo cáo:** [reports/figures/](reports/figures/)
 
